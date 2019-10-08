@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_wings
+  m_Name: skate
   m_Shader: {fileID: -6465566751694194690, guid: 58923c0fc067a1443b8c6097c932837b,
     type: 3}
   m_ShaderKeywords: 

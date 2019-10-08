@@ -46,18 +46,5 @@ public class PitManager : MonoBehaviour
             Destroy(currentSections[0]);
             currentSections.RemoveAt(0);
         }
-
-        spawnObstacles();
-    }
-
-    void spawnObstacles()
-    {
-        for(int i = 0; i < 10; i++)
-        {
-            GameObject r = Instantiate(rock);
-            r.transform.position = new Vector3(Random.Range(-4, 4), lastPosSpawned - 5 - 4 * i, Random.Range(-4, 4));
-            r.transform.rotation = Quaternion.Euler(new Vector3(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360)));
-            r.transform.localScale = new Vector3(Random.Range(0.5f, 1.5f), Random.Range(0.5f, 1.5f), Random.Range(0.5f, 1.5f));
-        }
     }
 }
