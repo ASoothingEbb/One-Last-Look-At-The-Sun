@@ -5,32 +5,33 @@ using System.Collections;
 public class CloudFade : MonoBehaviour
 {
     public Image img;
+    public float depth = 20;
     Transform player;
 
     public void Start()
     {
         player = GameObject.FindGameObjectWithTag("player").transform;
-        if(player.position.y < 3)
+    }
+
+    public void Update()
+    {
+        if (player.position.y < depth)
         {
             StartCoroutine(Fade());
-        }
-        if(player.position.y < -10)
-        {
-         //   Destroy(gameObject);
         }
     }
 
     IEnumerator Fade()
     {
-        for (float i = 1; i >= 0; i -= Time.deltaTime)
+        for (float i = 0; i <= 2; i += Time.deltaTime)
         {
-           img.color = new Color(0, 0, 0, i);
-           yield return null;
+            img.color = new Color(1, 1, 1, i);
+            yield return null;
         }
 
-        for (float i = 0; i <= 1; i += Time.deltaTime)
+        for (float i = 1; i >= 0; i -= Time.deltaTime)
         {
-           img.color = new Color(0, 0, 0, i);
+           img.color = new Color(1, 1, 1, i);
            yield return null;
         }
     }

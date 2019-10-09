@@ -6155,6 +6155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   img: {fileID: 1604474871}
+  depth: 15
 --- !u!1 &1687258581
 GameObject:
   m_ObjectHideFlags: 0
