@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_tentacle
-  m_Shader: {fileID: -6465566751694194690, guid: 08572767c80dbd04c95aa48d9644f4a6,
+  m_Name: tentacle
+  m_Shader: {fileID: -6465566751694194690, guid: 09db22f766f6e964fa5fe0369d4af6f1,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
