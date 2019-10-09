@@ -7,6 +7,7 @@ public class CloudFade : MonoBehaviour
     public Image img;
     public float depth = 20;
     Transform player;
+    bool doneIt = false;
 
     public void Start()
     {
@@ -15,8 +16,9 @@ public class CloudFade : MonoBehaviour
 
     public void Update()
     {
-        if (player.position.y < depth)
+        if (player.position.y < depth && !doneIt)
         {
+            doneIt = true;
             StartCoroutine(Fade());
         }
     }
