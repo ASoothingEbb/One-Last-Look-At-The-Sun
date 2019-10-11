@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     Rigidbody body;
 
     public float movementSpeed = 100;
+    public float horizontalDampening = 5;
     Vector2 forceToAdd;
     Camera cam;
 
@@ -19,14 +20,25 @@ public class Player : MonoBehaviour
         cam = GetComponentInChildren<Camera>();
     }
 
-    public void Update()
+    public void FixedUpdate()
     {
-        body.AddForce(movementSpeed * forceToAdd.x * Time.deltaTime, 0, movementSpeed * forceToAdd.y * Time.deltaTime);
+        //body.AddForce(movementSpeed * forceToAdd.x * Time.deltaTime, 0, movementSpeed * forceToAdd.y * Time.deltaTime);
+        body.velocity = Vector3.Lerp(body.velocity, new Vector3(forceToAdd.x * movementSpeed, body.velocity.y, forceToAdd.y * movementSpeed), Time.deltaTime * horizontalDampening);
     }
 
     public void move(InputAction.CallbackContext context)
     {
         forceToAdd = context.ReadValue<Vector2>();
+    }
+
+    public void dash(InputAction.CallbackContext context)
+    {
+        Debug.Log("dash!\n");
+    }
+
+    public void parry(InputAction.CallbackContext context)
+    {
+        Debug.Log("parry!\n");
     }
 
     public void OnTriggerEnter(Collider other)

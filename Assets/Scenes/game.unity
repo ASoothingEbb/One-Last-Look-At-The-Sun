@@ -5499,7 +5499,7 @@ Rigidbody:
   m_GameObject: {fileID: 836339431}
   serializedVersion: 2
   m_Mass: 0.5
-  m_Drag: 1
+  m_Drag: 0.5
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -5593,7 +5593,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17af2866e49b9540ae8f23ad438776c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 1000
+  movementSpeed: 5
+  horizontalDampening: 5
 --- !u!114 &836339438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5676,6 +5677,36 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: e8291688-eb4b-4b16-a338-cbd36414ecf3
     m_ActionName: UI/TrackedDeviceSelect
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 836339437}
+        m_MethodName: parry
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 597b40d9-3797-4a92-a557-dcd163fb1c49
+    m_ActionName: Player/Parry[/XInputControllerWindows/buttonSouth,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 836339437}
+        m_MethodName: dash
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 59575d4b-37fc-419e-8992-a50e81116c5f
+    m_ActionName: Player/Dash[/XInputControllerWindows/buttonWest,/Keyboard/leftShift]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: dac37852-f911-454a-b2fa-28aba7c9f946
@@ -5697,7 +5728,7 @@ MonoBehaviour:
   - {fileID: 8735898731201492089, guid: 7601329b84ba26849859db795446a88d, type: 3}
   currentSections: []
   sectionLength: 7.95
-  maxSections: 10
+  maxSections: 100
   mat: {fileID: 2100000, guid: e6354ac49b2722f4fa213ad93cbee8c4, type: 2}
   rock: {fileID: 6169946382852782520, guid: 995659167d573d347a3fe710a4ca39b6, type: 3}
 --- !u!1 &936522430
