@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem.Interactions;
 
 public class Player : MonoBehaviour
 {
@@ -10,9 +11,13 @@ public class Player : MonoBehaviour
 
     public float movementSpeed = 100;
     public float horizontalDampening = 5;
-    public float dashTime;
-    public float dashSpeed;
-    public float parryTime;
+    public float dashTime=0.15f;
+    public float dashSpeed=2f;
+    public float dashCamShakeMag = 0.2f;
+    public float dashCamShakeTime = 0.075f;
+    public float parryTime=0.15f;
+    public float parryCamShakeMag = 0.2f;
+    public float parryCamShakeTime = 0.075f;
     public float maxDist = 5;
 
     Vector2 forceToAdd;
@@ -43,7 +48,23 @@ public class Player : MonoBehaviour
 
     public void dash(InputAction.CallbackContext context)
     {
-        Debug.Log("dash!\n");
+        if (context.performed)
+        {
+            Debug.Log("dash --- " + context.interaction.ToString());
+            if (context.interaction is TapInteraction)
+            {
+                StartCoroutine(Dash());
+                if (forceToAdd.sqrMagnitude > 0.5f)
+                {
+                    StartCoroutine(shakeCamera(dashCamShakeMag, dashCamShakeTime));
+                }
+            }
+
+            if(context.interaction is HoldInteraction)
+            {
+                Debug.Log("ZOOOOOOM!");
+            }
+        }
     }
 
     public IEnumerator Dash()
@@ -59,7 +80,10 @@ public class Player : MonoBehaviour
 
     public void parry(InputAction.CallbackContext context)
     {
-        Debug.Log("parry!\n");
+        if (context.performed)
+        {
+            Debug.Log(context.interaction);
+        };
     }
 
     public IEnumerator Parry()
