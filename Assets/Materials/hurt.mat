@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: parryLight
+  m_Name: hurt
   m_Shader: {fileID: -6465566751694194690, guid: 76261c6d2e4e4424793612304e19626b,
     type: 3}
   m_ShaderKeywords: 
