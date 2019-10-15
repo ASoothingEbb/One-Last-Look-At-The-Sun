@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     public float parryCamShakeTime = 0.075f;
     public float maxDist = 5;
 
+    int health = 3;
+
     bool holdingDash = false;
     bool holdingParry = false;
 
@@ -53,15 +55,12 @@ public class Player : MonoBehaviour
     {
         if (context.interaction is TapInteraction && context.performed)
         {
-            StartCoroutine(Dash());
-            if (forceToAdd.sqrMagnitude > 0.5f)
-            {
-                StartCoroutine(shakeCamera(dashCamShakeMag, dashCamShakeTime));
-            }
+            StartCoroutine(ExecuteShortDash());
+            StartCoroutine(shakeCamera((forceToAdd.x + forceToAdd.y)/10, dashCamShakeTime));
         }
     }
 
-    public IEnumerator Dash()
+    public IEnumerator ExecuteShortDash()
     {
         var time = 0f;
         while(time < dashTime)
@@ -80,7 +79,7 @@ public class Player : MonoBehaviour
         };
     }
 
-    public IEnumerator Parry()
+    public IEnumerator ExecuteShortParry()
     {
         yield return null;
     }
@@ -89,7 +88,6 @@ public class Player : MonoBehaviour
     {
         if(other.CompareTag("hazard"))
         {
-            //SceneManager.LoadScene("Scenes/game");
             StartCoroutine(shakeCamera(.15f, .4f));
         }
     }

@@ -1170,7 +1170,7 @@ VisualEffectResource:
           m_Value:
             serializedVersion: 2
             key0: {r: 0, g: 0, b: 0, a: 1}
-            key1: {r: 0, g: 6.3626547, b: 63.999992, a: 1}
+            key1: {r: 8.41066, g: 14.351964, b: 22.57038, a: 1}
             key2: {r: 0, g: 0, b: 0, a: 1}
             key3: {r: 0, g: 0, b: 0, a: 1}
             key4: {r: 0, g: 0, b: 0, a: 1}
@@ -1178,9 +1178,9 @@ VisualEffectResource:
             key6: {r: 0, g: 0, b: 0, a: 0}
             key7: {r: 0, g: 0, b: 0, a: 0}
             ctime0: 0
-            ctime1: 40572
-            ctime2: 47368
-            ctime3: 64929
+            ctime1: 52347
+            ctime2: 64929
+            ctime3: 0
             ctime4: 0
             ctime5: 0
             ctime6: 0
@@ -1194,7 +1194,7 @@ VisualEffectResource:
             atime6: 0
             atime7: 0
             m_Mode: 0
-            m_NumColorKeys: 4
+            m_NumColorKeys: 3
             m_NumAlphaKeys: 5
       m_NamedObject:
         m_Array:
@@ -1638,7 +1638,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":0.0},{"color":{"r":0.0,"g":6.362654685974121,"b":63.99999237060547,"a":1.0},"time":0.6190890073776245},{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":0.7227893471717835},{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":0.9907530546188355}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":0.6324406862258911},{"alpha":1.0,"time":0.887067973613739},{"alpha":1.0,"time":0.955855667591095},{"alpha":1.0,"time":1.0}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":0.0},{"color":{"r":8.410659790039063,"g":14.351963996887207,"b":22.57037925720215,"a":1.0},"time":0.7987639904022217},{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":0.9907530546188355}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":0.6324406862258911},{"alpha":1.0,"time":0.887067973613739},{"alpha":1.0,"time":0.955855667591095},{"alpha":1.0,"time":1.0}],"gradientMode":0}'
     m_Space: 2147483647
   m_Property:
     name: gradient
