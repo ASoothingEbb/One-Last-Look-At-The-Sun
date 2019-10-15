@@ -36,5 +36,7 @@ public class CloudFade : MonoBehaviour
            img.color = new Color(1, 1, 1, i);
            yield return null;
         }
+
+        Destroy(gameObject);
     }
 }

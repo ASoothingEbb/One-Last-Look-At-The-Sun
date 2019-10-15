@@ -13,12 +13,16 @@ public class Player : MonoBehaviour
     public float horizontalDampening = 5;
     public float dashTime=0.15f;
     public float dashSpeed=2f;
+    public float dashCooldown = 2f;
     public float dashCamShakeMag = 0.2f;
     public float dashCamShakeTime = 0.075f;
     public float parryTime=0.15f;
     public float parryCamShakeMag = 0.2f;
     public float parryCamShakeTime = 0.075f;
     public float maxDist = 5;
+
+    bool holdingDash = false;
+    bool holdingParry = false;
 
     Vector2 forceToAdd;
     Camera cam;
@@ -32,7 +36,6 @@ public class Player : MonoBehaviour
 
     public void FixedUpdate()
     {
-        //body.AddForce(movementSpeed * forceToAdd.x * Time.deltaTime, 0, movementSpeed * forceToAdd.y * Time.deltaTime);
         body.velocity = Vector3.Lerp(body.velocity, new Vector3(forceToAdd.x * movementSpeed, body.velocity.y, forceToAdd.y * movementSpeed), Time.deltaTime * horizontalDampening);
         Vector2 temp = new Vector2(transform.position.x, transform.position.z);
         if (temp.SqrMagnitude() > maxDist*maxDist)
@@ -48,21 +51,12 @@ public class Player : MonoBehaviour
 
     public void dash(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.interaction is TapInteraction && context.performed)
         {
-            Debug.Log("dash --- " + context.interaction.ToString());
-            if (context.interaction is TapInteraction)
+            StartCoroutine(Dash());
+            if (forceToAdd.sqrMagnitude > 0.5f)
             {
-                StartCoroutine(Dash());
-                if (forceToAdd.sqrMagnitude > 0.5f)
-                {
-                    StartCoroutine(shakeCamera(dashCamShakeMag, dashCamShakeTime));
-                }
-            }
-
-            if(context.interaction is HoldInteraction)
-            {
-                Debug.Log("ZOOOOOOM!");
+                StartCoroutine(shakeCamera(dashCamShakeMag, dashCamShakeTime));
             }
         }
     }

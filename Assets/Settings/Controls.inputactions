@@ -17,9 +17,9 @@
                     "name": "Parry",
                     "type": "Button",
                     "id": "597b40d9-3797-4a92-a557-dcd163fb1c49",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Tap,Hold,Press"
+                    "interactions": "Tap(duration=0.5,pressPoint=0.1),Hold,Press"
                 },
                 {
                     "name": "Dash",
@@ -27,7 +27,7 @@
                     "id": "59575d4b-37fc-419e-8992-a50e81116c5f",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "Tap,Hold,Press"
+                    "interactions": "Tap,Hold"
                 }
             ],
             "bindings": [
