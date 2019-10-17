@@ -23,7 +23,6 @@ public class Player : MonoBehaviour
 
     int health = 3;
 
-    bool holdingDash = false;
     bool holdingParry = false;
 
     Vector2 forceToAdd;
@@ -51,17 +50,35 @@ public class Player : MonoBehaviour
         forceToAdd = context.ReadValue<Vector2>();
     }
 
-    public void dash(InputAction.CallbackContext context)
+    public void magic(InputAction.CallbackContext context)
     {
         if (context.interaction is TapInteraction && context.performed)
         {
-            StartCoroutine(ExecuteShortDash());
-            StartCoroutine(shakeCamera((forceToAdd.x + forceToAdd.y)/10, dashCamShakeTime));
+            if ((forceToAdd.x + forceToAdd.y) > 0.5)
+            {
+                StartCoroutine(ExecuteShortDash());
+            }
+            else
+            {
+                StartCoroutine(ExecuteShortParry());
+            }
+        }
+        else if(context.interaction is HoldInteraction)
+        {
+            if (context.started)
+            {
+                holdingParry = true;
+            }
+            else if (context.canceled)
+            {
+                holdingParry = false;
+            }
         }
     }
 
     public IEnumerator ExecuteShortDash()
     {
+        StartCoroutine(shakeCamera((forceToAdd.x + forceToAdd.y) / 10, dashCamShakeTime));
         var time = 0f;
         while(time < dashTime)
         {
@@ -69,14 +86,6 @@ public class Player : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-    }
-
-    public void parry(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            Debug.Log(context.interaction);
-        };
     }
 
     public IEnumerator ExecuteShortParry()
