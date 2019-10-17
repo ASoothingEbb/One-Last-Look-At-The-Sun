@@ -14,9 +14,12 @@ public class Player : MonoBehaviour
     public float dashTime=0.15f;
     public float dashSpeed=2f;
     public float dashCooldown = 2f;
+    float timeSinceLastDash = 0;
     public float dashCamShakeMag = 0.2f;
     public float dashCamShakeTime = 0.075f;
     public float parryTime=0.15f;
+    public float parryCooldown = 2f;
+    float timeSinceLastParry;
     public float parryCamShakeMag = 0.2f;
     public float parryCamShakeTime = 0.075f;
     public float maxDist = 5;
@@ -25,19 +28,19 @@ public class Player : MonoBehaviour
 
     bool holdingParry = false;
 
-    Vector2 forceToAdd;
+    Vector2 moveDir;
     Camera cam;
 
     public void Start()
     {
         body = GetComponent<Rigidbody>();
-        forceToAdd = new Vector2();
+        moveDir = new Vector2();
         cam = GetComponentInChildren<Camera>();
     }
 
     public void FixedUpdate()
     {
-        body.velocity = Vector3.Lerp(body.velocity, new Vector3(forceToAdd.x * movementSpeed, body.velocity.y, forceToAdd.y * movementSpeed), Time.deltaTime * horizontalDampening);
+        body.velocity = Vector3.Lerp(body.velocity, new Vector3(moveDir.x * movementSpeed, body.velocity.y, moveDir.y * movementSpeed), Time.deltaTime * horizontalDampening);
         Vector2 temp = new Vector2(transform.position.x, transform.position.z);
         if (temp.SqrMagnitude() > maxDist*maxDist)
         {
@@ -47,14 +50,14 @@ public class Player : MonoBehaviour
 
     public void move(InputAction.CallbackContext context)
     {
-        forceToAdd = context.ReadValue<Vector2>();
+        moveDir = context.ReadValue<Vector2>();
     }
 
     public void magic(InputAction.CallbackContext context)
     {
         if (context.interaction is TapInteraction && context.performed)
         {
-            if ((forceToAdd.x + forceToAdd.y) > 0.5)
+            if ((moveDir.x + moveDir.y) > 0.5)
             {
                 StartCoroutine(ExecuteShortDash());
             }
@@ -78,11 +81,11 @@ public class Player : MonoBehaviour
 
     public IEnumerator ExecuteShortDash()
     {
-        StartCoroutine(shakeCamera((forceToAdd.x + forceToAdd.y) / 10, dashCamShakeTime));
+        StartCoroutine(shakeCamera((moveDir.x + moveDir.y) / 10, dashCamShakeTime));
         var time = 0f;
         while(time < dashTime)
         {
-            transform.position = new Vector3(forceToAdd.x * dashSpeed * Time.deltaTime, 0, forceToAdd.y * dashSpeed * Time.deltaTime) + transform.position;
+            transform.position = new Vector3(moveDir.x * dashSpeed * Time.deltaTime, 0, moveDir.y * dashSpeed * Time.deltaTime) + transform.position;
             time += Time.deltaTime;
             yield return null;
         }
@@ -97,7 +100,7 @@ public class Player : MonoBehaviour
     {
         if(other.CompareTag("hazard"))
         {
-            StartCoroutine(shakeCamera(.15f, .4f));
+            StartCoroutine(shakeCamera(.4f, .4f));
         }
     }
 

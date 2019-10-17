@@ -33,6 +33,6 @@ Material:
     - Vector1_D0D0C459: 0
     - Vector1_E6A2403B: 2.89
     m_Colors:
-    - Color_234AA542: {r: 1, g: 1, b: 1, a: 0}
-    - Color_5B95FD3C: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 0}
+    - Color_234AA542: {r: 0, g: 0, b: 0, a: 0}
+    - Color_5B95FD3C: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0}
     - Vector3_E7E06A35: {r: 0.5, g: 0.5, b: 0.5, a: 0}
