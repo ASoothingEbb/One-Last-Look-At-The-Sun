@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: hurt
-  m_Shader: {fileID: -6465566751694194690, guid: 76261c6d2e4e4424793612304e19626b,
+  m_Name: something else
+  m_Shader: {fileID: -6465566751694194690, guid: a66ecf1b948002b43a2ece6bec52f028,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -21,5 +21,6 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - Vector1_932E682D: 5
+    - Vector1_5E361D35: 4
+    - Vector1_A11D789D: 0
     m_Colors: []

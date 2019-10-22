@@ -55,9 +55,11 @@ public class Player : MonoBehaviour
 
     public void magic(InputAction.CallbackContext context)
     {
+        Debug.Log(context.interaction + " - " + context.phase);
         if (context.interaction is TapInteraction && context.performed)
         {
-            if ((moveDir.x + moveDir.y) > 0.5)
+            //utv niceshot rally trakcs automaton starfish anyrocketpass4topper qilinhornscomp3v3 ftlwheels lunchbox
+            if (moveDir.sqrMagnitude > 0.1)
             {
                 StartCoroutine(ExecuteShortDash());
             }
