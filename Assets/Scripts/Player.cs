@@ -24,9 +24,14 @@ public class Player : MonoBehaviour
     public float parryCamShakeTime = 0.075f;
     public float maxDist = 5;
 
+    public Material hurt;
+    public Material tapParry;
+    public Material holdParry;
+
     int health = 3;
 
     bool holdingParry = false;
+    bool tappedParry = true;
 
     Vector2 moveDir;
     Camera cam;
@@ -58,7 +63,6 @@ public class Player : MonoBehaviour
         Debug.Log(context.interaction + " - " + context.phase);
         if (context.interaction is TapInteraction && context.performed)
         {
-            //utv niceshot rally trakcs automaton starfish anyrocketpass4topper qilinhornscomp3v3 ftlwheels lunchbox
             if (moveDir.sqrMagnitude > 0.1)
             {
                 StartCoroutine(ExecuteShortDash());
@@ -73,12 +77,24 @@ public class Player : MonoBehaviour
             if (context.started)
             {
                 holdingParry = true;
+                StartCoroutine(FadeMat(holdParry, "Vector1_5E361D35", 10, 1.5f, 0.4f));
             }
             else if (context.canceled)
             {
                 holdingParry = false;
+                StartCoroutine(FadeMat(holdParry, "Vector1_5E361D35", 1.5f, 10, 0.4f));
             }
         }
+    }
+
+    public IEnumerator FadeMat(Material mat, string property, float start, float stop, float time)
+    {
+        for(float i = 0; i < time; i += Time.deltaTime)
+        {
+            mat.SetFloat(property, Mathf.Lerp(start, stop, i / time));
+            yield return null;
+        }
+        mat.SetFloat(property, stop);
     }
 
     public IEnumerator ExecuteShortDash()
@@ -95,7 +111,15 @@ public class Player : MonoBehaviour
 
     public IEnumerator ExecuteShortParry()
     {
-        yield return null;
+        tappedParry = true;
+        //Vector1_5E361D35
+        StartCoroutine(FadeMat(tapParry, "Vector1_5E361D35", 0, 1, parryTime / 2));
+        for (float i = 0; i < parryTime / 2; i += Time.deltaTime)
+            yield return null;
+        StartCoroutine(FadeMat(tapParry, "Vector1_5E361D35", 1, 0, parryTime / 2));
+        for (float i = 0; i < parryTime / 2; i += Time.deltaTime)
+            yield return null;
+        tappedParry = false;
     }
 
     public void OnTriggerEnter(Collider other)
@@ -103,6 +127,14 @@ public class Player : MonoBehaviour
         if(other.CompareTag("hazard"))
         {
             StartCoroutine(shakeCamera(.4f, .4f));
+        }
+        else if (other.CompareTag("tapParry"))
+        {
+
+        }
+        else if (other.CompareTag("holdParry"))
+        {
+
         }
     }
 

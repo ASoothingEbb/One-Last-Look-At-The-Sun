@@ -11,8 +11,6 @@ public class PitManager : MonoBehaviour
     float lastPosSpawned = 0;
     public int maxSections = 3;
     System.Random random;
-    public Material mat;
-    float time = 0;
 
     public GameObject rock;
 
@@ -27,8 +25,6 @@ public class PitManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-        mat.SetFloat("Vector1_523F8AAB", time);
         if (playerPos.position.y < lastPosSpawned + (maxSections-1.5)*sectionLength)
         {
             spawnNextSection();
