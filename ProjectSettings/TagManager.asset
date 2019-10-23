@@ -6,6 +6,8 @@ TagManager:
   tags:
   - hazard
   - player
+  - tapParry
+  - holdParry
   layers:
   - Default
   - TransparentFX

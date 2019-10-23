@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem.Interactions;
@@ -23,10 +24,15 @@ public class Player : MonoBehaviour
     public float parryCamShakeMag = 0.2f;
     public float parryCamShakeTime = 0.075f;
     public float maxDist = 5;
+    public float maxFallSpeed = 10f;
+    public float parrySpeedBoost = 5f;
+    public float parryMovePenalty = 0.5f;
 
     public Material hurt;
     public Material tapParry;
     public Material holdParry;
+
+    public Image dieScreen;
 
     int health = 3;
 
@@ -45,11 +51,17 @@ public class Player : MonoBehaviour
 
     public void FixedUpdate()
     {
-        body.velocity = Vector3.Lerp(body.velocity, new Vector3(moveDir.x * movementSpeed, body.velocity.y, moveDir.y * movementSpeed), Time.deltaTime * horizontalDampening);
+        body.velocity = Vector3.Lerp(body.velocity, new Vector3(moveDir.x * movementSpeed * (holdingParry ? parryMovePenalty : 1), body.velocity.y, moveDir.y * movementSpeed * (holdingParry ? parryMovePenalty : 1)), Time.deltaTime * horizontalDampening);
+        body.velocity = new Vector3(body.velocity.x, Mathf.Max(body.velocity.y, - maxFallSpeed + (holdingParry ? -parrySpeedBoost : 0)), body.velocity.z);
         Vector2 temp = new Vector2(transform.position.x, transform.position.z);
         if (temp.SqrMagnitude() > maxDist*maxDist)
         {
             transform.position = new Vector3( temp.normalized.x * maxDist * 0.99f , transform.position.y, temp.normalized.y*maxDist * 0.99f);
+        }
+        hurt.SetFloat("Vector1_932E682D", health);
+        if (health < 1)
+        {
+            StartCoroutine(Die());
         }
     }
 
@@ -97,6 +109,17 @@ public class Player : MonoBehaviour
         mat.SetFloat(property, stop);
     }
 
+    public IEnumerator Die()
+    {
+        StartCoroutine(FadeMat(hurt, "Vector1_932E682D", 0, -1, 1));
+        for (float i = 0; i <= 1; i += Time.deltaTime)
+        {
+            dieScreen.color = new Color(0, 0, 0, i);
+            yield return null;
+        }
+        SceneManager.LoadScene(0);
+    }
+
     public IEnumerator ExecuteShortDash()
     {
         StartCoroutine(shakeCamera((moveDir.x + moveDir.y) / 10, dashCamShakeTime));
@@ -127,14 +150,31 @@ public class Player : MonoBehaviour
         if(other.CompareTag("hazard"))
         {
             StartCoroutine(shakeCamera(.4f, .4f));
+            health -= 1;
         }
         else if (other.CompareTag("tapParry"))
         {
+            if (tappedParry)
+            {
 
+            }
+            else
+            {
+                StartCoroutine(shakeCamera(.4f, .4f));
+                health = -1;
+            }
         }
         else if (other.CompareTag("holdParry"))
         {
+            if (holdingParry)
+            {
 
+            }
+            else
+            {
+                StartCoroutine(shakeCamera(.4f, .4f));
+                health -= 1;
+            }
         }
     }
 
