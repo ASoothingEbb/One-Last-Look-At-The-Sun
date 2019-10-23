@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
         Debug.Log(context.interaction + " - " + context.phase);
         if (context.interaction is TapInteraction && context.performed)
         {
-            if (moveDir.sqrMagnitude > 0.1)
+            if (moveDir.sqrMagnitude > 0.05)
             {
                 StartCoroutine(ExecuteShortDash());
             }
