@@ -124,9 +124,10 @@ public class Player : MonoBehaviour
     {
         StartCoroutine(shakeCamera((moveDir.x + moveDir.y) / 10, dashCamShakeTime));
         var time = 0f;
+        Vector2 dir = new Vector2(moveDir.x, moveDir.y);
         while(time < dashTime)
         {
-            transform.position = new Vector3(moveDir.x * dashSpeed * Time.deltaTime, 0, moveDir.y * dashSpeed * Time.deltaTime) + transform.position;
+            transform.position = new Vector3(dir.normalized.x * dashSpeed * Time.deltaTime, 0, dir.normalized.y * dashSpeed * Time.deltaTime) + transform.position;
             time += Time.deltaTime;
             yield return null;
         }
