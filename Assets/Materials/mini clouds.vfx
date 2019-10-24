@@ -124,12 +124,13 @@ VisualEffectResource:
       age = (float)0;\n        bool alive = (bool)true;\n        \n\n#if VFX_USE_PARTICLEID_CURRENT\n
       \        particleId = particleIndex;\n#endif\n#if VFX_USE_SEED_CURRENT\n        seed
       = WangHash(particleIndex ^ systemSeed);\n#endif\n        \n        {\n            SetAttribute_CAC295B2(
-      /*inout */position,  /*inout */seed, float3(3,0,3), float3(-3,0,-3));\n        }\n
-      \       {\n            SetAttribute_E6295C0( /*inout */velocity,  /*inout */seed,
-      float3(0.1,30,0.1), float3(-0.1,20,-0.1));\n        }\n        {\n            SetAttribute_F01429A3(
-      /*inout */lifetime,  /*inout */seed, (float)1, (float)3);\n        }\n        AttributeFromCurve_45ABB909(
-      /*inout */size, age, lifetime, Size_d);\n        \n\n\n#if VFX_USE_ALIVE_CURRENT\n
-      \       if (alive)\n        {\n\t\t\tuint deadIndex = deadListIn.DecrementCounter();\n
+      /*inout */position,  /*inout */seed, float3(10,0,10), float3(-10,0,-10));\n
+      \       }\n        {\n            SetAttribute_E6295C0( /*inout */velocity,
+      \ /*inout */seed, float3(0.1,30,0.1), float3(-0.1,20,-0.1));\n        }\n        {\n
+      \           SetAttribute_F01429A3( /*inout */lifetime,  /*inout */seed, (float)1,
+      (float)3);\n        }\n        AttributeFromCurve_45ABB909( /*inout */size,
+      age, lifetime, Size_d);\n        \n\n\n#if VFX_USE_ALIVE_CURRENT\n        if
+      (alive)\n        {\n\t\t\tuint deadIndex = deadListIn.DecrementCounter();\n
       \           uint index = deadListIn[deadIndex];\n            attributeBuffer.Store3((index
       * 0x4 + 0x0) << 2,asuint(position));\n            attributeBuffer.Store3((index
       * 0x4 + 0x1000) << 2,asuint(velocity));\n            attributeBuffer.Store((index
@@ -508,9 +509,9 @@ VisualEffectResource:
         - m_ExpressionIndex: 11
           m_Value: {x: 0.1, y: 30, z: 0.1}
         - m_ExpressionIndex: 12
-          m_Value: {x: -3, y: 0, z: -3}
+          m_Value: {x: -10, y: 0, z: -10}
         - m_ExpressionIndex: 13
-          m_Value: {x: 3, y: 0, z: 3}
+          m_Value: {x: 10, y: 0, z: 10}
         - m_ExpressionIndex: 15
           m_Value: {x: 2, y: 3, z: 2}
         - m_ExpressionIndex: 16
@@ -1956,7 +1957,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Position, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"position":{"x":3.0,"y":0.0,"z":3.0}}'
+      m_SerializableObject: '{"position":{"x":10.0,"y":0.0,"z":10.0}}'
     m_Space: 0
   m_Property:
     name: A
@@ -2132,7 +2133,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Position, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"position":{"x":-3.0,"y":0.0,"z":-3.0}}'
+      m_SerializableObject: '{"position":{"x":-10.0,"y":0.0,"z":-10.0}}'
     m_Space: 0
   m_Property:
     name: B
