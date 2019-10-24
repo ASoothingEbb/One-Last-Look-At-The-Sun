@@ -12,11 +12,9 @@ public class PitManager : MonoBehaviour
     public int maxSections = 3;
     System.Random random;
 
-    public GameObject rock;
-
     void Start()
     {
-        playerPos = GetComponent<Transform>();
+        playerPos = GameObject.FindGameObjectWithTag("player").GetComponent<Transform>();
         random = new System.Random();
         lastPosSpawned += sectionLength/2;
         for (int i = 0; i < maxSections; i++) spawnNextSection();
@@ -33,7 +31,7 @@ public class PitManager : MonoBehaviour
 
     void spawnNextSection()
     {
-        GameObject newSection = Instantiate(pitSections[random.Next(0, pitSections.Length)]);
+        GameObject newSection = Instantiate(pitSections[random.Next(0, pitSections.Length)], this.transform);
         lastPosSpawned -= sectionLength;
         newSection.transform.position = Vector3.up * lastPosSpawned;
         currentSections.Add(newSection);
