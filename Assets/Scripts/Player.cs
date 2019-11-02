@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     public float maxDist = 5;
     public float maxFallSpeed = 10f;
     public float parrySpeedBoost = 5f;
-    public float parryMovePenalty = 0.5f;
+    public float dashHoldMovePenalty = 0.5f;
 
     public Material hurt;
     public Material tapParry;
@@ -37,7 +37,8 @@ public class Player : MonoBehaviour
     int health = 3;
 
     bool holdingParry = false;
-    bool tappedParry = true;
+    bool tappedParry = false;
+    bool holdingDash = false;
 
     Vector2 moveDir;
     Camera cam;
@@ -51,8 +52,8 @@ public class Player : MonoBehaviour
 
     public void FixedUpdate()
     {
-        body.velocity = Vector3.Lerp(body.velocity, new Vector3(moveDir.x * movementSpeed * (holdingParry ? parryMovePenalty : 1), body.velocity.y, moveDir.y * movementSpeed * (holdingParry ? parryMovePenalty : 1)), Time.deltaTime * horizontalDampening);
-        body.velocity = new Vector3(body.velocity.x, Mathf.Max(body.velocity.y, - maxFallSpeed + (holdingParry ? -parrySpeedBoost : 0)), body.velocity.z);
+        body.velocity = Vector3.Lerp(body.velocity, new Vector3(moveDir.x * movementSpeed * (holdingDash ? dashHoldMovePenalty : 1), body.velocity.y, moveDir.y * movementSpeed * (holdingDash ? dashHoldMovePenalty : 1)), Time.deltaTime * horizontalDampening);
+        body.velocity = new Vector3(body.velocity.x, Mathf.Max(body.velocity.y, - maxFallSpeed + (holdingDash ? -parrySpeedBoost : 0)), body.velocity.z);
         Vector2 temp = new Vector2(transform.position.x, transform.position.z);
         if (temp.SqrMagnitude() > maxDist*maxDist)
         {
@@ -70,19 +71,12 @@ public class Player : MonoBehaviour
         moveDir = context.ReadValue<Vector2>();
     }
 
-    public void magic(InputAction.CallbackContext context)
+    public void parry(InputAction.CallbackContext context)
     {
         Debug.Log(context.interaction + " - " + context.phase);
         if (context.interaction is TapInteraction && context.performed)
         {
-            if (moveDir.sqrMagnitude > 0.05)
-            {
-                StartCoroutine(ExecuteShortDash());
-            }
-            else
-            {
-                StartCoroutine(ExecuteShortParry());
-            }
+            StartCoroutine(ExecuteShortParry());
         }
         else if(context.interaction is HoldInteraction)
         {
@@ -95,6 +89,26 @@ public class Player : MonoBehaviour
             {
                 holdingParry = false;
                 StartCoroutine(FadeMat(holdParry, "Vector1_5E361D35", 1.5f, 10, 0.4f));
+            }
+        }
+    }
+
+    public void dash(InputAction.CallbackContext context)
+    {
+        Debug.Log(context.interaction + " - " + context.phase);
+        if (context.interaction is TapInteraction && context.performed)
+        {
+            StartCoroutine(ExecuteShortDash());
+        }
+        else if (context.interaction is HoldInteraction)
+        {
+            if (context.started)
+            {
+                holdingDash = true;
+            }
+            else if (context.canceled)
+            {
+                holdingDash = false;
             }
         }
     }

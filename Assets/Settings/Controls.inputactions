@@ -14,12 +14,20 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Magic",
+                    "name": "Parry",
                     "type": "Button",
                     "id": "597b40d9-3797-4a92-a557-dcd163fb1c49",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Tap,Hold,Press"
+                    "interactions": "Tap,Hold"
+                },
+                {
+                    "name": "Dash",
+                    "type": "Button",
+                    "id": "deee874a-3b9d-430a-bce9-8c314c7f2cfb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Tap,Hold"
                 }
             ],
             "bindings": [
@@ -151,7 +159,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Magic",
+                    "action": "Parry",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -162,7 +170,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Magic",
+                    "action": "Parry",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -173,7 +181,40 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Magic",
+                    "action": "Parry",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0b211874-95e3-4859-b68e-e080c4df3a10",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "Tap,Hold",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "55098425-5d71-4738-972c-941397493348",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "Tap,Hold",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "81f43a96-2867-4cd7-bd39-9fda3333c9cd",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "Tap,Hold",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
