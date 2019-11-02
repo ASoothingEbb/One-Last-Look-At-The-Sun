@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3277683402622852504}
   m_Layer: 0
   m_Name: eel fixscale
-  m_TagString: hazard
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3837205132787149124}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -68.84, y: 61.73, z: -54.883366}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -121.38, y: 61.73, z: -54.883366}
+  m_LocalScale: {x: 0.19, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

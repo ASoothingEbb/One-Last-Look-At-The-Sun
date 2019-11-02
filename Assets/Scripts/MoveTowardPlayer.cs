@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MoveTowardPlayer : MonoBehaviour
 {
-    float activateDistance = 30f;
-    float speed = 2f;
+    public float activateDistance = 30f;
+    public float speed = 2f;
 
     Transform player;
     bool activated = false;
