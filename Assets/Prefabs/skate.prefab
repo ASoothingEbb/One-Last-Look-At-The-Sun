@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3717482877187828931}
   - component: {fileID: 8569666425921969059}
+  - component: {fileID: 7438797667993001949}
+  - component: {fileID: 7438797667993001948}
   m_Layer: 0
-  m_Name: skate 1
-  m_TagString: Untagged
+  m_Name: skate
+  m_TagString: hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417848658016755408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -120, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 4671553635471479979}
@@ -45,8 +47,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f393d774a20bb4eb04a7a9ce0ca4b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circleSize: 10
-  speed: 5
+  circleSize: 2
+  speed: 0.7
+  timeOffset: 0
+--- !u!65 &7438797667993001949
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417848658016755408}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.3, y: 0.4, z: 1.1606001}
+  m_Center: {x: 1.1372474e-15, y: 0, z: -0.24029994}
+--- !u!65 &7438797667993001948
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417848658016755408}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7691755, y: 0.4, z: 2.613335}
+  m_Center: {x: 0, y: 0, z: -0.4}
 --- !u!1 &620967529771069927
 GameObject:
   m_ObjectHideFlags: 0
