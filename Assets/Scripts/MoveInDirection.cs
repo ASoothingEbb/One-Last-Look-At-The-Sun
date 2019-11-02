@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class jelly : MonoBehaviour
+public class MoveInDirection : MonoBehaviour
 {
     public float speed = 0.2f;
     public Vector3 direction = new Vector3(0, 0, -1);
