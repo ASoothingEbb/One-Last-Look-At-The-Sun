@@ -21,7 +21,7 @@ public class PeriodicOnOff : MonoBehaviour
     }
     void Update()
     {
-        if(Time.time + offsetTime % (onTime + offTime) < onTime)
+        if((Time.time + offsetTime) % (onTime + offTime) < onTime)
         {
             child.SetActive(true);
         }
