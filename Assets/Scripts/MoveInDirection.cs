@@ -12,8 +12,8 @@ public class MoveInDirection : MonoBehaviour
     {
         if (randomize)
         {
-            speed = Random.Range(0, 1);
-            direction = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), Random.Range(-1, 1));
+            speed = PitManager.rand(0, 1);
+            direction = new Vector3(PitManager.rand(-1, 1), PitManager.rand(-1, 1), PitManager.rand(-1, 1));
         }
     }
 

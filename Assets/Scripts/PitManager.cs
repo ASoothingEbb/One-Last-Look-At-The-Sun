@@ -10,7 +10,7 @@ public class PitManager : MonoBehaviour
     Transform playerPos;
     float lastPosSpawned = 0;
     public int maxSections = 3;
-    System.Random random;
+    public static System.Random random;
 
     void Start()
     {
@@ -40,5 +40,10 @@ public class PitManager : MonoBehaviour
             Destroy(currentSections[0]);
             currentSections.RemoveAt(0);
         }
+    }
+
+    public static float rand(float start, float stop)
+    {
+        return (float)(random.NextDouble() * (stop - start) - start);
     }
 }

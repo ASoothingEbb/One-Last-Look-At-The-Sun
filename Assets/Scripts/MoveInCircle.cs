@@ -18,9 +18,9 @@ public class MoveInCircle : MonoBehaviour
     {
         if (randomize)
         {
-            circleSize = Random.Range(0, 3);
-            speed = Random.Range(-1, 1);
-            timeOffset = Random.Range(0, 7);
+            circleSize = PitManager.rand(0, 3);
+            speed = PitManager.rand(-1, 1);
+            timeOffset = PitManager.rand(0, 7);
         }
         if(speed < 0)
         {

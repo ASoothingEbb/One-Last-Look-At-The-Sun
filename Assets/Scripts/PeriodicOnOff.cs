@@ -15,7 +15,7 @@ public class PeriodicOnOff : MonoBehaviour
     {
         if (randomOffset)
         {
-            offsetTime = Random.Range(0, onTime + offsetTime);
+            offsetTime = PitManager.rand(0, onTime + offsetTime);
         }
         child = transform.GetChild(0).gameObject;
     }
