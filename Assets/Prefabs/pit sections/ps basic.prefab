@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4244428773757080780}
   - component: {fileID: 7627888375146948661}
   m_Layer: 0
-  m_Name: ps test
+  m_Name: ps basic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,10 +123,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnables:
-  - prefab: {fileID: 3135359719107929939, guid: ffdadcdcb3a09d943814fe7d7dec261f,
+  - prefab: {fileID: 7239812532468693633, guid: fb8c7f8e898c1bc44b89e5955bd74f40,
       type: 3}
     chance: 0.2
-  - prefab: {fileID: 2643850482252873046, guid: 393ad5c9e5c53614d8cf6a30e5ec7be8,
+  - prefab: {fileID: 3135359719107929939, guid: ffdadcdcb3a09d943814fe7d7dec261f,
       type: 3}
     chance: 0.2
   - prefab: {fileID: 3837205132787149124, guid: aa9d49b12b0c69e45abb52fbcf1a32d4,
@@ -136,4 +136,7 @@ MonoBehaviour:
       type: 3}
     chance: 0.2
   - prefab: {fileID: 417848658016755408, guid: ea747fc15725ab544b4609644d0f3ab0, type: 3}
+    chance: 1
+  - prefab: {fileID: 2643850482252873046, guid: 393ad5c9e5c53614d8cf6a30e5ec7be8,
+      type: 3}
     chance: 0.2

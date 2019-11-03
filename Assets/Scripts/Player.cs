@@ -59,6 +59,7 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3( temp.normalized.x * maxDist * 0.99f , transform.position.y, temp.normalized.y*maxDist * 0.99f);
         }
+
         hurt.SetFloat("Vector1_932E682D", health);
         if (health < 1)
         {
@@ -98,7 +99,14 @@ public class Player : MonoBehaviour
         Debug.Log(context.interaction + " - " + context.phase);
         if (context.interaction is TapInteraction && context.performed)
         {
-            StartCoroutine(ExecuteShortDash());
+            if (moveDir.SqrMagnitude() == 0)
+            {
+                StartCoroutine(ExecuteShortDash(new Vector3(0, -1, 0)));
+            }
+            else
+            {
+                StartCoroutine(ExecuteShortDash(new Vector3(moveDir.x, 0, moveDir.y)));
+            }
         }
         else if (context.interaction is HoldInteraction)
         {
@@ -134,14 +142,13 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public IEnumerator ExecuteShortDash()
+    public IEnumerator ExecuteShortDash(Vector3 dir)
     {
-        StartCoroutine(shakeCamera((moveDir.x + moveDir.y) / 10, dashCamShakeTime));
+        StartCoroutine(shakeCamera(dashCamShakeMag, dashCamShakeTime));
         var time = 0f;
-        Vector2 dir = new Vector2(moveDir.x, moveDir.y);
         while(time < dashTime)
         {
-            transform.position = new Vector3(dir.normalized.x * dashSpeed * Time.deltaTime, 0, dir.normalized.y * dashSpeed * Time.deltaTime) + transform.position;
+            transform.position = new Vector3(dir.normalized.x * dashSpeed * Time.deltaTime, dir.normalized.y * dashSpeed * Time.deltaTime, dir.normalized.z * dashSpeed * Time.deltaTime) + transform.position;
             time += Time.deltaTime;
             yield return null;
         }
@@ -176,7 +183,7 @@ public class Player : MonoBehaviour
             else
             {
                 StartCoroutine(shakeCamera(.4f, .4f));
-                health = -1;
+                health -= 1;
             }
         }
         else if (other.CompareTag("holdParry"))
