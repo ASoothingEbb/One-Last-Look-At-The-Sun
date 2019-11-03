@@ -10,10 +10,18 @@ public class MoveInCircle : MonoBehaviour
     public float timeOffset = 0;
     float time;
     float yRotOffset=0;
+
+    public bool randomize = false;
     // Update is called once per frame
 
     private void Start()
     {
+        if (randomize)
+        {
+            circleSize = Random.Range(0, 3);
+            speed = Random.Range(-1, 1);
+            timeOffset = Random.Range(0, 7);
+        }
         if(speed < 0)
         {
             yRotOffset = 180;

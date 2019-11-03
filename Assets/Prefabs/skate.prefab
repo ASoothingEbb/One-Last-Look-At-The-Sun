@@ -50,6 +50,7 @@ MonoBehaviour:
   circleSize: 2
   speed: 0.7
   timeOffset: 0
+  randomize: 1
 --- !u!65 &7438797667993001949
 BoxCollider:
   m_ObjectHideFlags: 0

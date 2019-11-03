@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6769078146553953796}
   - component: {fileID: 9029028610581559531}
   m_Layer: 0
-  m_Name: Lightning 1
+  m_Name: Lightning periodic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,8 +24,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3135359719107929939}
-  m_LocalRotation: {x: -0, y: 0.95238394, z: -0, w: 0.3049013}
-  m_LocalPosition: {x: -1.6281409, y: -120, z: -1.1615322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.29999992, y: 0.3, z: 0.29999992}
   m_Children:
   - {fileID: 5292361688470349803}
@@ -46,6 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onTime: 1
   offTime: 1
+  offsetTime: 0
+  randomOffset: 1
 --- !u!1001 &361712694188867404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61,17 +63,17 @@ PrefabInstance:
     - target: {fileID: 5509926738585000103, guid: c4ed8ddbc96db214f83caf33685c25cf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.012771
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5509926738585000103, guid: c4ed8ddbc96db214f83caf33685c25cf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 333.3333
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5509926738585000103, guid: c4ed8ddbc96db214f83caf33685c25cf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.567843
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5509926738585000103, guid: c4ed8ddbc96db214f83caf33685c25cf,
         type: 3}
