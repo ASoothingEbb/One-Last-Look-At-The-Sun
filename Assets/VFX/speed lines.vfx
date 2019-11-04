@@ -168,7 +168,7 @@ MonoBehaviour:
     x: 536
     y: -190
     width: 548
-    height: 1405
+    height: 1406
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
