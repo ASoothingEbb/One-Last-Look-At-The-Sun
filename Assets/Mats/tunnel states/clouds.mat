@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: tunnel
+  m_Name: clouds
   m_Shader: {fileID: -6465566751694194690, guid: 9aa9eb53e3910704fb30ff8059b6a3cc,
     type: 3}
   m_ShaderKeywords: 

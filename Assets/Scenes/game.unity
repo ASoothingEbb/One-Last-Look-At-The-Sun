@@ -154,6 +154,17 @@ MonoBehaviour:
   currentSections: []
   sectionLength: 15.95
   maxSections: 8
+  startSections: 0
+  tunnelMat: {fileID: 2100000, guid: ba8286236ef8dd548b57bdcc7bd1ec9d, type: 2}
+  tunnelStates:
+  - mat: {fileID: 2100000, guid: 745e4ae7a2b30ea4bb5e1fb8bb33665d, type: 2}
+    depth: 500
+  - mat: {fileID: 2100000, guid: 745e4ae7a2b30ea4bb5e1fb8bb33665d, type: 2}
+    depth: 0
+  - mat: {fileID: 2100000, guid: 045df28e40c52a242b70576e56fa0383, type: 2}
+    depth: -200
+  - mat: {fileID: 2100000, guid: 745e4ae7a2b30ea4bb5e1fb8bb33665d, type: 2}
+    depth: -5000
 --- !u!4 &171707092
 Transform:
   m_ObjectHideFlags: 0
@@ -467,6 +478,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7627888375146948661, guid: 5d1da83e165d4fd49abbe754dfe35680,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 045df28e40c52a242b70576e56fa0383, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d1da83e165d4fd49abbe754dfe35680, type: 3}
 --- !u!1 &425389679
@@ -721,7 +737,7 @@ Transform:
   - {fileID: 1687258585}
   - {fileID: 992099959}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &836339437
 MonoBehaviour:

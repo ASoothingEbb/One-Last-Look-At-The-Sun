@@ -11,6 +11,13 @@ public class PitManager : MonoBehaviour
     float lastPosSpawned = 0;
     public int maxSections = 3;
     public static System.Random random;
+    public float startSections;
+    public Material tunnelMat;
+
+    public TunnelState[] tunnelStates;
+    TunnelState a;
+    TunnelState b;
+    int currentTunnelState = 0;
 
     void Start()
     {
@@ -18,6 +25,8 @@ public class PitManager : MonoBehaviour
         random = new System.Random();
         lastPosSpawned += sectionLength/2;
         for (int i = 0; i < maxSections; i++) spawnNextSection();
+        a = tunnelStates[currentTunnelState];
+        b = tunnelStates[currentTunnelState + 1];
     }
 
     // Update is called once per frame
@@ -27,6 +36,15 @@ public class PitManager : MonoBehaviour
         {
             spawnNextSection();
         }
+
+        if (playerPos.position.y < b.depth)
+        {
+            currentTunnelState += 1;
+            a = tunnelStates[currentTunnelState];
+            b = tunnelStates[currentTunnelState + 1];
+        }
+
+        tunnelMat.Lerp(a.mat, b.mat, (playerPos.position.y - a.depth) / (b.depth - a.depth));
     }
 
     void spawnNextSection()
@@ -46,4 +64,11 @@ public class PitManager : MonoBehaviour
     {
         return (float)(random.NextDouble() * (stop - start) - start);
     }
+}
+
+[System.Serializable]
+public struct TunnelState
+{
+    public Material mat;
+    public float depth;
 }
