@@ -5,10 +5,12 @@ using UnityEngine;
 public class PitManager : MonoBehaviour
 {
     public GameObject[] pitSections;
+    public GameObject pitBlank;
     public List<GameObject> currentSections;
     public float sectionLength = 249.99f;
     Transform playerPos;
     float lastPosSpawned = 0;
+    public int startBuffer = 5;
     public int maxSections = 3;
     public static System.Random random;
     public float startSections;
@@ -49,7 +51,15 @@ public class PitManager : MonoBehaviour
 
     void spawnNextSection()
     {
-        GameObject newSection = Instantiate(pitSections[random.Next(0, pitSections.Length)], this.transform);
+        GameObject newSection;
+        if (lastPosSpawned > -sectionLength * startBuffer)
+        {
+            newSection = Instantiate(pitBlank, this.transform);
+        }
+        else
+        {
+            newSection = Instantiate(pitSections[random.Next(0, pitSections.Length)], this.transform);
+        }
         lastPosSpawned -= sectionLength;
         newSection.transform.position = Vector3.up * lastPosSpawned;
         currentSections.Add(newSection);
