@@ -23,8 +23,8 @@ public class PitManager : MonoBehaviour
 
     void Start()
     {
-        playerPos = GameObject.FindGameObjectWithTag("player").GetComponent<Transform>();
         random = new System.Random();
+        playerPos = GameObject.FindGameObjectWithTag("player").GetComponent<Transform>();
         lastPosSpawned += sectionLength/2;
         for (int i = 0; i < maxSections; i++) spawnNextSection();
         a = tunnelStates[currentTunnelState];

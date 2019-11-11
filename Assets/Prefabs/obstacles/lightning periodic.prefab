@@ -61,6 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5069bdc916af844b93aa1cc73228ccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  on: 0
 --- !u!1001 &361712694188867404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143,6 +144,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.38
       objectReference: {fileID: 0}
+    - target: {fileID: 405976310566403351, guid: c4ed8ddbc96db214f83caf33685c25cf,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 70.047966
+      objectReference: {fileID: 0}
+    - target: {fileID: 405976310566403351, guid: c4ed8ddbc96db214f83caf33685c25cf,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.0001371738
+      objectReference: {fileID: 0}
+    - target: {fileID: 405976310566403351, guid: c4ed8ddbc96db214f83caf33685c25cf,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 35.95689
+      objectReference: {fileID: 0}
     - target: {fileID: 1658595873511659624, guid: c4ed8ddbc96db214f83caf33685c25cf,
         type: 3}
       propertyPath: ShapeModule.m_Scale.y
@@ -162,21 +178,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NoiseModule.separateAxes
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 405976310566403351, guid: c4ed8ddbc96db214f83caf33685c25cf,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 70.047966
-      objectReference: {fileID: 0}
-    - target: {fileID: 405976310566403351, guid: c4ed8ddbc96db214f83caf33685c25cf,
-        type: 3}
-      propertyPath: m_Center.x
-      value: -0.0001371738
-      objectReference: {fileID: 0}
-    - target: {fileID: 405976310566403351, guid: c4ed8ddbc96db214f83caf33685c25cf,
-        type: 3}
-      propertyPath: m_Center.z
-      value: 35.95689
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4ed8ddbc96db214f83caf33685c25cf, type: 3}

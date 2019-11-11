@@ -13,11 +13,8 @@ public class Player : MonoBehaviour
     public float movementSpeed = 100;
     public float horizontalDampening = 5;
     public float dashTime=0.15f;
-    public float dashSpeed=2f;
-    public float dashCooldown = 2f;
-    float timeSinceLastDash = 0;
-    public float dashCamShakeMag = 0.2f;
-    public float dashCamShakeTime = 0.075f;
+    public float dashSideSpeed=2f;
+    public float dashDownSpeed = 2f;
     public float parryTime=0.15f;
     public float parryCooldown = 2f;
     float timeSinceLastParry = 0  ;
@@ -26,11 +23,9 @@ public class Player : MonoBehaviour
     public float maxDist = 5;
     public float maxFallSpeed = 10f;
     public float parrySpeedBoost = 5f;
-    public float dashHoldMovePenalty = 0.5f;
 
     public Material hurt;
     public Material tapParry;
-    public Material holdParry;
 
     public Image dieScreen;
 
@@ -52,12 +47,20 @@ public class Player : MonoBehaviour
 
     public void Update()
     {
-        body.velocity = Vector3.Lerp(body.velocity, new Vector3(moveDir.x * movementSpeed * (holdingDash ? dashHoldMovePenalty : 1), body.velocity.y, moveDir.y * movementSpeed * (holdingDash ? dashHoldMovePenalty : 1)), Time.deltaTime * horizontalDampening);
+        body.velocity = Vector3.Lerp(body.velocity, new Vector3(moveDir.x * movementSpeed, body.velocity.y, moveDir.y * movementSpeed), Time.deltaTime * horizontalDampening);
         body.velocity = new Vector3(body.velocity.x, Mathf.Max(body.velocity.y, - maxFallSpeed + (holdingDash ? -parrySpeedBoost : 0)), body.velocity.z);
         Vector2 temp = new Vector2(transform.position.x, transform.position.z);
         if (temp.SqrMagnitude() > maxDist*maxDist)
         {
             transform.position = new Vector3( temp.normalized.x * maxDist * 0.99f , transform.position.y, temp.normalized.y*maxDist * 0.99f);
+        }
+
+        if(holdingParry && timeSinceLastParry > parryCooldown)
+        {
+            timeSinceLastParry = 0;
+            StartCoroutine(ExecuteShortParry());
+            StartCoroutine(ExecuteShortDash());
+
         }
 
         hurt.SetFloat("Vector1_932E682D", health);
@@ -66,7 +69,6 @@ public class Player : MonoBehaviour
             StartCoroutine(Die());
         }
 
-        timeSinceLastDash += Time.deltaTime;
         timeSinceLastParry += Time.deltaTime;
     }
 
@@ -77,59 +79,14 @@ public class Player : MonoBehaviour
 
     public void parry(InputAction.CallbackContext context)
     {
-        if (timeSinceLastParry > parryCooldown)
-        {
-            Debug.Log(context.interaction + " - " + context.phase);
-            if (context.interaction is TapInteraction && context.performed)
+            if (context.started)
             {
-                StartCoroutine(ExecuteShortParry());
+                holdingParry = true;
             }
-            else if (context.interaction is HoldInteraction)
+            else if (context.canceled)
             {
-                if (context.started)
-                {
-                    holdingParry = true;
-                    StartCoroutine(FadeMat(holdParry, "Vector1_5E361D35", 10, 1.5f, 0.4f));
-                }
-                else if (context.canceled)
-                {
-                    holdingParry = false;
-                    StartCoroutine(FadeMat(holdParry, "Vector1_5E361D35", 1.5f, 10, 0.4f));
-                    timeSinceLastParry = 0;
-                }
+                holdingParry = false;
             }
-        }
-    }
-
-    public void dash(InputAction.CallbackContext context)
-    {
-        if (timeSinceLastDash > dashCooldown)
-        {
-            Debug.Log(context.interaction + " - " + context.phase);
-            if (context.interaction is TapInteraction && context.performed)
-            {
-                if (moveDir.SqrMagnitude() == 0)
-                {
-                    StartCoroutine(ExecuteShortDash(new Vector3(0, -1, 0)));
-                }
-                else
-                {
-                    StartCoroutine(ExecuteShortDash(new Vector3(moveDir.x, 0, moveDir.y)));
-                }
-            }
-            else if (context.interaction is HoldInteraction)
-            {
-                if (context.started)
-                {
-                    holdingDash = true;
-                }
-                else if (context.canceled)
-                {
-                    holdingDash = false;
-                    timeSinceLastDash = 0;
-                }
-            }
-        }
     }
 
     public IEnumerator FadeMat(Material mat, string property, float start, float stop, float time)
@@ -153,17 +110,22 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    public IEnumerator ExecuteShortDash(Vector3 dir)
+    public IEnumerator ExecuteShortDash()
     {
-        StartCoroutine(shakeCamera(dashCamShakeMag, dashCamShakeTime));
+        StartCoroutine(shakeCamera(parryCamShakeMag, parryCamShakeTime));
+        Vector3 dir = new Vector3(moveDir.x, 0, moveDir.y);
+
+        if(dir.sqrMagnitude < 0.1f)
+        {
+            dir.y = -1;
+        }
         var time = 0f;
         while(time < dashTime)
         {
-            transform.position = new Vector3(dir.normalized.x * dashSpeed * Time.deltaTime, dir.normalized.y * dashSpeed * Time.deltaTime, dir.normalized.z * dashSpeed * Time.deltaTime) + transform.position;
+            transform.position = new Vector3(dir.normalized.x * dashSideSpeed * Time.deltaTime, dir.normalized.y * dashDownSpeed * Time.deltaTime, dir.normalized.z * dashSideSpeed * Time.deltaTime) + transform.position;
             time += Time.deltaTime;
             yield return null;
         }
-        timeSinceLastDash = 0;
     }
 
     public IEnumerator ExecuteShortParry()

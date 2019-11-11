@@ -94,7 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.2
   direction: {x: 0, y: 0, z: -1}
-  randomize: 0
+  randomize: 1
 --- !u!136 &1870101741133048136
 CapsuleCollider:
   m_ObjectHideFlags: 0
