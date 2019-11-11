@@ -5,20 +5,26 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public SpawnData[] spawnables;
+    public bool evenChance = false;
     void Start()
     {
+        float chance = 1 / spawnables.Length;
         int i = 0;
-        for(;; i += 1)
+        for (; i < 100; i += 1)
         {
-            i = i % spawnables.Length;
 
-            if (PitManager.rand(0,1) < spawnables[i].chance)
+            if (!evenChance)
+            {
+                chance = spawnables[i % spawnables.Length].chance;
+            }
+
+            if (PitManager.rand(0,1) < chance)
             {
                 break;
             }
 
         }
-        Instantiate(spawnables[i].prefab, gameObject.transform);
+        Instantiate(spawnables[i % spawnables.Length].prefab, gameObject.transform);
     }
 }
 

@@ -8,7 +8,7 @@ public class PopOnCollideWithPlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("player"))
+        if (other.CompareTag("player") || other.CompareTag("tapParry") || other.CompareTag("holdParry"))
         {
             //play particles here
             Destroy(gameObject);

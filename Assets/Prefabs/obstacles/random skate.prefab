@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7438797667993001949}
   - component: {fileID: 7438797667993001948}
   m_Layer: 0
-  m_Name: skate
+  m_Name: random skate
   m_TagString: hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,12 +26,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417848658016755408}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.6823523, z: 0, w: 0.7310235}
+  m_LocalPosition: {x: 0.0150069725, y: 0, z: -0.2176377}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 4671553635471479979}
-  - {fileID: 5775867787437662544}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -77,36 +76,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.7691755, y: 0.4, z: 2.613335}
   m_Center: {x: 0, y: 0, z: -0.4}
---- !u!1 &620967529771069927
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5775867787437662544}
-  m_Layer: 0
-  m_Name: Empty
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5775867787437662544
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 620967529771069927}
-  m_LocalRotation: {x: -0.50000006, y: -0.4999999, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -0.06, y: -0.16, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
-  m_Children: []
-  m_Father: {fileID: 3717482877187828931}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7131219366290757573
 GameObject:
   m_ObjectHideFlags: 0

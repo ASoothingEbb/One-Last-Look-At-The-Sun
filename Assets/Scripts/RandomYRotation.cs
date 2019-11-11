@@ -5,10 +5,10 @@ using UnityEngine;
 public class RandomYRotation : MonoBehaviour
 {
 
-    public bool enabled = false;
+    public bool on = false;
     void Start()
     {
-        if (enabled)
+        if (on)
         {
             transform.rotation = Quaternion.Euler(0, PitManager.rand(0, 360), 0);
         }

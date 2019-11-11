@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     public float dashCamShakeTime = 0.075f;
     public float parryTime=0.15f;
     public float parryCooldown = 2f;
-    float timeSinceLastParry;
+    float timeSinceLastParry = 0  ;
     public float parryCamShakeMag = 0.2f;
     public float parryCamShakeTime = 0.075f;
     public float maxDist = 5;
@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
         cam = GetComponentInChildren<Camera>();
     }
 
-    public void FixedUpdate()
+    public void Update()
     {
         body.velocity = Vector3.Lerp(body.velocity, new Vector3(moveDir.x * movementSpeed * (holdingDash ? dashHoldMovePenalty : 1), body.velocity.y, moveDir.y * movementSpeed * (holdingDash ? dashHoldMovePenalty : 1)), Time.deltaTime * horizontalDampening);
         body.velocity = new Vector3(body.velocity.x, Mathf.Max(body.velocity.y, - maxFallSpeed + (holdingDash ? -parrySpeedBoost : 0)), body.velocity.z);
@@ -65,6 +65,9 @@ public class Player : MonoBehaviour
         {
             StartCoroutine(Die());
         }
+
+        timeSinceLastDash += Time.deltaTime;
+        timeSinceLastParry += Time.deltaTime;
     }
 
     public void move(InputAction.CallbackContext context)
@@ -74,49 +77,57 @@ public class Player : MonoBehaviour
 
     public void parry(InputAction.CallbackContext context)
     {
-        Debug.Log(context.interaction + " - " + context.phase);
-        if (context.interaction is TapInteraction && context.performed)
+        if (timeSinceLastParry > parryCooldown)
         {
-            StartCoroutine(ExecuteShortParry());
-        }
-        else if(context.interaction is HoldInteraction)
-        {
-            if (context.started)
+            Debug.Log(context.interaction + " - " + context.phase);
+            if (context.interaction is TapInteraction && context.performed)
             {
-                holdingParry = true;
-                StartCoroutine(FadeMat(holdParry, "Vector1_5E361D35", 10, 1.5f, 0.4f));
+                StartCoroutine(ExecuteShortParry());
             }
-            else if (context.canceled)
+            else if (context.interaction is HoldInteraction)
             {
-                holdingParry = false;
-                StartCoroutine(FadeMat(holdParry, "Vector1_5E361D35", 1.5f, 10, 0.4f));
+                if (context.started)
+                {
+                    holdingParry = true;
+                    StartCoroutine(FadeMat(holdParry, "Vector1_5E361D35", 10, 1.5f, 0.4f));
+                }
+                else if (context.canceled)
+                {
+                    holdingParry = false;
+                    StartCoroutine(FadeMat(holdParry, "Vector1_5E361D35", 1.5f, 10, 0.4f));
+                    timeSinceLastParry = 0;
+                }
             }
         }
     }
 
     public void dash(InputAction.CallbackContext context)
     {
-        Debug.Log(context.interaction + " - " + context.phase);
-        if (context.interaction is TapInteraction && context.performed)
+        if (timeSinceLastDash > dashCooldown)
         {
-            if (moveDir.SqrMagnitude() == 0)
+            Debug.Log(context.interaction + " - " + context.phase);
+            if (context.interaction is TapInteraction && context.performed)
             {
-                StartCoroutine(ExecuteShortDash(new Vector3(0, -1, 0)));
+                if (moveDir.SqrMagnitude() == 0)
+                {
+                    StartCoroutine(ExecuteShortDash(new Vector3(0, -1, 0)));
+                }
+                else
+                {
+                    StartCoroutine(ExecuteShortDash(new Vector3(moveDir.x, 0, moveDir.y)));
+                }
             }
-            else
+            else if (context.interaction is HoldInteraction)
             {
-                StartCoroutine(ExecuteShortDash(new Vector3(moveDir.x, 0, moveDir.y)));
-            }
-        }
-        else if (context.interaction is HoldInteraction)
-        {
-            if (context.started)
-            {
-                holdingDash = true;
-            }
-            else if (context.canceled)
-            {
-                holdingDash = false;
+                if (context.started)
+                {
+                    holdingDash = true;
+                }
+                else if (context.canceled)
+                {
+                    holdingDash = false;
+                    timeSinceLastDash = 0;
+                }
             }
         }
     }
@@ -139,7 +150,7 @@ public class Player : MonoBehaviour
             dieScreen.color = new Color(0, 0, 0, i);
             yield return null;
         }
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public IEnumerator ExecuteShortDash(Vector3 dir)
@@ -152,6 +163,7 @@ public class Player : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
+        timeSinceLastDash = 0;
     }
 
     public IEnumerator ExecuteShortParry()
@@ -165,6 +177,7 @@ public class Player : MonoBehaviour
         for (float i = 0; i < parryTime / 2; i += Time.deltaTime)
             yield return null;
         tappedParry = false;
+        timeSinceLastParry = 0;
     }
 
     public void OnTriggerEnter(Collider other)

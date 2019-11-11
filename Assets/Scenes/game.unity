@@ -488,6 +488,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bd5de9bf80bb76a45a7dd0e45a0cd7a5, type: 2}
+    - target: {fileID: 8348669700040881423, guid: 5d1da83e165d4fd49abbe754dfe35680,
+        type: 3}
+      propertyPath: evenChance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d1da83e165d4fd49abbe754dfe35680, type: 3}
 --- !u!1 &425389679
@@ -760,14 +765,14 @@ MonoBehaviour:
   horizontalDampening: 5
   dashTime: 0.1
   dashSpeed: 25
-  dashCooldown: 2
+  dashCooldown: 0.2
   dashCamShakeMag: 0.2
   dashCamShakeTime: 0.075
   parryTime: 0.3
-  parryCooldown: 2
+  parryCooldown: 0.2
   parryCamShakeMag: 0.2
   parryCamShakeTime: 0.075
-  maxDist: 3
+  maxDist: 1.75
   maxFallSpeed: 10
   parrySpeedBoost: 5
   dashHoldMovePenalty: 0.5

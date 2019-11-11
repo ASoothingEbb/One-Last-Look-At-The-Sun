@@ -22,7 +22,7 @@ public class MoveInCircle : MonoBehaviour
             speed = PitManager.rand(-1, 1);
             timeOffset = PitManager.rand(0, 7);
         }
-        if(speed < 0)
+        if(speed * circleSize < 0)
         {
             yRotOffset = 180;
         }
