@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     public float parryCamShakeTime = 0.075f;
     public float maxDist = 5;
     public float maxFallSpeed = 10f;
-    public float parrySpeedBoost = 5f;
+    public float parryEffectIntensity = 1f;
 
     public Material hurt;
     public Material tapParry;
@@ -33,7 +33,6 @@ public class Player : MonoBehaviour
 
     bool holdingParry = false;
     bool tappedParry = false;
-    bool holdingDash = false;
 
     Vector2 moveDir;
     Camera cam;
@@ -48,7 +47,7 @@ public class Player : MonoBehaviour
     public void Update()
     {
         body.velocity = Vector3.Lerp(body.velocity, new Vector3(moveDir.x * movementSpeed, body.velocity.y, moveDir.y * movementSpeed), Time.deltaTime * horizontalDampening);
-        body.velocity = new Vector3(body.velocity.x, Mathf.Max(body.velocity.y, - maxFallSpeed + (holdingDash ? -parrySpeedBoost : 0)), body.velocity.z);
+        body.velocity = new Vector3(body.velocity.x, Mathf.Max(body.velocity.y, - maxFallSpeed), body.velocity.z);
         Vector2 temp = new Vector2(transform.position.x, transform.position.z);
         if (temp.SqrMagnitude() > maxDist*maxDist)
         {
@@ -126,16 +125,16 @@ public class Player : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-    }
+    } 
 
     public IEnumerator ExecuteShortParry()
     {
         tappedParry = true;
         //Vector1_5E361D35
-        StartCoroutine(FadeMat(tapParry, "Vector1_5E361D35", 0, 1, parryTime / 2));
+        StartCoroutine(FadeMat(tapParry, "Vector1_5E361D35", 0, parryEffectIntensity, parryTime / 2));
         for (float i = 0; i < parryTime / 2; i += Time.deltaTime)
             yield return null;
-        StartCoroutine(FadeMat(tapParry, "Vector1_5E361D35", 1, 0, parryTime / 2));
+        StartCoroutine(FadeMat(tapParry, "Vector1_5E361D35", parryEffectIntensity, 0, parryTime / 2));
         for (float i = 0; i < parryTime / 2; i += Time.deltaTime)
             yield return null;
         tappedParry = false;
@@ -153,7 +152,7 @@ public class Player : MonoBehaviour
         {
             if (tappedParry)
             {
-
+                
             }
             else
             {

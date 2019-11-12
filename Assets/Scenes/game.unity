@@ -773,11 +773,11 @@ MonoBehaviour:
   dashDownSpeed: 25
   parryTime: 0.3
   parryCooldown: 0.5
-  parryCamShakeMag: 0.2
+  parryCamShakeMag: 0.4
   parryCamShakeTime: 0.075
   maxDist: 1.75
   maxFallSpeed: 10
-  parrySpeedBoost: 5
+  parryEffectIntensity: 0.3
   hurt: {fileID: 2100000, guid: 777f9a44c20686e41a65882311194804, type: 2}
   tapParry: {fileID: 2100000, guid: a8bed727e10947744bb31337b4cd5a2c, type: 2}
   dieScreen: {fileID: 893750341}

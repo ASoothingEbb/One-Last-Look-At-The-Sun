@@ -557,8 +557,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5756991512553808663}
+  - component: {fileID: 4805503897505144389}
   m_Layer: 0
-  m_Name: tent cross
+  m_Name: tent cross spinning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -582,3 +583,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4805503897505144389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5756991512553808660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f065b1bd4b75d5c4798ce8ddc232f347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 35
