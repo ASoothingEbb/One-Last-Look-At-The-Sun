@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9785dd1f73cdf4b87a36bee6637eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onTime: 2
-  offTime: 2
-  offsetTime: 2
+  onTime: 1
+  offTime: 1
+  offsetTime: 1
   randomOffset: 0
 --- !u!1 &3646454037261303686
 GameObject:
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9785dd1f73cdf4b87a36bee6637eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onTime: 2
-  offTime: 2
+  onTime: 1
+  offTime: 1
   offsetTime: 0
   randomOffset: 0
 --- !u!1 &7612130821238020956

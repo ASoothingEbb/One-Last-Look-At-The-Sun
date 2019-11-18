@@ -9,10 +9,11 @@ public class PitManager : MonoBehaviour
     public List<GameObject> currentSections;
     public float sectionLength = 249.99f;
     Transform playerPos;
-    float lastPosSpawned = 0;
+    public float lastPosSpawned = 0;
     public int startBuffer = 5;
     public int maxSections = 3;
     public static System.Random random;
+    public const int max_depth = 15000;
     public float startSections;
     public Material tunnelMat;
 

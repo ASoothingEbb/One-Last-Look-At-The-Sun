@@ -268,6 +268,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &777963826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 777963827}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &777963827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777963826}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 89.04224, y: 18.4387, z: 70.36892}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &811356086
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,21 +495,17 @@ MonoBehaviour:
   movementSpeed: 0
   horizontalDampening: 0
   dashTime: 0
-  dashSpeed: 0
-  dashCooldown: 0
-  dashCamShakeMag: 0
-  dashCamShakeTime: 0
+  dashSideSpeed: 2
+  dashDownSpeed: 2
   parryTime: 0
   parryCooldown: 0
   parryCamShakeMag: 0
   parryCamShakeTime: 0
   maxDist: 1
   maxFallSpeed: 10
-  parrySpeedBoost: 0
-  dashHoldMovePenalty: 0
+  parryEffectIntensity: 1
   hurt: {fileID: 2100000, guid: 777f9a44c20686e41a65882311194804, type: 2}
   tapParry: {fileID: 2100000, guid: a8bed727e10947744bb31337b4cd5a2c, type: 2}
-  holdParry: {fileID: 2100000, guid: fb21bc3618149fc428670413758549b1, type: 2}
   dieScreen: {fileID: 0}
 --- !u!114 &836339438
 MonoBehaviour:
