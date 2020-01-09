@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
     int health = 3;
 
     bool holdingParry = false;
-    bool tappedParry = false;
+    bool parrying = false;
 
     Vector2 moveDir;
     Camera cam;
@@ -143,7 +143,7 @@ public class Player : MonoBehaviour
 
     public IEnumerator ExecuteShortParry()
     {
-        tappedParry = true;
+        parrying = true;
         //Vector1_5E361D35
         StartCoroutine(FadeMat(tapParry, "Vector1_5E361D35", 0, parryEffectIntensity, parryTime / 2));
         for (float i = 0; i < parryTime / 2; i += Time.deltaTime)
@@ -151,7 +151,7 @@ public class Player : MonoBehaviour
         StartCoroutine(FadeMat(tapParry, "Vector1_5E361D35", parryEffectIntensity, 0, parryTime / 2));
         for (float i = 0; i < parryTime / 2; i += Time.deltaTime)
             yield return null;
-        tappedParry = false;
+        parrying = false;
         timeSinceLastParry = 0;
     }
 
@@ -163,7 +163,7 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("tapParry"))
         {
-            if (tappedParry)
+            if (parrying)
             {
                 
             }
