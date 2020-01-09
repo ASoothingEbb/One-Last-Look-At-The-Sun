@@ -1086,6 +1086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17af2866e49b9540ae8f23ad438776c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hurtCooldown: 1
   movementSpeed: 10
   horizontalDampening: 5
   dashTime: 0.45

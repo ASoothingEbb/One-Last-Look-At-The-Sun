@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
 
     Rigidbody body;
 
+    public float hurtCooldown = 1f;
+    float timeSinceLastHurt = 0f;
     public float movementSpeed = 100;
     public float horizontalDampening = 5;
     public float dashTime=0.15f;
@@ -62,14 +64,25 @@ public class Player : MonoBehaviour
 
         }
 
+        timeSinceLastParry += Time.deltaTime;
+        timeSinceLastHurt += Time.deltaTime;
         hurt.SetFloat("Vector1_932E682D", health);
-        if (health < 1)
+    }
+
+    public void takeDamage()
+    {
+        if (timeSinceLastHurt > hurtCooldown)
         {
-            StartCoroutine(shakeCamera(0.4f, 1f));
-            StartCoroutine(Die());
+            timeSinceLastHurt = 0;
+            health -= 1;
+            StartCoroutine(shakeCamera(.4f, .4f));
+            if (health < 1)
+            {
+                StartCoroutine(shakeCamera(0.4f, 1f));
+                StartCoroutine(Die());
+            }
         }
 
-        timeSinceLastParry += Time.deltaTime;
     }
 
     public void move(InputAction.CallbackContext context)
@@ -146,8 +159,7 @@ public class Player : MonoBehaviour
     {
         if(other.CompareTag("hazard"))
         {
-            StartCoroutine(shakeCamera(.4f, .4f));
-            health -= 1;
+            takeDamage();
         }
         else if (other.CompareTag("tapParry"))
         {
@@ -157,8 +169,7 @@ public class Player : MonoBehaviour
             }
             else
             {
-                StartCoroutine(shakeCamera(.4f, .4f));
-                health -= 1;
+                takeDamage();
             }
         }
         else if (other.CompareTag("holdParry"))
@@ -169,8 +180,7 @@ public class Player : MonoBehaviour
             }
             else
             {
-                StartCoroutine(shakeCamera(.4f, .4f));
-                health -= 1;
+                takeDamage();
             }
         }
     }
