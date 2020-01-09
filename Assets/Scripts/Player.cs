@@ -65,6 +65,7 @@ public class Player : MonoBehaviour
         hurt.SetFloat("Vector1_932E682D", health);
         if (health < 1)
         {
+            StartCoroutine(shakeCamera(0.4f, 1f));
             StartCoroutine(Die());
         }
 
