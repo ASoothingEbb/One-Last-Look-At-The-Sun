@@ -797,6 +797,7 @@ GameObject:
   - component: {fileID: 1687258583}
   - component: {fileID: 1687258588}
   - component: {fileID: 1687258589}
+  - component: {fileID: 1687258590}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1009,6 +1010,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaa8805318c05a74e9673334b80d82f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1687258590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687258581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 0
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_RendererOverrideOption: 1
+  m_RendererData: {fileID: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &2063726841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,6 +1235,11 @@ PrefabInstance:
     - target: {fileID: 1217574574513284239, guid: fddb48217f5c3a0418874ce24642d489,
         type: 3}
       propertyPath: m_EnableTreeColliders
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933042166109405382, guid: fddb48217f5c3a0418874ce24642d489,
+        type: 3}
+      propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
