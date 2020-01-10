@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem.Interactions;
+using UnityEngine.Video;
 
 public class Player : MonoBehaviour
 {
@@ -152,12 +153,11 @@ public class Player : MonoBehaviour
         for (float i = 0; i < parryTime / 2; i += Time.deltaTime)
             yield return null;
         parrying = false;
-        timeSinceLastParry = 0;
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("hazard"))
+        if (other.CompareTag("hazard"))
         {
             takeDamage();
         }
@@ -165,7 +165,7 @@ public class Player : MonoBehaviour
         {
             if (parrying)
             {
-                
+
             }
             else
             {
@@ -182,6 +182,23 @@ public class Player : MonoBehaviour
             {
                 takeDamage();
             }
+        }
+        else if (other.CompareTag("vid"))
+        {
+            var player = GameObject.FindGameObjectWithTag("vid").GetComponent<VideoPlayer>();
+            player.url = Application.dataPath + "/Videos/" + other.name + ".mp4";
+            Debug.Log("enter!!!!  " + "/Videos/" + other.name);
+            player.Play();
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("vid"))
+        {
+            var player = GameObject.FindGameObjectWithTag("vid").GetComponent<VideoPlayer>();
+            Debug.Log("exit!!!!!");
+            player.Stop();
         }
     }
 

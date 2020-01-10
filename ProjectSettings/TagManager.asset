@@ -8,6 +8,7 @@ TagManager:
   - player
   - tapParry
   - holdParry
+  - vid
   layers:
   - Default
   - TransparentFX
