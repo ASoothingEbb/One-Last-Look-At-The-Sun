@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     public Material tapParry;
 
     public Image dieScreen;
+    VideoPlayer vid;
 
     int health = 3;
 
@@ -45,6 +46,7 @@ public class Player : MonoBehaviour
         body = GetComponent<Rigidbody>();
         moveDir = new Vector2();
         cam = GetComponentInChildren<Camera>();
+        vid = GameObject.FindGameObjectWithTag("vid").GetComponent<VideoPlayer>();
     }
 
     public void Update()
@@ -185,10 +187,8 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("vid"))
         {
-            var player = GameObject.FindGameObjectWithTag("vid").GetComponent<VideoPlayer>();
-            player.url = Application.dataPath + "/Videos/" + other.name + ".mp4";
-            Debug.Log("enter!!!!  " + "/Videos/" + other.name);
-            player.Play();
+            vid.url = Application.dataPath + "/Videos/" + other.name + ".mp4";
+            vid.Play();
         }
     }
 
@@ -196,9 +196,7 @@ public class Player : MonoBehaviour
     {
         if (other.CompareTag("vid"))
         {
-            var player = GameObject.FindGameObjectWithTag("vid").GetComponent<VideoPlayer>();
-            Debug.Log("exit!!!!!");
-            player.Stop();
+            vid.Stop();
         }
     }
 
