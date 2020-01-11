@@ -3,8 +3,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem.Interactions;
 using UnityEngine.Video;
+using UnityEngine.Experimental.VFX;
 
 public class Player : MonoBehaviour
 {
@@ -26,7 +26,6 @@ public class Player : MonoBehaviour
     public float maxDist = 5;
     public float maxFallSpeed = 10f;
     public float parryEffectIntensity = 1f;
-
     public Material hurt;
     public Material tapParry;
 
@@ -38,6 +37,10 @@ public class Player : MonoBehaviour
     bool holdingParry = false;
     bool parrying = false;
 
+    VisualEffect dashLines;
+    public float dashLinesRate = 45f;
+    public float dashLinesSpeed = 45f;
+
     Vector2 moveDir;
     Camera cam;
 
@@ -47,6 +50,8 @@ public class Player : MonoBehaviour
         moveDir = new Vector2();
         cam = GetComponentInChildren<Camera>();
         vid = GameObject.FindGameObjectWithTag("vid").GetComponent<VideoPlayer>();
+        dashLines = GetComponentInChildren<VisualEffect>();
+
     }
 
     public void Update()
@@ -135,6 +140,8 @@ public class Player : MonoBehaviour
         {
             dir.y = -1;
         }
+        dashLines.SetFloat("rate", dashLinesRate);
+        dashLines.SetVector3("velocity", -dir * dashLinesSpeed);
         var time = 0f;
         while(time < dashTime)
         {
@@ -142,6 +149,8 @@ public class Player : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
+        dashLines.SetFloat("rate", 0);
+        dashLines.SetVector3("velocity", Vector3.zero);
     } 
 
     public IEnumerator ExecuteShortParry()
