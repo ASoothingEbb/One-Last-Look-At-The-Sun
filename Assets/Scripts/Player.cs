@@ -199,6 +199,10 @@ public class Player : MonoBehaviour
             vid.url = Application.dataPath + "/Videos/" + other.name + ".mp4";
             vid.Play();
         }
+        else if (other.CompareTag("bounce"))
+        {
+            body.velocity = -body.velocity;
+        }
     }
 
     public void OnTriggerExit(Collider other)
