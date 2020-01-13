@@ -35,7 +35,7 @@ public class PitManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerPos.position.y < lastPosSpawned + (maxSections-1.5)*sectionLength)
+        if (playerPos.position.y + sectionLength < lastPosSpawned + (maxSections-1.5)*sectionLength)
         {
             spawnNextSection();
         }

@@ -11,12 +11,10 @@ GameObject:
   - component: {fileID: 1196108074503738284}
   - component: {fileID: 1196108074503738287}
   - component: {fileID: 1196108074503738286}
-  - component: {fileID: 1196108074503738275}
-  - component: {fileID: 1196108074503738274}
-  - component: {fileID: 1196108074503738285}
+  - component: {fileID: 2897428436624718913}
   m_Layer: 0
   m_Name: nibblers
-  m_TagString: holdParry
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,8 +105,8 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &1196108074503738275
-SphereCollider:
+--- !u!65 &2897428436624718913
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -118,31 +116,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.9
+  m_Size: {x: 10, y: 20, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &1196108074503738274
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196108074503738281}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.9
-  m_Center: {x: 0, y: 2, z: 0}
---- !u!135 &1196108074503738285
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196108074503738281}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.9
-  m_Center: {x: 0, y: -2, z: 0}

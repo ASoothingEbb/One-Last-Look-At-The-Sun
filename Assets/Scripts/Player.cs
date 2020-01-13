@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
     public float parryEffectIntensity = 1f;
     public Material hurt;
     public Material tapParry;
+    public float slowMultiplier = 0.3f;
+    bool slowed = false;
 
     public Image dieScreen;
     VideoPlayer vid;
@@ -57,7 +59,7 @@ public class Player : MonoBehaviour
     public void Update()
     {
         body.velocity = Vector3.Lerp(body.velocity, new Vector3(moveDir.x * movementSpeed, body.velocity.y, moveDir.y * movementSpeed), Time.deltaTime * horizontalDampening);
-        body.velocity = new Vector3(body.velocity.x, Mathf.Max(body.velocity.y, - maxFallSpeed), body.velocity.z);
+        body.velocity = new Vector3(body.velocity.x, Mathf.Max(body.velocity.y, - maxFallSpeed * (slowed ? slowMultiplier : 1)), body.velocity.z);
         Vector2 temp = new Vector2(transform.position.x, transform.position.z);
         if (temp.SqrMagnitude() > maxDist*maxDist)
         {
@@ -203,13 +205,24 @@ public class Player : MonoBehaviour
         {
             body.velocity = -body.velocity;
         }
+        else if (other.CompareTag("slow"))
+        {
+            Debug.Log("enter slow!");
+            slowed = true;
+        }
     }
 
     public void OnTriggerExit(Collider other)
     {
+        Debug.Log("trigger exit!");
         if (other.CompareTag("vid"))
         {
             vid.Stop();
+        }
+        else if (other.CompareTag("slow"))
+        {
+            Debug.Log("exit slow!");
+            slowed = false;
         }
     }
 
