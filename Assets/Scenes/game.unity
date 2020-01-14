@@ -1005,6 +1005,7 @@ GameObject:
   - component: {fileID: 836339433}
   - component: {fileID: 836339437}
   - component: {fileID: 836339432}
+  - component: {fileID: 836339439}
   m_Layer: 0
   m_Name: Player
   m_TagString: player
@@ -1131,6 +1132,7 @@ MonoBehaviour:
   parryEffectIntensity: 1
   hurt: {fileID: 2100000, guid: 777f9a44c20686e41a65882311194804, type: 2}
   tapParry: {fileID: 2100000, guid: a8bed727e10947744bb31337b4cd5a2c, type: 2}
+  slowMultiplier: 0.5
   dieScreen: {fileID: 893750341}
   dashLinesRate: 400
   dashLinesSpeed: 100
@@ -1251,6 +1253,19 @@ MonoBehaviour:
   m_DefaultActionMap: dac37852-f911-454a-b2fa-28aba7c9f946
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!135 &836339439
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836339431}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.4
+  m_Center: {x: 0, y: -0.6, z: 0}
 --- !u!1 &893750339
 GameObject:
   m_ObjectHideFlags: 0

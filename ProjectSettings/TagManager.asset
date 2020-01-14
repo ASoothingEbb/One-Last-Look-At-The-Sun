@@ -9,6 +9,8 @@ TagManager:
   - tapParry
   - holdParry
   - vid
+  - bounce
+  - slow
   layers:
   - Default
   - TransparentFX
