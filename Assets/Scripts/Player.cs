@@ -43,6 +43,8 @@ public class Player : MonoBehaviour
     public float dashLinesRate = 45f;
     public float dashLinesSpeed = 45f;
 
+    Coroutine lastDash;
+
     Vector2 moveDir;
     Camera cam;
 
@@ -70,7 +72,7 @@ public class Player : MonoBehaviour
         {
             timeSinceLastParry = 0;
             StartCoroutine(ExecuteShortParry());
-            StartCoroutine(ExecuteShortDash());
+            lastDash = StartCoroutine(ExecuteShortDash());
 
         }
 
@@ -138,16 +140,20 @@ public class Player : MonoBehaviour
         StartCoroutine(shakeCamera(parryCamShakeMag, parryCamShakeTime));
         Vector3 dir = new Vector3(moveDir.x, 0, moveDir.y);
 
-        if(dir.sqrMagnitude < 0.1f)
+        if (dir.sqrMagnitude < 0.1f)
         {
             dir.y = -1;
+        }
+        else
+        {
+            dir.y = -maxFallSpeed / dashDownSpeed;
         }
         dashLines.SetFloat("rate", dashLinesRate);
         dashLines.SetVector3("velocity", -dir * dashLinesSpeed);
         var time = 0f;
         while(time < dashTime)
         {
-            transform.position = new Vector3(dir.normalized.x * dashSideSpeed * Time.deltaTime, dir.normalized.y * dashDownSpeed * Time.deltaTime, dir.normalized.z * dashSideSpeed * Time.deltaTime) + transform.position;
+            body.velocity = new Vector3(dir.normalized.x * dashSideSpeed, dir.normalized.y * dashDownSpeed, dir.normalized.z * dashSideSpeed);
             time += Time.deltaTime;
             yield return null;
         }
@@ -203,8 +209,11 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("bounce"))
         {
-            StopCoroutine("ExecuteShortDash");
+            Debug.Log("Do a bounce!");
+            StopCoroutine(lastDash);
+            Debug.Log("before!: " + body.velocity.ToString());
             body.velocity = -body.velocity;
+            Debug.Log("after!: " + body.velocity.ToString());
         }
         else if (other.CompareTag("slow"))
         {

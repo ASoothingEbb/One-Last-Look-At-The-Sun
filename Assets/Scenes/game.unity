@@ -1002,7 +1002,6 @@ GameObject:
   - component: {fileID: 836339435}
   - component: {fileID: 836339434}
   - component: {fileID: 836339438}
-  - component: {fileID: 836339433}
   - component: {fileID: 836339437}
   - component: {fileID: 836339432}
   - component: {fileID: 836339439}
@@ -1029,20 +1028,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!136 &836339433
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 836339431}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &836339434
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1120,9 +1105,9 @@ MonoBehaviour:
   hurtCooldown: 1
   movementSpeed: 10
   horizontalDampening: 5
-  dashTime: 0.5
-  dashSideSpeed: 15
-  dashDownSpeed: 10
+  dashTime: 0.35
+  dashSideSpeed: 30
+  dashDownSpeed: 30
   parryTime: 0.25
   parryCooldown: 1
   parryCamShakeMag: 0.4
