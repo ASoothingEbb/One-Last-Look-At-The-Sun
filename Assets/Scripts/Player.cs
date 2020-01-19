@@ -203,6 +203,7 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("bounce"))
         {
+            StopCoroutine("ExecuteShortDash");
             body.velocity = -body.velocity;
         }
         else if (other.CompareTag("slow"))
@@ -242,4 +243,3 @@ public class Player : MonoBehaviour
     }
 
 }
-

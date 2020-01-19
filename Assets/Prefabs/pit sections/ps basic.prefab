@@ -529,7 +529,7 @@ MonoBehaviour:
       m_RotationOrder: 4
   - prefab: {fileID: 5471296908070536388, guid: d7b39ca4ab95b614d860f0e6c39df28e,
       type: 3}
-    chance: 0.2
+    chance: 1
     depthChance:
       serializedVersion: 2
       m_Curve:
@@ -824,4 +824,4 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  evenChance: 1
+  evenChance: 0
