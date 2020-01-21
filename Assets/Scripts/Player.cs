@@ -209,11 +209,11 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("bounce"))
         {
-            Debug.Log("Do a bounce!");
-            StopCoroutine(lastDash);
-            Debug.Log("before!: " + body.velocity.ToString());
-            body.velocity = -body.velocity;
-            Debug.Log("after!: " + body.velocity.ToString());
+            if (lastDash != null)
+            {
+                StopCoroutine(lastDash);
+            }
+            body.velocity = -body.velocity * 0.5f;
         }
         else if (other.CompareTag("slow"))
         {
