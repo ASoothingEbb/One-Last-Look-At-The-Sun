@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_tunnelv3
+  m_Name: pinkgreen
   m_Shader: {fileID: -6465566751694194690, guid: f44e1c9aa581f454abf22bab0dad1b5e,
     type: 3}
   m_ShaderKeywords: 
@@ -31,6 +31,7 @@ Material:
     - Vector1_5508946C: -1
     - Vector1_585C3A82: 1
     - Vector1_598F3F1F: 0
+    - Vector1_5B40B077: 0
     - Vector1_64F7CD26: -0.02
     - Vector1_7CB2CF9C: 1.78
     - Vector1_8F072952: 1
@@ -42,6 +43,9 @@ Material:
     - Color_5B95FD3C: {r: 4.368959, g: 0, b: 2.0589347, a: 0}
     - Color_D2AA129A: {r: 1, g: 0, b: 0, a: 0}
     - Vector2_40F122B: {r: 1, g: 2, b: 0, a: 0}
+    - Vector2_428A62E0: {r: 1, g: 1, b: 0, a: 0}
     - Vector2_6122286F: {r: 1, g: 2, b: 0, a: 0}
+    - Vector2_6ECAE893: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_A04E26FA: {r: 1, g: 1, b: 0, a: 0}
     - Vector2_F0BB377B: {r: 3, g: 4, b: 0, a: 0}
     - Vector3_E7E06A35: {r: 1, g: 1, b: 1, a: 0}
