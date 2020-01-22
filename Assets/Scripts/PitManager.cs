@@ -21,6 +21,7 @@ public class PitManager : MonoBehaviour
     TunnelState a;
     TunnelState b;
     int currentTunnelState = 0;
+    int flip = 1;
 
     void Start()
     {
