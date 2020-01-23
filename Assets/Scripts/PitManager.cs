@@ -64,12 +64,14 @@ public class PitManager : MonoBehaviour
         }
         lastPosSpawned -= sectionLength;
         newSection.transform.position = Vector3.up * lastPosSpawned;
+        newSection.GetComponentInChildren<Transform>().localScale = new Vector3(1, flip, 1);
         currentSections.Add(newSection);
         if (currentSections.Count > maxSections)
         {
             Destroy(currentSections[0]);
             currentSections.RemoveAt(0);
         }
+        flip *= -1;
     }
 
     public static float rand(float start, float stop)
