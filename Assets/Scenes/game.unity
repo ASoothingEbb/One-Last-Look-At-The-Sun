@@ -1256,15 +1256,15 @@ MonoBehaviour:
   movementSpeed: 5
   horizontalDampening: 5
   dashTime: 0.35
-  dashSideSpeed: 15
-  dashDownSpeed: 15
+  dashSideSpeed: 3
+  dashDownSpeed: 3
   parryTime: 0.35
   parryCooldown: 1
   parryCamShakeMag: 0.4
   parryCamShakeTime: 0.075
   maxDist: 2.25
   maxFallSpeed: 10
-  parryEffectIntensity: 1
+  parryEffectIntensity: 0.5
   hurt: {fileID: 2100000, guid: 777f9a44c20686e41a65882311194804, type: 2}
   tapParry: {fileID: 2100000, guid: a8bed727e10947744bb31337b4cd5a2c, type: 2}
   slowMultiplier: 0.5

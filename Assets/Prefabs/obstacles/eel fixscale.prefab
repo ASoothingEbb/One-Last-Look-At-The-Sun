@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8296172668660599439}
   m_Layer: 0
   m_Name: eel fixscale
-  m_TagString: tapParry
+  m_TagString: holdParry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
