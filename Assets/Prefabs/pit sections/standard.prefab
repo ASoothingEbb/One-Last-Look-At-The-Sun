@@ -805,6 +805,32 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+  - prefab: {fileID: 936788554240627512, guid: d632755bbd751434186b5fe2ae064162, type: 3}
+    chance: 0.4
+    depthChance:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
   evenChance: 1
 --- !u!1 &8656804124779663134
 GameObject:
@@ -1553,6 +1579,32 @@ MonoBehaviour:
       m_RotationOrder: 4
   - prefab: {fileID: 5730223321613780210, guid: 7144e2f543807d34a882d2217fb7a8ec,
       type: 3}
+    chance: 0.4
+    depthChance:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - prefab: {fileID: 936788554240627512, guid: d632755bbd751434186b5fe2ae064162, type: 3}
     chance: 0.4
     depthChance:
       serializedVersion: 2
