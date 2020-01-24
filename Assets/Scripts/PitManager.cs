@@ -64,7 +64,7 @@ public class PitManager : MonoBehaviour
         }
         lastPosSpawned -= sectionLength;
         newSection.transform.position = Vector3.up * lastPosSpawned;
-        newSection.GetComponentInChildren<Transform>().localScale = new Vector3(1, flip, 1);
+        newSection.transform.GetChild(0).transform.localScale = new Vector3(1, flip, 1);
         currentSections.Add(newSection);
         if (currentSections.Count > maxSections)
         {
