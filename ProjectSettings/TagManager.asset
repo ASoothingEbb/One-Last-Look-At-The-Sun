@@ -11,6 +11,7 @@ TagManager:
   - vid
   - bounce
   - slow
+  - cliff
   layers:
   - Default
   - TransparentFX

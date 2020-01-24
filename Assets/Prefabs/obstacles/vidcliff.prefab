@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4520676286737331385}
   m_Layer: 0
   m_Name: vidcliff
-  m_TagString: Untagged
+  m_TagString: cliff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 3030024129378005921}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: cliff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

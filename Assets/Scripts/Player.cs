@@ -230,6 +230,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void OnCollisionEnter(Collision col)
+    {
+        if (col.collider.CompareTag("cliff"))
+        {
+            health = 3;
+        }
+    }
+
     public void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("vid"))
