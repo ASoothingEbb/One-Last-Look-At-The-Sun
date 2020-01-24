@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
         body = GetComponent<Rigidbody>();
         moveDir = new Vector2();
         cam = GetComponentInChildren<Camera>();
-        vid = GameObject.FindGameObjectWithTag("vid").GetComponent<VideoPlayer>();
+        vid = GameObject.FindGameObjectWithTag("vidPlayer").GetComponent<VideoPlayer>();
         dashLines = GetComponentInChildren<VisualEffect>();
         tapParry.SetFloat("Vector1_5E361D35", 0);
     }

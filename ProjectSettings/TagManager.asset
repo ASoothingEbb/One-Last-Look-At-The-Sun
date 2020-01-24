@@ -12,6 +12,7 @@ TagManager:
   - bounce
   - slow
   - cliff
+  - vidPlayer
   layers:
   - Default
   - TransparentFX
