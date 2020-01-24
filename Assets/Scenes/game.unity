@@ -377,13 +377,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pitSections:
-  - {fileID: 8207636721247263977, guid: 5d1da83e165d4fd49abbe754dfe35680, type: 3}
+  - {fileID: 679782418064105462, guid: 14845ea77dd0cae47878021a47230800, type: 3}
   pitBlank: {fileID: 8207636721247263977, guid: bbb522c15aaa55d44ad904cf88dd2e27,
     type: 3}
   currentSections: []
   sectionLength: 19.1
   lastPosSpawned: 0
-  startBuffer: 1
+  startBuffer: 2
   maxSections: 10
   startSections: 0
   tunnelMat: {fileID: 2100000, guid: ba8286236ef8dd548b57bdcc7bd1ec9d, type: 2}
@@ -1083,6 +1083,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: standard
       objectReference: {fileID: 0}
+    - target: {fileID: 679782418064105462, guid: 14845ea77dd0cae47878021a47230800,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3217577763520603385, guid: 14845ea77dd0cae47878021a47230800,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1173,7 +1178,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -1253,21 +1258,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hurtCooldown: 1
-  movementSpeed: 5
-  horizontalDampening: 5
-  dashTime: 0.35
-  dashSideSpeed: 3
-  dashDownSpeed: 3
-  parryTime: 0.35
-  parryCooldown: 1
+  horizMovementSpeed: 7
+  horizVelDamp: 6
+  vertVelDamp: 6
+  sideSpeedMult: 1.5
+  fallSpeedMult: 1.5
   parryCamShakeMag: 0.4
   parryCamShakeTime: 0.075
-  maxDist: 2.25
-  maxFallSpeed: 10
-  parryEffectIntensity: 0.5
+  maxHorizDist: 3.5
+  fallSpeed: 15
+  parryEffectIntensity: 0.05
   hurt: {fileID: 2100000, guid: 777f9a44c20686e41a65882311194804, type: 2}
   tapParry: {fileID: 2100000, guid: a8bed727e10947744bb31337b4cd5a2c, type: 2}
-  slowMultiplier: 0.5
+  slowSpeedMult: 0.3
+  horizVelDampMult: 1.5
   dieScreen: {fileID: 893750341}
   dashLinesRate: 400
   dashLinesSpeed: 100

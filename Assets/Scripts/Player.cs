@@ -62,9 +62,18 @@ public class Player : MonoBehaviour
         float newX, newY, newZ;
         if (holdingParry)
         {
-            newX = Mathf.Lerp(body.velocity.x, moveDir.x * horizMovementSpeed * sideSpeedMult, horizVelDamp * Time.deltaTime * horizVelDampMult);
-            newY = Mathf.Lerp(body.velocity.y, -fallSpeed * fallSpeedMult, vertVelDamp * Time.deltaTime);
-            newZ = Mathf.Lerp(body.velocity.z, moveDir.y * horizMovementSpeed * sideSpeedMult, horizVelDamp * Time.deltaTime * horizVelDampMult);
+            if (timeSinceHolding < 0.05f)
+            {
+                newX = Mathf.Lerp(body.velocity.x, moveDir.x * horizMovementSpeed * sideSpeedMult * 7f, horizVelDamp * Time.deltaTime * horizVelDampMult);
+                newY = Mathf.Lerp(body.velocity.y, -fallSpeed * fallSpeedMult, vertVelDamp * Time.deltaTime);
+                newZ = Mathf.Lerp(body.velocity.z, moveDir.y * horizMovementSpeed * sideSpeedMult * 7f, horizVelDamp * Time.deltaTime * horizVelDampMult);
+            }
+            else
+            {
+                newX = Mathf.Lerp(body.velocity.x, moveDir.x * horizMovementSpeed * sideSpeedMult, horizVelDamp * Time.deltaTime * horizVelDampMult);
+                newY = Mathf.Lerp(body.velocity.y, -fallSpeed * fallSpeedMult, vertVelDamp * Time.deltaTime);
+                newZ = Mathf.Lerp(body.velocity.z, moveDir.y * horizMovementSpeed * sideSpeedMult, horizVelDamp * Time.deltaTime * horizVelDampMult);
+            }
         }
         else if (slowed)
         {
@@ -120,6 +129,7 @@ public class Player : MonoBehaviour
         {
             holdingParry = true;
             tapParry.SetFloat("Vector1_5E361D35", parryEffectIntensity);
+            timeSinceHolding = 0f;
         }
         else if (context.canceled)
         {
