@@ -9,7 +9,7 @@ using UnityEngine.Video;
 public class Player : MonoBehaviour
 {
 
-    Rigidbody body;
+    
 
     public float hurtCooldown = 1f;
     float timeSinceLastHurt = 0f;
@@ -23,37 +23,40 @@ public class Player : MonoBehaviour
     public float maxHorizDist = 5;
     public float fallSpeed = 10f;
     public float parryEffectIntensity = 1f;
-    public Material hurt;
-    public Material tapParry;
     public float slowSpeedMult = 0.3f;
     bool slowed = false;
     public float horizVelDampMult = 3;
     float timeSinceHolding = 0f;
 
-    public Image dieScreen;
-    VideoPlayer vid;
+    
 
     int health = 3;
 
     bool holdingParry = false;
 
-    VisualEffect dashLines;
+    
     public float dashLinesRate = 45f;
     public float dashLinesSpeed = 45f;
 
     Vector2 moveDir;
-    Camera cam;
 
+    public Material hurt;
+    public Material tapParry;
+    public Camera cam;
+    public VisualEffect dashLines;
+    public Image dieScreen;
+    public VideoPlayer vid;
+    public Rigidbody body;
     public AudioSource hurtNoise;
     public AudioSource parryNoise;
 
     public void Start()
     {
-        body = GetComponent<Rigidbody>();
+        //body = GetComponent<Rigidbody>();
         moveDir = new Vector2();
-        cam = GetComponentInChildren<Camera>();
-        vid = GameObject.FindGameObjectWithTag("vidPlayer").GetComponent<VideoPlayer>();
-        dashLines = GetComponentInChildren<VisualEffect>();
+        //cam = GetComponentInChildren<Camera>();
+        //vid = GameObject.FindGameObjectWithTag("vidPlayer").GetComponent<VideoPlayer>();
+        //dashLines = GetComponentInChildren<VisualEffect>();
         tapParry.SetFloat("Vector1_5E361D35", 0);
     }
 
@@ -163,45 +166,6 @@ public class Player : MonoBehaviour
         }
         SceneManager.LoadScene(1);
     }
-
-    //public IEnumerator ExecuteShortDash()
-    //{
-    //    StartCoroutine(shakeCamera(parryCamShakeMag, parryCamShakeTime));
-    //    Vector3 dir = new Vector3(moveDir.x, 0, moveDir.y);
-
-    //    if (dir.sqrMagnitude < 0.1f)
-    //    {
-    //        dir.y = -1;
-    //    }
-    //    else
-    //    {
-    //        dir.y = -fallSpeed / fallSpeedMult;
-    //    }
-    //    dashLines.SetFloat("rate", dashLinesRate);
-    //    dashLines.SetVector3("velocity", -dir * dashLinesSpeed);
-    //    var time = 0f;
-    //    while (time < dashTime)
-    //    {
-    //        body.velocity = new Vector3(dir.normalized.x * sideSpeedMult, dir.normalized.y * fallSpeedMult, dir.normalized.z * sideSpeedMult);
-    //        time += Time.deltaTime;
-    //        yield return null;
-    //    }
-    //    dashLines.SetFloat("rate", 0);
-    //    dashLines.SetVector3("velocity", Vector3.zero);
-    //}
-
-    //public ienumerator executeshortparry()
-    //{
-    //    parrying = true;
-    //    //vector1_5e361d35
-    //    startcoroutine(fademat(tapparry, "vector1_5e361d35", 0, parryeffectintensity, parrytime / 2));
-    //    for (float i = 0; i < parrytime / 2; i += time.deltatime)
-    //        yield return null;
-    //    startcoroutine(fademat(tapparry, "vector1_5e361d35", parryeffectintensity, 0, parrytime / 2));
-    //    for (float i = 0; i < parrytime / 2; i += time.deltatime)
-    //        yield return null;
-    //    parrying = false;
-    //}
 
     public void OnTriggerEnter(Collider other)
     {

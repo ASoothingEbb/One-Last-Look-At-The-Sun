@@ -6,13 +6,11 @@ TagManager:
   tags:
   - hazard
   - player
-  - tapParry
   - holdParry
   - vid
   - bounce
   - slow
   - cliff
-  - vidPlayer
   layers:
   - Default
   - TransparentFX
