@@ -44,6 +44,9 @@ public class Player : MonoBehaviour
     Vector2 moveDir;
     Camera cam;
 
+    public AudioSource hurtNoise;
+    public AudioSource parryNoise;
+
     public void Start()
     {
         body = GetComponent<Rigidbody>();
@@ -106,6 +109,8 @@ public class Player : MonoBehaviour
     {
         if (timeSinceLastHurt > hurtCooldown)
         {
+            hurtNoise.pitch = (float)PitManager.random.NextDouble() * -0.4f + 1.2f;
+            hurtNoise.Play();
             timeSinceLastHurt = 0;
             health -= 1;
             StartCoroutine(shakeCamera(.4f, .4f));
@@ -203,12 +208,14 @@ public class Player : MonoBehaviour
         if (other.CompareTag("hazard"))
         {
             takeDamage();
+            Debug.Log("bloop");
         }
         else if (other.CompareTag("holdParry"))
         {
             if (holdingParry)
             {
-                //play sound
+                parryNoise.pitch = (float)PitManager.random.NextDouble() * -0.4f + 1.2f;
+                parryNoise.Play();
             }
             else
             {
