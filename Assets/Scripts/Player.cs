@@ -49,6 +49,10 @@ public class Player : MonoBehaviour
     public Rigidbody body;
     public AudioSource hurtNoise;
     public AudioSource parryNoise;
+    public AudioSource tapDashNoise;
+    public AudioSource holdDashNoise;
+    public AudioSource healNoise;
+    public AudioSource dieNoise;
 
     public void Start()
     {

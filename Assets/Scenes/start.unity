@@ -493,27 +493,39 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836339431}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d17af2866e49b9540ae8f23ad438776c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hurtCooldown: 1
-  movementSpeed: 0
-  horizontalDampening: 0
-  dashTime: 0
-  dashSideSpeed: 2
-  dashDownSpeed: 2
-  parryTime: 0
-  parryCooldown: 0
+  horizMovementSpeed: 100
+  horizVelDamp: 5
+  vertVelDamp: 2
+  sideSpeedMult: 2
+  fallSpeedMult: 2
   parryCamShakeMag: 0
   parryCamShakeTime: 0
-  maxDist: 1
-  maxFallSpeed: 10
+  maxHorizDist: 5
+  fallSpeed: 10
   parryEffectIntensity: 1
+  slowSpeedMult: 0.3
+  horizVelDampMult: 3
+  dashLinesRate: 45
+  dashLinesSpeed: 45
   hurt: {fileID: 2100000, guid: 777f9a44c20686e41a65882311194804, type: 2}
   tapParry: {fileID: 2100000, guid: a8bed727e10947744bb31337b4cd5a2c, type: 2}
+  cam: {fileID: 0}
+  dashLines: {fileID: 0}
   dieScreen: {fileID: 0}
+  vid: {fileID: 0}
+  body: {fileID: 0}
+  hurtNoise: {fileID: 0}
+  parryNoise: {fileID: 0}
+  tapDashNoise: {fileID: 0}
+  holdDashNoise: {fileID: 0}
+  healNoise: {fileID: 0}
+  dieNoise: {fileID: 0}
 --- !u!114 &836339438
 MonoBehaviour:
   m_ObjectHideFlags: 0

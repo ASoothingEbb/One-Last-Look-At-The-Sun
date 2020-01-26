@@ -165,14 +165,14 @@ MonoBehaviour:
     depth: 500
   - mat: {fileID: 2100000, guid: 745e4ae7a2b30ea4bb5e1fb8bb33665d, type: 2}
     depth: 0
-  - mat: {fileID: 2100000, guid: 745e4ae7a2b30ea4bb5e1fb8bb33665d, type: 2}
-    depth: -2000
   - mat: {fileID: 2100000, guid: 045df28e40c52a242b70576e56fa0383, type: 2}
-    depth: -5000
+    depth: -500
   - mat: {fileID: 2100000, guid: 440392962e4c90f41843da7f5189e58c, type: 2}
-    depth: -10000
+    depth: -1000
   - mat: {fileID: 2100000, guid: 0d4e4eba6c94ff3459a7d4774ad5e351, type: 2}
-    depth: -15000
+    depth: -1500
+  - mat: {fileID: 2100000, guid: 9428aed3eeb73684eb40d7c7a336357b, type: 2}
+    depth: -2000
   - mat: {fileID: 2100000, guid: 9428aed3eeb73684eb40d7c7a336357b, type: 2}
     depth: -20000
   - mat: {fileID: 2100000, guid: 22828c2d429d03945a930361fd820267, type: 2}
@@ -785,6 +785,10 @@ MonoBehaviour:
   body: {fileID: 836339432}
   hurtNoise: {fileID: 836339441}
   parryNoise: {fileID: 836339433}
+  tapDashNoise: {fileID: 0}
+  holdDashNoise: {fileID: 0}
+  healNoise: {fileID: 0}
+  dieNoise: {fileID: 0}
 --- !u!114 &836339438
 MonoBehaviour:
   m_ObjectHideFlags: 0
