@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     bool slowed = false;
     public float horizVelDampMult = 3;
     float timeSinceHolding = 0f;
+    public float endDepth = -2000;
 
     
 
@@ -51,6 +52,7 @@ public class Player : MonoBehaviour
     public AudioSource parryNoise;
     public AudioSource tapDashNoise;
     public AudioSource holdDashNoise;
+    public AudioSource holdDashEndNoise;
     public AudioSource healNoise;
     public AudioSource dieNoise;
 
@@ -110,6 +112,12 @@ public class Player : MonoBehaviour
         timeSinceLastHurt += Time.deltaTime;
         timeSinceHolding += Time.deltaTime;
         hurt.SetFloat("Vector1_932E682D", health);
+
+        //check if at game end
+        if (transform.position.y < endDepth)
+        {
+            SceneManager.LoadScene("end");
+        }
     }
 
     public void takeDamage()
@@ -168,7 +176,7 @@ public class Player : MonoBehaviour
             dieScreen.color = new Color(0, 0, 0, i);
             yield return null;
         }
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("game");
     }
 
     public void OnTriggerEnter(Collider other)
