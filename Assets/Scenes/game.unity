@@ -165,13 +165,13 @@ MonoBehaviour:
     depth: 500
   - mat: {fileID: 2100000, guid: 745e4ae7a2b30ea4bb5e1fb8bb33665d, type: 2}
     depth: 0
-  - mat: {fileID: 2100000, guid: 045df28e40c52a242b70576e56fa0383, type: 2}
+  - mat: {fileID: 2100000, guid: 0d4e4eba6c94ff3459a7d4774ad5e351, type: 2}
     depth: -500
   - mat: {fileID: 2100000, guid: 440392962e4c90f41843da7f5189e58c, type: 2}
     depth: -1000
-  - mat: {fileID: 2100000, guid: 0d4e4eba6c94ff3459a7d4774ad5e351, type: 2}
-    depth: -1500
   - mat: {fileID: 2100000, guid: 9428aed3eeb73684eb40d7c7a336357b, type: 2}
+    depth: -1500
+  - mat: {fileID: 2100000, guid: 045df28e40c52a242b70576e56fa0383, type: 2}
     depth: -2000
   - mat: {fileID: 2100000, guid: 9428aed3eeb73684eb40d7c7a336357b, type: 2}
     depth: -20000
@@ -771,10 +771,10 @@ MonoBehaviour:
   parryCamShakeTime: 0.075
   maxHorizDist: 3.5
   fallSpeed: 15
-  parryEffectIntensity: 0.05
+  parryEffectIntensity: 0.1
   slowSpeedMult: 0.3
   horizVelDampMult: 1.5
-  endDepth: -500
+  endDepth: -200
   dashLinesRate: 400
   dashLinesSpeed: 100
   hurt: {fileID: 2100000, guid: 777f9a44c20686e41a65882311194804, type: 2}

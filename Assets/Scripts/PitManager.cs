@@ -16,6 +16,7 @@ public class PitManager : MonoBehaviour
     public const int max_depth = 15000;
     public float startSections;
     public Material tunnelMat;
+    public static float timeSinceStart = 0;
 
     public TunnelState[] tunnelStates;
     TunnelState a;
@@ -31,6 +32,7 @@ public class PitManager : MonoBehaviour
         for (int i = 0; i < maxSections; i++) spawnNextSection();
         a = tunnelStates[currentTunnelState];
         b = tunnelStates[currentTunnelState + 1];
+        timeSinceStart = 0;
     }
 
     // Update is called once per frame
@@ -49,6 +51,7 @@ public class PitManager : MonoBehaviour
         }
 
         tunnelMat.Lerp(a.mat, b.mat, (playerPos.position.y - a.depth) / (b.depth - a.depth));
+        timeSinceStart += Time.deltaTime;
     }
 
     void spawnNextSection()
