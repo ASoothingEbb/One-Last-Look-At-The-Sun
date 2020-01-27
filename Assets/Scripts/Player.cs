@@ -116,7 +116,7 @@ public class Player : MonoBehaviour
         //check if at game end
         if (transform.position.y < endDepth)
         {
-            SceneManager.LoadScene("end");
+            StartCoroutine(FadeOut(1, "end"));
         }
     }
 
@@ -132,7 +132,7 @@ public class Player : MonoBehaviour
             if (health < 1)
             {
                 StartCoroutine(shakeCamera(0.4f, 1f));
-                StartCoroutine(Die());
+                StartCoroutine(FadeOut(0, "game"));
             }
         }
 
@@ -168,15 +168,15 @@ public class Player : MonoBehaviour
         mat.SetFloat(property, stop);
     }
 
-    public IEnumerator Die()
+    public IEnumerator FadeOut(float shade, string sceneToLoad)
     {
         //StartCoroutine(FadeMat(hurt, "Vector1_932E682D", 0, -1, 1));
         for (float i = 0; i <= 1; i += Time.deltaTime)
         {
-            dieScreen.color = new Color(0, 0, 0, i);
+            dieScreen.color = new Color(shade, shade, shade, i);
             yield return null;
         }
-        SceneManager.LoadScene("game");
+        SceneManager.LoadScene(sceneToLoad);
     }
 
     public void OnTriggerEnter(Collider other)
