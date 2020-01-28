@@ -1,5 +1,12 @@
 {
-    "m_SerializedProperties": [],
+    "m_SerializedProperties": [
+        {
+            "typeInfo": {
+                "fullName": "UnityEditor.ShaderGraph.ColorShaderProperty"
+            },
+            "JSONnodeData": "{\n    \"m_Name\": \"Color\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"0bd8afad-0500-4d28-a447-29c77ae434d4\"\n    },\n    \"m_DefaultReferenceName\": \"Color_AD8C6C79\",\n    \"m_OverrideReferenceName\": \"\",\n    \"m_Precision\": 0,\n    \"m_Value\": {\n        \"r\": 0.0,\n        \"g\": 1.4820301532745362,\n        \"b\": 3.538347005844116,\n        \"a\": 0.0\n    },\n    \"m_ColorMode\": 1,\n    \"m_Hidden\": false\n}"
+        }
+    ],
     "m_SerializableNodes": [
         {
             "typeInfo": {
