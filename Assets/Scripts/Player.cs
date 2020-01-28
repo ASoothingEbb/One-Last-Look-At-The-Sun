@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
 
     
 
-    int health = 3;
+    public int health = 3;
 
     bool holdingParry = false;
 
