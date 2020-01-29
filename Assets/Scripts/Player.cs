@@ -204,7 +204,7 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("bounce"))
         {
-            body.velocity = -body.velocity * 0.5f;
+            body.velocity = -body.velocity * 5f;
         }
         else if (other.CompareTag("slow"))
         {

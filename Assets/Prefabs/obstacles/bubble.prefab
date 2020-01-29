@@ -113,10 +113,10 @@ MonoBehaviour:
   maxX: 1
   minY: 0
   maxY: 0
-  minZ: 0.1
+  minZ: 0.3
   maxZ: 1
-  minSpeed: 0.5
-  maxSpeed: 0.5
+  minSpeed: 1.5
+  maxSpeed: 1.5
 --- !u!114 &4315164913508085279
 MonoBehaviour:
   m_ObjectHideFlags: 0
