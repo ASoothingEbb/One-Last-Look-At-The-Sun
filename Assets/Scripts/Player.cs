@@ -184,7 +184,6 @@ public class Player : MonoBehaviour
         if (other.CompareTag("hazard"))
         {
             takeDamage();
-            Debug.Log("bloop");
         }
         else if (other.CompareTag("holdParry"))
         {

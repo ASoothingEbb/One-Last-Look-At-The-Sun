@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: egg inner
-  m_Shader: {fileID: -6465566751694194690, guid: bc626993856019045aa204f45986788f,
+  m_Name: blue jelly
+  m_Shader: {fileID: -6465566751694194690, guid: d9e8992da009a784fa69dbd291f0125e,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -22,4 +22,4 @@ Material:
     m_TexEnvs: []
     m_Floats: []
     m_Colors:
-    - Color_7AA942FD: {r: 45.138145, g: 45.138145, b: 45.138145, a: 0}
+    - Color_C94CFBDF: {r: 0, g: 11.00169, b: 41.168556, a: 0}

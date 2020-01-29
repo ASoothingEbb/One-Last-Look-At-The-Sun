@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: jelly
-  m_Shader: {fileID: -6465566751694194690, guid: d9e8992da009a784fa69dbd291f0125e,
+  m_Name: blue skate
+  m_Shader: {fileID: -6465566751694194690, guid: 58923c0fc067a1443b8c6097c932837b,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,6 +20,8 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs: []
-    m_Floats: []
+    m_Floats:
+    - Vector1_17B87AE9: 2
+    - Vector1_38A9EDCC: 1
     m_Colors:
-    - Color_C94CFBDF: {r: 41.16855, g: 0, b: 0, a: 0}
+    - Color_6DED5A69: {r: 0, g: 13.050981, b: 47.937256, a: 0}

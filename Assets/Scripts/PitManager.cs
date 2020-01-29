@@ -79,7 +79,7 @@ public class PitManager : MonoBehaviour
 
     public static float rand(float start, float stop)
     {
-        return (float)(random.NextDouble() * (stop - start) - start);
+        return (float)(random.NextDouble() * (stop - start) + start);
     }
 }
 

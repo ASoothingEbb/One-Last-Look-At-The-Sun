@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: hurt
-  m_Shader: {fileID: -6465566751694194690, guid: 76261c6d2e4e4424793612304e19626b,
+  m_Name: red skate
+  m_Shader: {fileID: -6465566751694194690, guid: 58923c0fc067a1443b8c6097c932837b,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -21,5 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - Vector1_932E682D: 998
-    m_Colors: []
+    - Vector1_17B87AE9: 2
+    - Vector1_38A9EDCC: 1
+    m_Colors:
+    - Color_6DED5A69: {r: 191.74902, g: 0, b: 0, a: 0}
