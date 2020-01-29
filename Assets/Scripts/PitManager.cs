@@ -17,6 +17,8 @@ public class PitManager : MonoBehaviour
     public float startSections;
     public Material tunnelMat;
     public static float timeSinceStart = 0;
+    public float sectionsBetweenMurals = 10;
+    float sectionsSinceLastMural = 0;
 
     public TunnelState[] tunnelStates;
     TunnelState a;

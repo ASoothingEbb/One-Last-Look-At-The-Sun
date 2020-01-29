@@ -35,16 +35,11 @@ public class Player : MonoBehaviour
 
     bool holdingParry = false;
 
-    
-    public float dashLinesRate = 45f;
-    public float dashLinesSpeed = 45f;
-
     Vector2 moveDir;
 
     public Material hurt;
     public Material tapParry;
     public Camera cam;
-    public VisualEffect dashLines;
     public Image dieScreen;
     public VideoPlayer vid;
     public Rigidbody body;
@@ -58,11 +53,7 @@ public class Player : MonoBehaviour
 
     public void Start()
     {
-        //body = GetComponent<Rigidbody>();
         moveDir = new Vector2();
-        //cam = GetComponentInChildren<Camera>();
-        //vid = GameObject.FindGameObjectWithTag("vidPlayer").GetComponent<VideoPlayer>();
-        //dashLines = GetComponentInChildren<VisualEffect>();
         tapParry.SetFloat("Vector1_5E361D35", 0);
     }
 
@@ -170,7 +161,6 @@ public class Player : MonoBehaviour
 
     public IEnumerator FadeOut(float shade, string sceneToLoad)
     {
-        //StartCoroutine(FadeMat(hurt, "Vector1_932E682D", 0, -1, 1));
         for (float i = 0; i <= 1; i += Time.deltaTime)
         {
             dieScreen.color = new Color(shade, shade, shade, i);
