@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PitManager : MonoBehaviour
 {
-    public GameObject[] pitSections;
+    public GameObject pitStandard;
     public GameObject pitBlank;
+    public GameObject pitMural;
     public List<GameObject> currentSections;
     public float sectionLength = 249.99f;
     Transform playerPos;
@@ -61,12 +62,16 @@ public class PitManager : MonoBehaviour
         GameObject newSection;
         if (lastPosSpawned > -sectionLength * startBuffer)
         {
-            newSection = Instantiate(pitBlank, this.transform);
+            newSection = pitBlank;
+        }
+        else if (sectionsSinceLastMural % sectionsBetweenMurals == 0){
+            newSection = pitMural;
         }
         else
         {
-            newSection = Instantiate(pitSections[random.Next(0, pitSections.Length)], this.transform);
+            newSection = pitStandard;
         }
+        newSection = Instantiate(newSection, this.transform);
         lastPosSpawned -= sectionLength;
         newSection.transform.position = Vector3.up * lastPosSpawned;
         newSection.transform.GetChild(0).transform.localScale = new Vector3(1, flip, 1);
@@ -76,6 +81,7 @@ public class PitManager : MonoBehaviour
             Destroy(currentSections[0]);
             currentSections.RemoveAt(0);
         }
+        sectionsSinceLastMural += 1;
         flip *= -1;
     }
 
