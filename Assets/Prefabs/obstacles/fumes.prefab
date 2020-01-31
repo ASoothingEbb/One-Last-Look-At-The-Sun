@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6081870832994917609}
   - component: {fileID: 6081870832994917610}
   - component: {fileID: 6081870832994917611}
-  - component: {fileID: 6081870832994917608}
+  - component: {fileID: 5944045117550841796}
   m_Layer: 0
   m_Name: fumes
   m_TagString: hazard
@@ -105,8 +105,8 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &6081870832994917608
-CapsuleCollider:
+--- !u!65 &5944045117550841796
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -115,7 +115,6 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1
-  m_Height: 1
-  m_Direction: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}

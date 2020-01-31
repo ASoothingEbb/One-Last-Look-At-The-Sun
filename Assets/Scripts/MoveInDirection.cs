@@ -28,6 +28,6 @@ public class MoveInDirection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = transform.position + direction.normalized * Time.deltaTime * speed;
+        transform.localPosition = transform.localPosition + direction.normalized * Time.deltaTime * speed;
     }
 }

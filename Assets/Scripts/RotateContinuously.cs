@@ -8,6 +8,7 @@ public class RotateContinuously : MonoBehaviour
     public bool random = false;
     public float minRandom = 0f;
     public float maxRandom = 20f;
+    public float offset = 0f;
 
     private void Start()
     {
@@ -18,6 +19,6 @@ public class RotateContinuously : MonoBehaviour
     }
     void Update()
     {
-        transform.rotation = Quaternion.Euler(0, Time.time * speed, 0);
+        transform.rotation = Quaternion.Euler(0, offset + Time.time * speed, 0);
     }
 }
