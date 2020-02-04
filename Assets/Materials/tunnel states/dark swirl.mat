@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: clouds 2
+  m_Name: dark swirl
   m_Shader: {fileID: -6465566751694194690, guid: f44e1c9aa581f454abf22bab0dad1b5e,
     type: 3}
   m_ShaderKeywords: 
@@ -26,22 +26,23 @@ Material:
     - Vector1_3CB99EEF: 0.296
     - Vector1_427A4790: 0
     - Vector1_436EA4AF: 0.44
-    - Vector1_4965E593: -2.85
-    - Vector1_4BB411CC: 0.196
+    - Vector1_4965E593: 11.02
+    - Vector1_4BB411CC: 0.266
     - Vector1_5508946C: 0
     - Vector1_585C3A82: -2.31
     - Vector1_598F3F1F: 2.59
     - Vector1_5B40B077: 1
-    - Vector1_64F7CD26: 0.11
+    - Vector1_61B3EA7D: 37
+    - Vector1_64F7CD26: 0.12
     - Vector1_7CB2CF9C: 1.02
-    - Vector1_8F072952: 0.58
+    - Vector1_8F072952: 0.3
     - Vector1_AAFD6E51: -3.16
     - Vector1_D3F0B5F1: -9.85
     - Vector1_E6A2403B: 0.2
     m_Colors:
     - Color_30BCA8B2: {r: 5.937239, g: 5.937239, b: 5.937239, a: 0}
     - Color_5B95FD3C: {r: 0.13207549, g: 0.11190747, b: 0.052954797, a: 0}
-    - Color_D2AA129A: {r: 5.508716, g: 5.538493, b: 5.6873775, a: 0}
+    - Color_D2AA129A: {r: 4, g: 4, b: 4, a: 0}
     - Vector2_40F122B: {r: 0.1, g: 0.06, b: 0, a: 0}
     - Vector2_428A62E0: {r: 1, g: 1, b: 0, a: 0}
     - Vector2_6122286F: {r: 5, g: 5, b: 0, a: 0}

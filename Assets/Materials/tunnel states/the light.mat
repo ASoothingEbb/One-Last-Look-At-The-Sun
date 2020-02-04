@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: purp
+  m_Name: the light
   m_Shader: {fileID: -6465566751694194690, guid: f44e1c9aa581f454abf22bab0dad1b5e,
     type: 3}
   m_ShaderKeywords: 
@@ -21,32 +21,28 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - Vector1_1B5F0BAA: -0.2
-    - Vector1_3A77257F: 0.25
+    - Vector1_1B5F0BAA: 1
+    - Vector1_3A77257F: 1
     - Vector1_3CB99EEF: 0
-    - Vector1_427A4790: 0.091
-    - Vector1_436EA4AF: 0.36
-    - Vector1_4965E593: 0.4
-    - Vector1_4BB411CC: 0.463
-    - Vector1_5508946C: 0
-    - Vector1_585C3A82: 6.4
-    - Vector1_598F3F1F: 0
-    - Vector1_5B40B077: 4.02
+    - Vector1_427A4790: 0
+    - Vector1_436EA4AF: 1
+    - Vector1_4965E593: 0
+    - Vector1_4BB411CC: 0
+    - Vector1_5508946C: -1
+    - Vector1_585C3A82: 1
+    - Vector1_5B40B077: 0
     - Vector1_61B3EA7D: 37
-    - Vector1_64F7CD26: 5.85
-    - Vector1_7CB2CF9C: 2
+    - Vector1_64F7CD26: 1
     - Vector1_8F072952: 1
-    - Vector1_AAFD6E51: 0.53
-    - Vector1_D3F0B5F1: -2.39
-    - Vector1_E6A2403B: 0.2
+    - Vector1_AAFD6E51: 0
+    - Vector1_D3F0B5F1: 0
     m_Colors:
-    - Color_30BCA8B2: {r: 9.258901, g: 17.432196, b: 5.344777, a: 0}
-    - Color_5B95FD3C: {r: 0.7075472, g: 0.57071024, b: 0.5916773, a: 0}
-    - Color_D2AA129A: {r: 2.2846332, g: 1.5410497, b: 1.9797627, a: 0}
+    - Color_30BCA8B2: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 0}
+    - Color_5B95FD3C: {r: 1, g: 1, b: 1, a: 0}
+    - Color_D2AA129A: {r: 1, g: 1, b: 1, a: 0}
     - Vector2_40F122B: {r: 0, g: 0, b: 0, a: 0}
     - Vector2_428A62E0: {r: 1, g: 1, b: 0, a: 0}
-    - Vector2_6122286F: {r: 5, g: 5, b: 0, a: 0}
+    - Vector2_6122286F: {r: 0, g: 0, b: 0, a: 0}
     - Vector2_6ECAE893: {r: 1, g: 1, b: 0, a: 0}
     - Vector2_A04E26FA: {r: 1, g: 1, b: 0, a: 0}
-    - Vector2_F0BB377B: {r: 1, g: 1, b: 0, a: 0}
-    - Vector3_E7E06A35: {r: 1, g: 1, b: 1, a: 0}
+    - Vector2_F0BB377B: {r: 0, g: 0, b: 0, a: 0}

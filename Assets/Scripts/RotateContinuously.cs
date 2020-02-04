@@ -8,6 +8,7 @@ public class RotateContinuously : MonoBehaviour
     public bool random = false;
     public float minRandom = 0f;
     public float maxRandom = 20f;
+    public bool randomOffset = false;
     public float offset = 0f;
 
     private void Start()
@@ -15,6 +16,11 @@ public class RotateContinuously : MonoBehaviour
         if (random)
         {
             speed = PitManager.rand(minRandom, maxRandom);
+        }
+
+        if (randomOffset)
+        {
+            offset = PitManager.rand(0, 360);
         }
     }
     void Update()

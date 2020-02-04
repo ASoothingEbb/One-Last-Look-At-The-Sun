@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pinkgreen
+  m_Name: magma
   m_Shader: {fileID: -6465566751694194690, guid: f44e1c9aa581f454abf22bab0dad1b5e,
     type: 3}
   m_ShaderKeywords: 
@@ -21,32 +21,32 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - Vector1_1B5F0BAA: 0.16
-    - Vector1_3A77257F: 0.2
-    - Vector1_3CB99EEF: 0.141
-    - Vector1_427A4790: 0.441
+    - Vector1_1B5F0BAA: 0.36
+    - Vector1_3A77257F: 1.12
+    - Vector1_3CB99EEF: 0.363
+    - Vector1_427A4790: 0.388
     - Vector1_436EA4AF: 0.3
-    - Vector1_4965E593: 0
+    - Vector1_4965E593: 14.01
     - Vector1_4BB411CC: 0.453
     - Vector1_5508946C: -1
-    - Vector1_585C3A82: 1
+    - Vector1_585C3A82: 1.13
     - Vector1_598F3F1F: 0
-    - Vector1_5B40B077: 1
-    - Vector1_61B3EA7D: 37
+    - Vector1_5B40B077: 3
+    - Vector1_61B3EA7D: 42.58
     - Vector1_64F7CD26: -0.02
     - Vector1_7CB2CF9C: 1.78
     - Vector1_8F072952: 1
     - Vector1_AAFD6E51: 1
-    - Vector1_D3F0B5F1: 1
+    - Vector1_D3F0B5F1: -0.31
     - Vector1_E6A2403B: 1.51
     m_Colors:
     - Color_30BCA8B2: {r: 0.21960784, g: 2.4627452, b: 0, a: 0}
-    - Color_5B95FD3C: {r: 4.368959, g: 0, b: 2.0589347, a: 0}
-    - Color_D2AA129A: {r: 1, g: 0, b: 0, a: 0}
-    - Vector2_40F122B: {r: 1, g: 2, b: 0, a: 0}
+    - Color_5B95FD3C: {r: 4.848749, g: 1.6754841, b: 0, a: 0}
+    - Color_D2AA129A: {r: 0.34901962, g: 0.34117648, b: 0.13725491, a: 0}
+    - Vector2_40F122B: {r: 0, g: 0.2, b: 0, a: 0}
     - Vector2_428A62E0: {r: 1, g: 1, b: 0, a: 0}
-    - Vector2_6122286F: {r: 1, g: 2, b: 0, a: 0}
+    - Vector2_6122286F: {r: 0.1, g: 0.2, b: 0, a: 0}
     - Vector2_6ECAE893: {r: 1, g: 1, b: 0, a: 0}
-    - Vector2_A04E26FA: {r: 1, g: 1, b: 0, a: 0}
-    - Vector2_F0BB377B: {r: 3, g: 4, b: 0, a: 0}
+    - Vector2_A04E26FA: {r: 0.35, g: 1, b: 0, a: 0}
+    - Vector2_F0BB377B: {r: 0, g: 0.2, b: 0, a: 0}
     - Vector3_E7E06A35: {r: 1, g: 1, b: 1, a: 0}
