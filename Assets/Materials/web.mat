@@ -21,4 +21,5 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats: []
-    m_Colors: []
+    m_Colors:
+    - Color_AD8C6C79: {r: 191.74902, g: 191.74902, b: 191.74902, a: 0}

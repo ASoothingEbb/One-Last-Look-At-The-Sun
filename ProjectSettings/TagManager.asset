@@ -11,6 +11,7 @@ TagManager:
   - bounce
   - slow
   - cliff
+  - accel
   layers:
   - Default
   - TransparentFX

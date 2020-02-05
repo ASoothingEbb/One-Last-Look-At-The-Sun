@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     float timeSinceHolding = 0f;
     public float endDepth = -2000;
     float acceleratedTime = 0;
+    float accelToAdd = 30f;
     public float acceleratedMult = 1.25f;
     public float initDashTime = 0.05f;
     public float initDashMult = 7;
@@ -191,6 +192,10 @@ public class Player : MonoBehaviour
             {
                 takeDamage();
             }
+        }
+        else if (other.CompareTag("accel"))
+        {
+            acceleratedTime = -accelToAdd;
         }
         else if (other.CompareTag("vid"))
         {
