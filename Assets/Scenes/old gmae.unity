@@ -223,14 +223,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf929205907b5c4fbadd7591a8e0eb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pitStandard: {fileID: 679782418064105462, guid: 4ef54340457bdac47b94fdbd376d6303,
+  pitStandard: {fileID: 679782418064105462, guid: 14845ea77dd0cae47878021a47230800,
     type: 3}
   pitBlank: {fileID: 7563236848205761239, guid: a5bcd92526dd53343b370cd52b7a2778,
     type: 3}
   pitMural: {fileID: 7563236848205761239, guid: 97807fc285a6a9d4eb37e7d56499b67d,
     type: 3}
   currentSections: []
-  sectionLength: 25
+  sectionLength: 19.1
   lastPosSpawned: 0
   startBuffer: 2
   maxSections: 10
@@ -248,44 +248,24 @@ MonoBehaviour:
     depth: -550
   - mat: {fileID: 2100000, guid: aef13be66fed3d040a4bf0c7283c9b62, type: 2}
     depth: -1000
-  - mat: {fileID: 2100000, guid: cad731e5975f78e4fb2287f828fc9a31, type: 2}
+  - mat: {fileID: 2100000, guid: 045df28e40c52a242b70576e56fa0383, type: 2}
     depth: -1050
-  - mat: {fileID: 2100000, guid: cad731e5975f78e4fb2287f828fc9a31, type: 2}
+  - mat: {fileID: 2100000, guid: 045df28e40c52a242b70576e56fa0383, type: 2}
     depth: -1500
-  - mat: {fileID: 2100000, guid: 1547ec152b64fe6489dd474c3a22eded, type: 2}
+  - mat: {fileID: 2100000, guid: 440392962e4c90f41843da7f5189e58c, type: 2}
     depth: -1550
-  - mat: {fileID: 2100000, guid: 1547ec152b64fe6489dd474c3a22eded, type: 2}
+  - mat: {fileID: 2100000, guid: 440392962e4c90f41843da7f5189e58c, type: 2}
     depth: -2000
-  - mat: {fileID: 2100000, guid: 045df28e40c52a242b70576e56fa0383, type: 2}
+  - mat: {fileID: 2100000, guid: 0d4e4eba6c94ff3459a7d4774ad5e351, type: 2}
     depth: -2050
-  - mat: {fileID: 2100000, guid: 045df28e40c52a242b70576e56fa0383, type: 2}
+  - mat: {fileID: 2100000, guid: 0d4e4eba6c94ff3459a7d4774ad5e351, type: 2}
     depth: -2500
-  - mat: {fileID: 2100000, guid: 440392962e4c90f41843da7f5189e58c, type: 2}
+  - mat: {fileID: 2100000, guid: 9428aed3eeb73684eb40d7c7a336357b, type: 2}
     depth: -2550
-  - mat: {fileID: 2100000, guid: 440392962e4c90f41843da7f5189e58c, type: 2}
-    depth: -3000
-  - mat: {fileID: 2100000, guid: 8c4964018950d4049b365c22b2334c5e, type: 2}
-    depth: -3050
-  - mat: {fileID: 2100000, guid: 8c4964018950d4049b365c22b2334c5e, type: 2}
-    depth: -3500
-  - mat: {fileID: 2100000, guid: dfb4c254da087b64f80d607cf8cdd7b9, type: 2}
-    depth: -3550
-  - mat: {fileID: 2100000, guid: dfb4c254da087b64f80d607cf8cdd7b9, type: 2}
-    depth: -4000
-  - mat: {fileID: 2100000, guid: 5ea19ace553e2fa4992f08095b2134cf, type: 2}
-    depth: -4050
-  - mat: {fileID: 2100000, guid: 5ea19ace553e2fa4992f08095b2134cf, type: 2}
-    depth: -4500
   - mat: {fileID: 2100000, guid: 9428aed3eeb73684eb40d7c7a336357b, type: 2}
-    depth: -4550
-  - mat: {fileID: 2100000, guid: 9428aed3eeb73684eb40d7c7a336357b, type: 2}
-    depth: -5000
-  - mat: {fileID: 2100000, guid: 0d4e4eba6c94ff3459a7d4774ad5e351, type: 2}
-    depth: -5050
-  - mat: {fileID: 2100000, guid: 0d4e4eba6c94ff3459a7d4774ad5e351, type: 2}
-    depth: -5500
+    depth: -50000000
   - mat: {fileID: 2100000, guid: 22828c2d429d03945a930361fd820267, type: 2}
-    depth: -5550
+    depth: -1e+10
   - mat: {fileID: 2100000, guid: 22828c2d429d03945a930361fd820267, type: 2}
     depth: -1e+10
   - mat: {fileID: 2100000, guid: 22828c2d429d03945a930361fd820267, type: 2}
@@ -956,9 +936,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hurtCooldown: 1
-  horizMovementSpeed: 10
+  horizMovementSpeed: 7
   horizVelDamp: 6
-  vertVelDamp: 15
+  vertVelDamp: 6
   sideSpeedMult: 1.5
   fallSpeedMult: 1.5
   parryCamShakeMag: 0.4
@@ -969,7 +949,7 @@ MonoBehaviour:
   slowSpeedMult: 0.3
   horizVelDampMult: 1.5
   endDepth: -7000
-  health: 2000000
+  health: 3
   hurt: {fileID: 2100000, guid: 777f9a44c20686e41a65882311194804, type: 2}
   tapParry: {fileID: 2100000, guid: a8bed727e10947744bb31337b4cd5a2c, type: 2}
   cam: {fileID: 1687258584}

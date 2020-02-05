@@ -970,6 +970,10 @@ GameObject:
   - component: {fileID: 5932593371301056296}
   - component: {fileID: 5932593371301056298}
   - component: {fileID: 5932593371301056297}
+  - component: {fileID: 2726583318337913209}
+  - component: {fileID: 1577080075952343330}
+  - component: {fileID: 293130014015842444}
+  - component: {fileID: 3315835596282980643}
   m_Layer: 0
   m_Name: skate hex random speed
   m_TagString: Untagged
@@ -1027,8 +1031,65 @@ MonoBehaviour:
   random: 1
   minRandom: 50
   maxRandom: 100
+  randomOffset: 1
   offset: 0
 --- !u!114 &5932593371301056297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5932593371301056343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc659bfab90657f4c9b40204ac317266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  replaceWith: {fileID: 195274340987569003, guid: 5dbdfe325b9cecd4c86921e559738fe7,
+    type: 3}
+--- !u!114 &2726583318337913209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5932593371301056343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc659bfab90657f4c9b40204ac317266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  replaceWith: {fileID: 195274340987569003, guid: 5dbdfe325b9cecd4c86921e559738fe7,
+    type: 3}
+--- !u!114 &1577080075952343330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5932593371301056343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc659bfab90657f4c9b40204ac317266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  replaceWith: {fileID: 214201111767440337, guid: 71ba89379c639b74b84d299ec31206e5,
+    type: 3}
+--- !u!114 &293130014015842444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5932593371301056343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc659bfab90657f4c9b40204ac317266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  replaceWith: {fileID: 195274340987569003, guid: 5dbdfe325b9cecd4c86921e559738fe7,
+    type: 3}
+--- !u!114 &3315835596282980643
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2422,7 +2483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5932593372320468937}
   m_Layer: 0
-  m_Name: skate wall (1)
+  m_Name: skate wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2436,7 +2497,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5932593372320468936}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.01, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children:
   - {fileID: 5932593371301056296}

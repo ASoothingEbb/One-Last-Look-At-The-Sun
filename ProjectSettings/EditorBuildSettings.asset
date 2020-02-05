@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/start.unity
     guid: b603b918386feb34b8698d380aaa852a
+  - enabled: 0
+    path: Assets/Scenes/old gmae.unity
+    guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
     path: Assets/Scenes/game.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+    guid: 85fd590dbdc0a8d4f91e86323877f8cf
   - enabled: 1
     path: Assets/Scenes/end.unity
     guid: 6e62893e8259de24c90efc2c1b82157a
