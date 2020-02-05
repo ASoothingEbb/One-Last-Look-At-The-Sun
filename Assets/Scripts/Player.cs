@@ -25,9 +25,12 @@ public class Player : MonoBehaviour
     public float parryEffectIntensity = 1f;
     public float slowSpeedMult = 0.3f;
     bool slowed = false;
-    public float horizVelDampMult = 3;
     float timeSinceHolding = 0f;
     public float endDepth = -2000;
+    float acceleratedTime = 0;
+    public float acceleratedMult = 1.25f;
+    public float initDashTime = 0.05f;
+    public float initDashMult = 7;
 
     
 
@@ -61,36 +64,37 @@ public class Player : MonoBehaviour
     {
 
         //CALC NEW VELOCITY
-        //this code is verbose but its easiest to read and has no performance penalties
-        float newX, newY, newZ;
+        float newX = moveDir.x * horizMovementSpeed;
+        float newY = -fallSpeed;
+        float newZ = moveDir.y * horizMovementSpeed; 
         if (holdingParry)
         {
-            if (timeSinceHolding < 0.05f)
+          
+            newX *= sideSpeedMult;
+            newY *= fallSpeedMult;
+            newZ *= sideSpeedMult;
+            if (timeSinceHolding < initDashTime)
             {
-                newX = Mathf.Lerp(body.velocity.x, moveDir.x * horizMovementSpeed * sideSpeedMult * 7f, horizVelDamp * Time.deltaTime * horizVelDampMult);
-                newY = Mathf.Lerp(body.velocity.y, -fallSpeed * fallSpeedMult, vertVelDamp * Time.deltaTime);
-                newZ = Mathf.Lerp(body.velocity.z, moveDir.y * horizMovementSpeed * sideSpeedMult * 7f, horizVelDamp * Time.deltaTime * horizVelDampMult);
-            }
-            else
-            {
-                newX = Mathf.Lerp(body.velocity.x, moveDir.x * horizMovementSpeed * sideSpeedMult, horizVelDamp * Time.deltaTime * horizVelDampMult);
-                newY = Mathf.Lerp(body.velocity.y, -fallSpeed * fallSpeedMult, vertVelDamp * Time.deltaTime);
-                newZ = Mathf.Lerp(body.velocity.z, moveDir.y * horizMovementSpeed * sideSpeedMult, horizVelDamp * Time.deltaTime * horizVelDampMult);
+                newX *= initDashMult;
+                newZ *= initDashMult;
             }
         }
         else if (slowed)
         {
-            newX = Mathf.Lerp(body.velocity.x, moveDir.x * horizMovementSpeed * slowSpeedMult, horizVelDamp * Time.deltaTime);
-            newY = Mathf.Lerp(body.velocity.y, -fallSpeed * slowSpeedMult, vertVelDamp * Time.deltaTime);
-            newZ = Mathf.Lerp(body.velocity.z, moveDir.y * horizMovementSpeed * slowSpeedMult, horizVelDamp * Time.deltaTime);
+            newX *= slowSpeedMult;
+            newY *= slowSpeedMult;
+            newZ *= slowSpeedMult;
         }
-        else
+        
+        if(acceleratedTime < 0)
         {
-            newX = Mathf.Lerp(body.velocity.x, moveDir.x * horizMovementSpeed, horizVelDamp * Time.deltaTime);
-            newY = Mathf.Lerp(body.velocity.y, -fallSpeed, vertVelDamp * Time.deltaTime);
-            newZ = Mathf.Lerp(body.velocity.z, moveDir.y * horizMovementSpeed, horizVelDamp * Time.deltaTime);
-
+            newY *= acceleratedMult;
         }
+
+        newX = Mathf.Lerp(body.velocity.x, newX, horizVelDamp * Time.deltaTime);
+        newY = Mathf.Lerp(body.velocity.y, newY, vertVelDamp * Time.deltaTime);
+        newZ = Mathf.Lerp(body.velocity.z, newZ, horizVelDamp * Time.deltaTime);
+
         body.velocity = new Vector3(newX, newY, newZ);
 
         //CHECK OUT OF BOUNDS.
@@ -102,6 +106,7 @@ public class Player : MonoBehaviour
 
         timeSinceLastHurt += Time.deltaTime;
         timeSinceHolding += Time.deltaTime;
+        acceleratedTime += Time.deltaTime;
         hurt.SetFloat("Vector1_932E682D", health);
 
         //check if at game end
