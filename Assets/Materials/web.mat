@@ -22,4 +22,4 @@ Material:
     m_TexEnvs: []
     m_Floats: []
     m_Colors:
-    - Color_AD8C6C79: {r: 191.74902, g: 191.74902, b: 191.74902, a: 0}
+    - Color_AD8C6C79: {r: 1024, g: 1024, b: 1024, a: 0}

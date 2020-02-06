@@ -26,14 +26,12 @@ public class Player : MonoBehaviour
     public float slowSpeedMult = 0.3f;
     bool slowed = false;
     float timeSinceHolding = 0f;
-    public float endDepth = -2000;
-    float acceleratedTime = 0;
+
+    public float acceleratedTime = 0;
     float accelToAdd = 30f;
     public float acceleratedMult = 1.25f;
     public float initDashTime = 0.05f;
     public float initDashMult = 7;
-
-    
 
     public int health = 3;
 
@@ -49,6 +47,7 @@ public class Player : MonoBehaviour
     public Rigidbody body;
     public AudioSource hurtNoise;
     public AudioSource parryNoise;
+    public AudioSource windNoise;
     public AudioSource tapDashNoise;
     public AudioSource holdDashNoise;
     public AudioSource holdDashEndNoise;
@@ -86,8 +85,8 @@ public class Player : MonoBehaviour
             newY *= slowSpeedMult;
             newZ *= slowSpeedMult;
         }
-        
-        if(acceleratedTime < 0)
+
+        if (acceleratedTime < 0)
         {
             newY *= acceleratedMult;
         }
@@ -111,10 +110,13 @@ public class Player : MonoBehaviour
         hurt.SetFloat("Vector1_932E682D", health);
 
         //check if at game end
-        if (transform.position.y < endDepth)
+        if (transform.position.y < PitManager.max_depth)
         {
             StartCoroutine(FadeOut(1, "end"));
         }
+
+        //mo speed mo wind
+        windNoise.pitch = Mathf.Clamp( ( ( Mathf.Abs(body.velocity.y) + Mathf.Abs(body.velocity.x) + Mathf.Abs(body.velocity.z)) / (fallSpeed * fallSpeedMult * acceleratedMult + horizMovementSpeed * sideSpeedMult)) * 0.75f + 0.5f, 0.5f, 2.5f); 
     }
 
     public void takeDamage()
@@ -209,15 +211,14 @@ public class Player : MonoBehaviour
         else if (other.CompareTag("slow"))
         {
             slowed = true;
+        } else if (other.CompareTag("heal"))
+        {
+            health = 3;
         }
     }
 
     public void OnCollisionEnter(Collision col)
     {
-        if (col.collider.CompareTag("cliff"))
-        {
-            health = 3;
-        }
     }
 
     public void OnTriggerExit(Collider other)

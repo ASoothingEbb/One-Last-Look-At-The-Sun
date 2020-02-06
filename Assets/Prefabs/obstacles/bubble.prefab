@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bcba0cb3749a424eac529b32db547b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
+  speed: 0.5
   direction: {x: 0, y: 0, z: -1}
   randomize: 1
   minX: -1
@@ -115,8 +115,8 @@ MonoBehaviour:
   maxY: 0
   minZ: 0.3
   maxZ: 1
-  minSpeed: 3
-  maxSpeed: 3
+  minSpeed: 1
+  maxSpeed: 1
 --- !u!114 &4315164913508085279
 MonoBehaviour:
   m_ObjectHideFlags: 0

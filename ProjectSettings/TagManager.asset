@@ -12,6 +12,7 @@ TagManager:
   - slow
   - cliff
   - accel
+  - heal
   layers:
   - Default
   - TransparentFX

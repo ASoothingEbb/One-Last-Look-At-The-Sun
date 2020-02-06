@@ -7,6 +7,8 @@ public class PitManager : MonoBehaviour
     public GameObject pitStandard;
     public GameObject pitBlank;
     public GameObject pitMural;
+    public GameObject pitAccel;
+
     public List<GameObject> currentSections;
     public float sectionLength = 249.99f;
     Transform playerPos;
@@ -14,12 +16,12 @@ public class PitManager : MonoBehaviour
     public int startBuffer = 5;
     public int maxSections = 3;
     public static System.Random random;
-    public const int max_depth = 15000;
+    public static int max_depth = -6000;
     public float startSections;
     public Material tunnelMat;
     public static float timeSinceStart = 0;
     public float sectionsBetweenMurals = 10;
-    float sectionsSinceLastMural = 0;
+    float sectionNum = 0;
 
     public TunnelState[] tunnelStates;
     TunnelState a;
@@ -67,7 +69,7 @@ public class PitManager : MonoBehaviour
         {
             newSection = pitBlank;
         }
-        else if (sectionsSinceLastMural % sectionsBetweenMurals == 0){
+        else if (sectionNum % sectionsBetweenMurals == 0){
             newSection = pitMural;
         }
         else
@@ -84,7 +86,7 @@ public class PitManager : MonoBehaviour
             Destroy(currentSections[0]);
             currentSections.RemoveAt(0);
         }
-        sectionsSinceLastMural += 1;
+        sectionNum++;
         flip *= -1;
     }
 

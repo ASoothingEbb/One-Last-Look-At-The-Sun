@@ -510,20 +510,24 @@ MonoBehaviour:
   fallSpeed: 10
   parryEffectIntensity: 1
   slowSpeedMult: 0.3
-  horizVelDampMult: 3
-  dashLinesRate: 45
-  dashLinesSpeed: 45
+  endDepth: -2000
+  acceleratedTime: 0
+  acceleratedMult: 1.25
+  initDashTime: 0.05
+  initDashMult: 7
+  health: 200000
   hurt: {fileID: 2100000, guid: 777f9a44c20686e41a65882311194804, type: 2}
   tapParry: {fileID: 2100000, guid: a8bed727e10947744bb31337b4cd5a2c, type: 2}
   cam: {fileID: 0}
-  dashLines: {fileID: 0}
   dieScreen: {fileID: 0}
   vid: {fileID: 0}
   body: {fileID: 0}
   hurtNoise: {fileID: 0}
   parryNoise: {fileID: 0}
+  windNoise: {fileID: 0}
   tapDashNoise: {fileID: 0}
   holdDashNoise: {fileID: 0}
+  holdDashEndNoise: {fileID: 0}
   healNoise: {fileID: 0}
   dieNoise: {fileID: 0}
 --- !u!114 &836339438
