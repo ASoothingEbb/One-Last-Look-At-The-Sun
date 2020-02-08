@@ -112,7 +112,7 @@ public class Player : MonoBehaviour
         //check if at game end
         if (transform.position.y < PitManager.max_depth)
         {
-            StartCoroutine(FadeOut(1, "end"));
+            StartCoroutine(FadeOut(1,1,1, "end", 1));
         }
 
         //mo speed mo wind
@@ -131,7 +131,7 @@ public class Player : MonoBehaviour
             if (health < 1)
             {
                 StartCoroutine(shakeCamera(0.4f, 1f));
-                StartCoroutine(FadeOut(0, "game"));
+                StartCoroutine(FadeOut(0.2f,0,0, "game", 0.75f));
             }
         }
 
@@ -157,21 +157,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    public IEnumerator FadeMat(Material mat, string property, float start, float stop, float time)
+    public IEnumerator FadeOut(float r, float g, float b, string sceneToLoad, float time)
     {
-        for (float i = 0; i < time; i += Time.deltaTime)
+        for (float i = 0; i <= time; i += Time.deltaTime)
         {
-            mat.SetFloat(property, Mathf.Lerp(start, stop, i / time));
-            yield return null;
-        }
-        mat.SetFloat(property, stop);
-    }
-
-    public IEnumerator FadeOut(float shade, string sceneToLoad)
-    {
-        for (float i = 0; i <= 1; i += Time.deltaTime)
-        {
-            dieScreen.color = new Color(shade, shade, shade, i);
+            dieScreen.color = new Color(r, g, b, i/time);
             yield return null;
         }
         SceneManager.LoadScene(sceneToLoad);
