@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: lode
-  m_Shader: {fileID: -6465566751694194690, guid: bc9c9110715c9c64db324da9a2e515c6,
+  m_Shader: {fileID: -6465566751694194690, guid: e6915fadee5e55341a5e739ba9ffa9c6,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4

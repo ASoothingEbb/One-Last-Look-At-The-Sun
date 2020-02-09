@@ -21,14 +21,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: blue bubble
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: bc9c9110715c9c64db324da9a2e515c6,
+    type: 3}
   m_ShaderKeywords: _EMISSION _ENVIRONMENTREFLECTIONS_OFF
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3050
-  stringTagMap:
-    RenderType: Transparent
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses:
   - SHADOWCASTER
   m_SavedProperties:
@@ -85,6 +85,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 0
     m_Colors:
+    - Color_6DC947D6: {r: 0, g: 2.8087463, b: 5.9607835, a: 1}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.16862746}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 2.9176471, b: 5.992157, a: 1}
