@@ -25,7 +25,7 @@ public class Vibrate : MonoBehaviour
             time = 0;
             Vector3 tmp = start;
             start = end;
-            end = start;
+            end = tmp;
         }
         transform.localPosition = Vector3.Lerp(start, end, time / period);
         time += Time.deltaTime;
