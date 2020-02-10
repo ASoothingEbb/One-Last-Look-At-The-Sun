@@ -133,7 +133,7 @@ public class Player : MonoBehaviour
             if (health < 1)
             {
                 StartCoroutine(shakeCamera(0.4f, 1f));
-                StartCoroutine(FadeOut(0.2f,0,0, "game", 0.75f));
+                StartCoroutine(FadeOut(0,0,0, "death", 0.2f));
             }
         }
 
