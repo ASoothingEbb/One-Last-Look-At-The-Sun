@@ -88,7 +88,9 @@ public class Player : MonoBehaviour
 
         if (acceleratedTime < 0)
         {
+            newX *= acceleratedMult;
             newY *= acceleratedMult;
+            newZ *= acceleratedMult;
         }
 
         newX = Mathf.Lerp(body.velocity.x, newX, horizVelDamp * Time.deltaTime);
