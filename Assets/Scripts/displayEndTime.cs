@@ -8,6 +8,6 @@ public class displayEndTime : MonoBehaviour
     public Text text;
     void Start()
     {
-        text.text = "Congratulations!\n" + PitManager.timeSinceStart;
+        text.text = "Congratulations!\n" + Mathf.Round ((int) PitManager.timeSinceStart/60) + ":" + ((int) PitManager.timeSinceStart) % 60;
     }
 }

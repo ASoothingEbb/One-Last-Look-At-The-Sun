@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PeriodicOnOff : MonoBehaviour
+public class PeriodicOnOff : Offsetable
 {
     public float onTime = 1f;
     public float offTime = 1f;
-    public float offsetTime = 0f;
     public bool randomOffset = false;
 
     GameObject child;
@@ -15,13 +14,13 @@ public class PeriodicOnOff : MonoBehaviour
     {
         if (randomOffset)
         {
-            offsetTime = PitManager.rand(0, onTime + offsetTime);
+            offset = PitManager.rand(0, onTime + offset);
         }
         child = transform.GetChild(0).gameObject;
     }
     void Update()
     {
-        if((Time.time + offsetTime) % (onTime + offTime) < onTime)
+        if((Time.time + offset) % (onTime + offTime) < onTime)
         {
             child.SetActive(true);
         }
