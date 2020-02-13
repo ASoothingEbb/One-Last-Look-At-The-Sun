@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Vibrate : MonoBehaviour
+public class Vibrate : Offsetable
 {
     public float period = 1;
     public float time = 0;
@@ -13,7 +13,7 @@ public class Vibrate : MonoBehaviour
     {
         if (randomOffset)
         {
-            time = PitManager.rand(0, period);
+            offset = PitManager.rand(0, period);
         }
     }
 
@@ -27,7 +27,7 @@ public class Vibrate : MonoBehaviour
             start = end;
             end = tmp;
         }
-        transform.localPosition = Vector3.Lerp(start, end, time / period);
+        transform.localPosition = Vector3.Lerp(start, end, time + offset / period);
         time += Time.deltaTime;
     }
 }
