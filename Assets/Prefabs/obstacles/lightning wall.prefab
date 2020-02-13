@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9785dd1f73cdf4b87a36bee6637eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 0
   onTime: 0.3
   offTime: 1.4
-  offsetTime: 0.8
   randomOffset: 0
 --- !u!1 &1494062053547457529
 GameObject:
@@ -92,9 +92,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9785dd1f73cdf4b87a36bee6637eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 0
   onTime: 0.3
   offTime: 1.4
-  offsetTime: 0.2
   randomOffset: 0
 --- !u!1 &1494062053693055704
 GameObject:
@@ -140,9 +140,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9785dd1f73cdf4b87a36bee6637eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 0
   onTime: 0.3
   offTime: 1.4
-  offsetTime: 0.6
   randomOffset: 0
 --- !u!1 &1494062054206484087
 GameObject:
@@ -188,9 +188,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9785dd1f73cdf4b87a36bee6637eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 0
   onTime: 0.3
   offTime: 1.4
-  offsetTime: 0
   randomOffset: 0
 --- !u!1 &1494062054213946577
 GameObject:
@@ -236,9 +236,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9785dd1f73cdf4b87a36bee6637eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 0
   onTime: 0.3
   offTime: 1.4
-  offsetTime: 1
   randomOffset: 0
 --- !u!1 &1494062054334702708
 GameObject:
@@ -284,9 +284,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9785dd1f73cdf4b87a36bee6637eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 0
   onTime: 0.3
   offTime: 1.4
-  offsetTime: 1.2
   randomOffset: 0
 --- !u!1 &1494062054601038879
 GameObject:
@@ -332,9 +332,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9785dd1f73cdf4b87a36bee6637eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 0
   onTime: 0.3
   offTime: 1.4
-  offsetTime: 0.4
   randomOffset: 0
 --- !u!1 &1494062054830621260
 GameObject:
@@ -346,6 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1494062054830621263}
   - component: {fileID: -1031670282951573180}
+  - component: {fileID: 7685356819707501328}
   m_Layer: 0
   m_Name: lightning wall
   m_TagString: Untagged
@@ -386,6 +387,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5069bdc916af844b93aa1cc73228ccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7685356819707501328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494062054830621260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529d98cebb0c1624fab04bed3dc7f02b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 1494062054206484073}
+  - {fileID: 1494062053547457531}
+  - {fileID: 1494062054601038865}
+  - {fileID: 1494062053693055706}
+  - {fileID: 1494062053326311251}
+  - {fileID: 1494062054213946579}
+  - {fileID: 1494062054334702710}
+  minOffset: 0
+  maxOffset: 1
+  spacing: 0.25
 --- !u!1001 &1494062054522591227
 PrefabInstance:
   m_ObjectHideFlags: 0

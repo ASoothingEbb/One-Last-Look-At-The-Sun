@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RandomStaggeredOffsets : MonoBehaviour
 {
-    Offsetable[] items;
+    public Offsetable[] items;
     public float minOffset = 0;
     public float maxOffset = 1;
     public float spacing = 0.25f;
