@@ -15,6 +15,8 @@ public class Vibrate : Offsetable
         {
             offset = PitManager.rand(0, period);
         }
+
+        time = offset;
     }
 
     // Update is called once per frame
@@ -27,7 +29,7 @@ public class Vibrate : Offsetable
             start = end;
             end = tmp;
         }
-        transform.localPosition = Vector3.Lerp(start, end, time + offset / period);
+        transform.localPosition = Vector3.Lerp(start, end, time / period);
         time += Time.deltaTime;
     }
 }
