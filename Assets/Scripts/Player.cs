@@ -206,6 +206,7 @@ public class Player : MonoBehaviour
         } else if (other.CompareTag("heal"))
         {
             health = 3;
+            acceleratedTime = 0;
         }
     }
 
