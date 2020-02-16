@@ -15,14 +15,12 @@ public class Vibrate : Offsetable
         {
             offset = PitManager.rand(0, period);
         }
-
-        time = offset;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.localPosition = Vector3.Lerp(start, end, Mathf.Abs(period - (time % (2*period)))*2 );
+        transform.localPosition = Vector3.Lerp(start, end, Mathf.Abs(period - ((time + offset) % (2*period)))*2 );
         time += Time.deltaTime;
     }
 }
