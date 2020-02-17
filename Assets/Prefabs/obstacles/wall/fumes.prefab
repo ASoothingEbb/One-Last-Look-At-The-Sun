@@ -127,7 +127,7 @@ MonoBehaviour:
       m_RotationOrder: 0
   - prefab: {fileID: 1671546806857064940, guid: b398190b8e5882d42b4a182f1f5dc2ce,
       type: 3}
-    chance: 0.25
+    chance: 0
     depthChance:
       serializedVersion: 2
       m_Curve:

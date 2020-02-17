@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8941460023656224024}
   - component: {fileID: 8941460023656224036}
   - component: {fileID: 8941460023656224039}
+  - component: {fileID: 2743185041812355125}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,6 +79,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2743185041812355125
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8941460023656224027}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20.03, y: 9, z: 5.91}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8941460023975917276
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 288ec009aca85284299fa9bc9ebe1880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 0
   period: 0.5
   time: 0
   start: {x: 0, y: 0, z: -3.5}

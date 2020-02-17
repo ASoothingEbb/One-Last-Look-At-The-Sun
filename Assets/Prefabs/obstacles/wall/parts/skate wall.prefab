@@ -1045,7 +1045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc659bfab90657f4c9b40204ac317266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  replaceWith: {fileID: 195274340987569003, guid: 5dbdfe325b9cecd4c86921e559738fe7,
+  replaceWith: {fileID: 214201111767440337, guid: 71ba89379c639b74b84d299ec31206e5,
     type: 3}
 --- !u!114 &2726583318337913209
 MonoBehaviour:
@@ -1059,7 +1059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc659bfab90657f4c9b40204ac317266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  replaceWith: {fileID: 195274340987569003, guid: 5dbdfe325b9cecd4c86921e559738fe7,
+  replaceWith: {fileID: 214201111767440337, guid: 71ba89379c639b74b84d299ec31206e5,
     type: 3}
 --- !u!114 &1577080075952343330
 MonoBehaviour:
@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc659bfab90657f4c9b40204ac317266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  replaceWith: {fileID: 195274340987569003, guid: 5dbdfe325b9cecd4c86921e559738fe7,
+  replaceWith: {fileID: 214201111767440337, guid: 71ba89379c639b74b84d299ec31206e5,
     type: 3}
 --- !u!114 &3315835596282980643
 MonoBehaviour:
@@ -1101,7 +1101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc659bfab90657f4c9b40204ac317266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  replaceWith: {fileID: 195274340987569003, guid: 5dbdfe325b9cecd4c86921e559738fe7,
+  replaceWith: {fileID: 214201111767440337, guid: 71ba89379c639b74b84d299ec31206e5,
     type: 3}
 --- !u!1 &5932593371309198689
 GameObject:
@@ -2496,7 +2496,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5932593372320468936}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children:

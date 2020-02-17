@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1588633100462055983}
   - component: {fileID: 5848229678422453631}
   m_Layer: 0
-  m_Name: wall spawner
+  m_Name: gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,13 +44,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnables:
-  - prefab: {fileID: 1494062054830621260, guid: b0e978705cfe6f54a9d5b7a1e7789b82,
-      type: 3}
+  - prefab: {fileID: 173946678037162056, guid: 65f0df7b03f4c2a46beb0de690aeda2e, type: 3}
     chance: 1
     depthChance:
       serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
       m_RotationOrder: 0
   evenChance: 0

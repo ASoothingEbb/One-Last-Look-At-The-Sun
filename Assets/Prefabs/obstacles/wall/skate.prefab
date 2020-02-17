@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1588633100462055983}
   - component: {fileID: 5848229678422453631}
   m_Layer: 0
-  m_Name: wall spawner
+  m_Name: skate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,13 +44,111 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnables:
-  - prefab: {fileID: 1494062054830621260, guid: b0e978705cfe6f54a9d5b7a1e7789b82,
+  - prefab: {fileID: 4545207899350072925, guid: f4745a7a06122a144bb8af64e4cee0e9,
       type: 3}
     chance: 1
     depthChance:
       serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
       m_RotationOrder: 0
-  evenChance: 0
+  - prefab: {fileID: 4584760755275602780, guid: 76e4cfcdf1a0aad4faaf3ebe86e83fd6,
+      type: 3}
+    chance: 1
+    depthChance:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+  - prefab: {fileID: 5932593372320468936, guid: 1a871b2e51b4aec46a0dea58b839c763,
+      type: 3}
+    chance: 1
+    depthChance:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+  - prefab: {fileID: 230169505156310363, guid: 43d56319d96c3b347bbbb8b9794470bd, type: 3}
+    chance: 1
+    depthChance:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+  evenChance: 1
