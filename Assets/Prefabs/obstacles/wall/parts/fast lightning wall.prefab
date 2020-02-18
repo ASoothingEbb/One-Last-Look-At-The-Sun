@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0
-  onTime: 0.6
-  offTime: 3
+  onTime: 0.3
+  offTime: 1.4
   randomOffset: 0
 --- !u!1 &1494062053547457529
 GameObject:
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0
-  onTime: 0.6
-  offTime: 3
+  onTime: 0.3
+  offTime: 1.4
   randomOffset: 0
 --- !u!1 &1494062053693055704
 GameObject:
@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0
-  onTime: 0.6
-  offTime: 3
+  onTime: 0.3
+  offTime: 1.4
   randomOffset: 0
 --- !u!1 &1494062054206484087
 GameObject:
@@ -189,8 +189,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0
-  onTime: 0.6
-  offTime: 3
+  onTime: 0.3
+  offTime: 1.4
   randomOffset: 0
 --- !u!1 &1494062054213946577
 GameObject:
@@ -237,8 +237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0
-  onTime: 0.6
-  offTime: 3
+  onTime: 0.3
+  offTime: 1.4
   randomOffset: 0
 --- !u!1 &1494062054334702708
 GameObject:
@@ -285,8 +285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0
-  onTime: 0.6
-  offTime: 3
+  onTime: 0.3
+  offTime: 1.4
   randomOffset: 0
 --- !u!1 &1494062054601038879
 GameObject:
@@ -333,8 +333,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0
-  onTime: 0.6
-  offTime: 3
+  onTime: 0.3
+  offTime: 1.4
   randomOffset: 0
 --- !u!1 &1494062054830621260
 GameObject:
@@ -409,8 +409,7 @@ MonoBehaviour:
   - {fileID: 1494062054334702710}
   minOffset: 0
   maxOffset: 1
-  spacingMin: 0.5
-  spacingMax: 0.5
+  spacing: 0.25
 --- !u!1001 &1494062054522591227
 PrefabInstance:
   m_ObjectHideFlags: 0

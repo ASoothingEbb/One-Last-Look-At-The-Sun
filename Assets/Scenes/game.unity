@@ -163,7 +163,7 @@ MonoBehaviour:
   maxSections: 10
   startSections: 0
   tunnelMat: {fileID: 2100000, guid: ba8286236ef8dd548b57bdcc7bd1ec9d, type: 2}
-  sectionsBetweenMurals: 10
+  sectionsBetweenMurals: 30
   tunnelStates:
   - mat: {fileID: 2100000, guid: 745e4ae7a2b30ea4bb5e1fb8bb33665d, type: 2}
     depth: 500
@@ -323,7 +323,10 @@ VisualEffect:
   m_ResetSeedOnPlay: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 10
+        m_Name: rate
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
@@ -370,7 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f15eb3ab9c94540b4a2525e53cb3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rateScale: 3
+  rateScale: 0.3
 --- !u!1 &237119751
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,11 +890,11 @@ MonoBehaviour:
   horizVelDamp: 6
   vertVelDamp: 15
   sideSpeedMult: 1.5
-  fallSpeedMult: 1.5
+  fallSpeedMult: 1.75
   parryCamShakeMag: 0.4
   parryCamShakeTime: 0.075
   maxHorizDist: 3.5
-  fallSpeed: 15
+  fallSpeed: 17.5
   parryEffectIntensity: 0.1
   slowSpeedMult: 0.3
   acceleratedTime: 0

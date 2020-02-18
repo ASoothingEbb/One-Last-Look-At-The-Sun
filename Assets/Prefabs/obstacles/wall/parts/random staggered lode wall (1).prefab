@@ -178,6 +178,11 @@ PrefabInstance:
       propertyPath: randomOffset
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
+        type: 3}
+      propertyPath: period
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62cf94cba5ab52c4a8dad378afd35135, type: 3}
 --- !u!4 &1100102815423751260 stripped
@@ -269,6 +274,11 @@ PrefabInstance:
         type: 3}
       propertyPath: randomOffset
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
+        type: 3}
+      propertyPath: period
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62cf94cba5ab52c4a8dad378afd35135, type: 3}
@@ -362,6 +372,11 @@ PrefabInstance:
       propertyPath: randomOffset
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
+        type: 3}
+      propertyPath: period
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62cf94cba5ab52c4a8dad378afd35135, type: 3}
 --- !u!4 &1100102815193249110 stripped
@@ -453,6 +468,11 @@ PrefabInstance:
         type: 3}
       propertyPath: randomOffset
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
+        type: 3}
+      propertyPath: period
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62cf94cba5ab52c4a8dad378afd35135, type: 3}
@@ -546,6 +566,11 @@ PrefabInstance:
       propertyPath: randomOffset
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
+        type: 3}
+      propertyPath: period
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62cf94cba5ab52c4a8dad378afd35135, type: 3}
 --- !u!4 &1100102815565956648 stripped
@@ -638,6 +663,11 @@ PrefabInstance:
       propertyPath: randomOffset
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
+        type: 3}
+      propertyPath: period
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62cf94cba5ab52c4a8dad378afd35135, type: 3}
 --- !u!4 &1100102817125608080 stripped
@@ -729,6 +759,11 @@ PrefabInstance:
         type: 3}
       propertyPath: randomOffset
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
+        type: 3}
+      propertyPath: period
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62cf94cba5ab52c4a8dad378afd35135, type: 3}
