@@ -8,11 +8,11 @@ using UnityEngine.Video;
 
 public class Player : MonoBehaviour
 {
-
-    
-
     public float hurtCooldown = 1f;
     float timeSinceLastHurt = 0f;
+    float timeSinceParryEnded = 0f;
+    float timeSinceHolding = 0f;
+    public float parryPityWindow = 0.3f;
     public float horizMovementSpeed = 100;
     public float horizVelDamp = 5;
     public float vertVelDamp = 2;
@@ -25,7 +25,6 @@ public class Player : MonoBehaviour
     public float parryEffectIntensity = 1f;
     public float slowSpeedMult = 0.3f;
     bool slowed = false;
-    float timeSinceHolding = 0f;
 
     public float acceleratedTime = 0;
     float accelToAdd = 30f;
@@ -108,6 +107,7 @@ public class Player : MonoBehaviour
 
         timeSinceLastHurt += Time.deltaTime;
         timeSinceHolding += Time.deltaTime;
+        timeSinceParryEnded += Time.deltaTime;
         acceleratedTime += Time.deltaTime;
         hurt.SetFloat("Vector1_932E682D", health);
 
@@ -155,6 +155,7 @@ public class Player : MonoBehaviour
         else if (context.canceled)
         {
             holdingParry = false;
+            timeSinceParryEnded = 0;
             tapParry.SetFloat("Vector1_5E361D35", 0);
         }
     }
@@ -177,7 +178,7 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("holdParry"))
         {
-            if (holdingParry)
+            if (holdingParry || timeSinceParryEnded < parryPityWindow)
             {
                 parryNoise.pitch = (float)PitManager.random.NextDouble() * -0.4f + 1.2f;
                 parryNoise.Play();
