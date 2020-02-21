@@ -20,7 +20,7 @@ public class Vibrate : Offsetable
     // Update is called once per frame
     void Update()
     {
-        transform.localPosition = Vector3.Lerp(start, end, Mathf.Abs(period - ((time + offset) % (2*period)))*2 );
+        transform.localPosition = Vector3.Lerp(start, end, Mathf.Abs(period - ((time + offset) % (2*period)))/period );
         time += Time.deltaTime;
     }
 }
