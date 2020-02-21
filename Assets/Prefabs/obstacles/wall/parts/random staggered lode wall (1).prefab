@@ -40,8 +40,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8309751723916005034}
-  - component: {fileID: 8309751723916005032}
   - component: {fileID: 8309751723916005035}
+  - component: {fileID: 498089215}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -70,18 +70,6 @@ Transform:
   m_Father: {fileID: 8309751722733544806}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8309751723916005032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8309751723916005045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5069bdc916af844b93aa1cc73228ccd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8309751723916005035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +94,24 @@ MonoBehaviour:
   maxOffset: 2
   spacingMin: 0
   spacingMax: 1
+--- !u!114 &498089215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8309751723916005045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f065b1bd4b75d5c4798ce8ddc232f347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  random: 1
+  minRandom: 0
+  maxRandom: 50
+  randomOffset: 1
+  offset: 0
 --- !u!1001 &8309751722105754241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -175,13 +181,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
         type: 3}
-      propertyPath: randomOffset
-      value: 0
+      propertyPath: period
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
         type: 3}
-      propertyPath: period
-      value: 1
+      propertyPath: randomOffset
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62cf94cba5ab52c4a8dad378afd35135, type: 3}
@@ -272,13 +278,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
         type: 3}
-      propertyPath: randomOffset
-      value: 0
+      propertyPath: period
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
         type: 3}
-      propertyPath: period
-      value: 1
+      propertyPath: randomOffset
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62cf94cba5ab52c4a8dad378afd35135, type: 3}
@@ -369,13 +375,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
         type: 3}
-      propertyPath: randomOffset
-      value: 0
+      propertyPath: period
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
         type: 3}
-      propertyPath: period
-      value: 1
+      propertyPath: randomOffset
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62cf94cba5ab52c4a8dad378afd35135, type: 3}
@@ -466,13 +472,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
         type: 3}
-      propertyPath: randomOffset
-      value: 0
+      propertyPath: period
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
         type: 3}
-      propertyPath: period
-      value: 1
+      propertyPath: randomOffset
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62cf94cba5ab52c4a8dad378afd35135, type: 3}
@@ -563,13 +569,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
         type: 3}
-      propertyPath: randomOffset
-      value: 0
+      propertyPath: period
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
         type: 3}
-      propertyPath: period
-      value: 1
+      propertyPath: randomOffset
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62cf94cba5ab52c4a8dad378afd35135, type: 3}
@@ -660,13 +666,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
         type: 3}
-      propertyPath: randomOffset
-      value: 0
+      propertyPath: period
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
         type: 3}
-      propertyPath: period
-      value: 1
+      propertyPath: randomOffset
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62cf94cba5ab52c4a8dad378afd35135, type: 3}
@@ -757,13 +763,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
         type: 3}
-      propertyPath: randomOffset
-      value: 0
+      propertyPath: period
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8941460025165583838, guid: 62cf94cba5ab52c4a8dad378afd35135,
         type: 3}
-      propertyPath: period
-      value: 1
+      propertyPath: randomOffset
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62cf94cba5ab52c4a8dad378afd35135, type: 3}
