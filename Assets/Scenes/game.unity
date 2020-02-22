@@ -170,9 +170,9 @@ MonoBehaviour:
   - mat: {fileID: 2100000, guid: 745e4ae7a2b30ea4bb5e1fb8bb33665d, type: 2}
     depth: 0
   - mat: {fileID: 2100000, guid: 745e4ae7a2b30ea4bb5e1fb8bb33665d, type: 2}
-    depth: -1000
+    depth: -500
   - mat: {fileID: 2100000, guid: aef13be66fed3d040a4bf0c7283c9b62, type: 2}
-    depth: -1050
+    depth: -1500
   - mat: {fileID: 2100000, guid: aef13be66fed3d040a4bf0c7283c9b62, type: 2}
     depth: -2000
   - mat: {fileID: 2100000, guid: 1547ec152b64fe6489dd474c3a22eded, type: 2}
