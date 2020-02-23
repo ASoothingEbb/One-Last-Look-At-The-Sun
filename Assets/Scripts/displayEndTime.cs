@@ -8,6 +8,6 @@ public class displayEndTime : MonoBehaviour
     public Text text;
     void Start()
     {
-        text.text = "Congratulations!\n" + Mathf.Round ((int) PitManager.timeSinceStart/60) + ":" + ((int) PitManager.timeSinceStart) % 60;
+        text.text = "One Last Look At The Sun\nCode, Art & Sound: Jak Kostrzanowski\nSupervisor: Ronald Grau\n\nTime: " + Mathf.Round ((int) PitManager.timeSinceStart/60) + ":" + ((int) PitManager.timeSinceStart) % 60;
     }
 }
