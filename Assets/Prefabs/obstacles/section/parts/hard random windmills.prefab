@@ -119,6 +119,11 @@ PrefabInstance:
       propertyPath: randomOffset
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4805503897505144389, guid: 50f548a95c69599429ae32f5880fc8b5,
+        type: 3}
+      propertyPath: randomDir
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50f548a95c69599429ae32f5880fc8b5, type: 3}
 --- !u!4 &5540330334757913173 stripped
@@ -208,6 +213,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maxRandom
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805503897505144389, guid: 50f548a95c69599429ae32f5880fc8b5,
+        type: 3}
+      propertyPath: randomDir
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50f548a95c69599429ae32f5880fc8b5, type: 3}
@@ -299,6 +309,11 @@ PrefabInstance:
       propertyPath: randomOffset
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4805503897505144389, guid: 50f548a95c69599429ae32f5880fc8b5,
+        type: 3}
+      propertyPath: randomDir
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50f548a95c69599429ae32f5880fc8b5, type: 3}
 --- !u!4 &5540330334316329820 stripped
@@ -388,6 +403,11 @@ PrefabInstance:
         type: 3}
       propertyPath: randomOffset
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805503897505144389, guid: 50f548a95c69599429ae32f5880fc8b5,
+        type: 3}
+      propertyPath: randomDir
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50f548a95c69599429ae32f5880fc8b5, type: 3}
@@ -479,6 +499,11 @@ PrefabInstance:
       propertyPath: maxRandom
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4805503897505144389, guid: 50f548a95c69599429ae32f5880fc8b5,
+        type: 3}
+      propertyPath: randomDir
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50f548a95c69599429ae32f5880fc8b5, type: 3}
 --- !u!4 &5540330334623075242 stripped
@@ -568,6 +593,11 @@ PrefabInstance:
         type: 3}
       propertyPath: randomOffset
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805503897505144389, guid: 50f548a95c69599429ae32f5880fc8b5,
+        type: 3}
+      propertyPath: randomDir
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50f548a95c69599429ae32f5880fc8b5, type: 3}

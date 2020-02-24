@@ -871,7 +871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hurtCooldown: 1
   parryPityWindow: 0.3
-  horizMovementSpeed: 8
+  horizMovementSpeed: 10
   horizVelDamp: 6
   vertVelDamp: 15
   sideSpeedMult: 1.5
