@@ -26,8 +26,7 @@ public class Player : MonoBehaviour
     public float slowSpeedMult = 0.3f;
     bool slowed = false;
 
-    public float acceleratedTime = 0;
-    float accelToAdd = 30f;
+    public bool accelerated;
     public float acceleratedMult = 1.25f;
     public float initDashTime = 0.05f;
     public float initDashMult = 7;
@@ -47,11 +46,8 @@ public class Player : MonoBehaviour
     public AudioSource hurtNoise;
     public AudioSource parryNoise;
     public AudioSource windNoise;
-    public AudioSource tapDashNoise;
-    public AudioSource holdDashNoise;
-    public AudioSource holdDashEndNoise;
     public AudioSource healNoise;
-    public AudioSource dieNoise;
+    public AudioSource accelNoise;
 
     public void Start()
     {
@@ -85,7 +81,7 @@ public class Player : MonoBehaviour
             newZ *= slowSpeedMult;
         }
 
-        if (acceleratedTime < 0)
+        if (accelerated)
         {
             newX *= acceleratedMult;
             newY *= acceleratedMult;
@@ -108,7 +104,6 @@ public class Player : MonoBehaviour
         timeSinceLastHurt += Time.deltaTime;
         timeSinceHolding += Time.deltaTime;
         timeSinceParryEnded += Time.deltaTime;
-        acceleratedTime += Time.deltaTime;
         hurt.SetFloat("Vector1_932E682D", health);
 
         //check if at game end
@@ -190,7 +185,8 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("accel"))
         {
-            acceleratedTime = -accelToAdd;
+            accelerated = true;
+            accelNoise.Play();
         }
         else if (other.CompareTag("vid"))
         {
@@ -207,7 +203,8 @@ public class Player : MonoBehaviour
         } else if (other.CompareTag("heal"))
         {
             health = 3;
-            acceleratedTime = 0;
+            accelerated = false;
+            healNoise.Play();
         }
     }
 
