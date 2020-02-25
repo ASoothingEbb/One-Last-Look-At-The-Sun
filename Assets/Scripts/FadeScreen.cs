@@ -12,7 +12,7 @@ public class FadeScreen : MonoBehaviour
 
     public void Start()
     {
-        player = GameObject.FindGameObjectWithTag("player").transform;
+        //player = GameObject.FindGameObjectWithTag("player").transform;
         StartCoroutine(Fade(seconds, startAlpha, stopAlpha));
     }
 

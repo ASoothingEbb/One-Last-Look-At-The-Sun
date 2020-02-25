@@ -116,7 +116,7 @@ public class Player : MonoBehaviour
         //check if at game end
         if (transform.position.y < PitManager.max_depth)
         {
-            StartCoroutine(FadeOut(1,1,1, "end", 1));
+            StartCoroutine(FadeOut(1,1,1, "end", 5));
         }
 
         //mo speed mo wind

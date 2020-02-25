@@ -166,47 +166,49 @@ MonoBehaviour:
   sectionsBetweenMurals: 30
   tunnelStates:
   - mat: {fileID: 2100000, guid: 745e4ae7a2b30ea4bb5e1fb8bb33665d, type: 2}
-    depth: 500
+    depth: -500
   - mat: {fileID: 2100000, guid: 745e4ae7a2b30ea4bb5e1fb8bb33665d, type: 2}
     depth: 0
   - mat: {fileID: 2100000, guid: 745e4ae7a2b30ea4bb5e1fb8bb33665d, type: 2}
-    depth: -500
+    depth: 0.05
   - mat: {fileID: 2100000, guid: aef13be66fed3d040a4bf0c7283c9b62, type: 2}
-    depth: -1500
+    depth: 0.1
   - mat: {fileID: 2100000, guid: aef13be66fed3d040a4bf0c7283c9b62, type: 2}
-    depth: -2000
+    depth: 0.2
   - mat: {fileID: 2100000, guid: 1547ec152b64fe6489dd474c3a22eded, type: 2}
-    depth: -2050
+    depth: 0.205
   - mat: {fileID: 2100000, guid: 1547ec152b64fe6489dd474c3a22eded, type: 2}
-    depth: -3000
+    depth: 0.3
   - mat: {fileID: 2100000, guid: 045df28e40c52a242b70576e56fa0383, type: 2}
-    depth: -3050
+    depth: 0.305
   - mat: {fileID: 2100000, guid: 045df28e40c52a242b70576e56fa0383, type: 2}
-    depth: -4000
+    depth: 0.4
   - mat: {fileID: 2100000, guid: 8c4964018950d4049b365c22b2334c5e, type: 2}
-    depth: -4050
+    depth: 0.405
   - mat: {fileID: 2100000, guid: 8c4964018950d4049b365c22b2334c5e, type: 2}
-    depth: -5000
+    depth: 0.5
   - mat: {fileID: 2100000, guid: dfb4c254da087b64f80d607cf8cdd7b9, type: 2}
-    depth: -5050
+    depth: 0.505
   - mat: {fileID: 2100000, guid: dfb4c254da087b64f80d607cf8cdd7b9, type: 2}
-    depth: -6000
+    depth: 0.6
   - mat: {fileID: 2100000, guid: 0d4e4eba6c94ff3459a7d4774ad5e351, type: 2}
-    depth: -6050
+    depth: 0.605
   - mat: {fileID: 2100000, guid: 0d4e4eba6c94ff3459a7d4774ad5e351, type: 2}
-    depth: -7000
+    depth: 0.7
   - mat: {fileID: 2100000, guid: 9428aed3eeb73684eb40d7c7a336357b, type: 2}
-    depth: -7050
+    depth: 0.705
   - mat: {fileID: 2100000, guid: 9428aed3eeb73684eb40d7c7a336357b, type: 2}
-    depth: -8000
+    depth: 0.8
   - mat: {fileID: 2100000, guid: 440392962e4c90f41843da7f5189e58c, type: 2}
-    depth: -8050
+    depth: 0.805
   - mat: {fileID: 2100000, guid: 440392962e4c90f41843da7f5189e58c, type: 2}
-    depth: -9000
+    depth: 0.9
   - mat: {fileID: 2100000, guid: 5ea19ace553e2fa4992f08095b2134cf, type: 2}
-    depth: -9050
-  - mat: {fileID: 2100000, guid: 5ea19ace553e2fa4992f08095b2134cf, type: 2}
-    depth: -100000
+    depth: 0.905
+  - mat: {fileID: 2100000, guid: 22828c2d429d03945a930361fd820267, type: 2}
+    depth: 0.95
+  - mat: {fileID: 2100000, guid: 22828c2d429d03945a930361fd820267, type: 2}
+    depth: 2
 --- !u!4 &171707092
 Transform:
   m_ObjectHideFlags: 0
@@ -886,7 +888,7 @@ MonoBehaviour:
   acceleratedMult: 1.33
   initDashTime: 0.05
   initDashMult: 7
-  health: 3
+  health: 1000
   parryPitchMaxTime: 1.75
   maxParryPitch: 10
   parryPitchSpacing: 0.1

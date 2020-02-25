@@ -16,7 +16,7 @@ public class PitManager : MonoBehaviour
     public int startBuffer = 5;
     public int maxSections = 3;
     public static System.Random random;
-    public static int max_depth = -10000;
+    public static int max_depth = -1000;
     public float startSections;
     public Material tunnelMat;
     public static float timeSinceStart = 0;
@@ -51,21 +51,21 @@ public class PitManager : MonoBehaviour
             spawnNextSection();
         }
 
-        if (playerPos.position.y < b.depth)
+        if (playerPos.position.y < b.depth*max_depth)
         {
             currentTunnelState += 1;
             a = tunnelStates[currentTunnelState];
             b = tunnelStates[currentTunnelState + 1];
         }
 
-        tunnelMat.Lerp(a.mat, b.mat, (playerPos.position.y - a.depth) / (b.depth - a.depth));
+        tunnelMat.Lerp(a.mat, b.mat, (playerPos.position.y - a.depth * max_depth) / (b.depth * max_depth - a.depth * max_depth));
         timeSinceStart += Time.deltaTime;
     }
 
     void spawnNextSection()
     {
         GameObject newSection;
-        if (lastPosSpawned > -sectionLength * startBuffer)
+        if (lastPosSpawned > -sectionLength * startBuffer || lastPosSpawned <= max_depth)
         {
             newSection = pitBlank;
         }
