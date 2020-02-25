@@ -33,6 +33,12 @@ public class Player : MonoBehaviour
 
     public int health = 3;
 
+    public float parryPitchMaxTime = 1f;
+    public int maxParryPitch =  5;
+    public float parryPitchSpacing = 0.1f;
+    int currentParryPitch = 0;
+    float timeSinceLastParryHit = 0f;
+
     bool holdingParry = false;
 
     Vector2 moveDir;
@@ -104,6 +110,7 @@ public class Player : MonoBehaviour
         timeSinceLastHurt += Time.deltaTime;
         timeSinceHolding += Time.deltaTime;
         timeSinceParryEnded += Time.deltaTime;
+        timeSinceLastParryHit += Time.deltaTime;
         hurt.SetFloat("Vector1_932E682D", health);
 
         //check if at game end
@@ -175,7 +182,16 @@ public class Player : MonoBehaviour
         {
             if (holdingParry || timeSinceParryEnded < parryPityWindow)
             {
-                parryNoise.pitch = (float)PitManager.random.NextDouble() * -0.4f + 1.2f;
+                if(timeSinceLastParryHit < parryPitchMaxTime)
+                {
+                    currentParryPitch = Mathf.Min(currentParryPitch+1, maxParryPitch);
+                }
+                else
+                {
+                    currentParryPitch = 0;
+                }
+                timeSinceLastParryHit = 0;
+                parryNoise.pitch = 1 + currentParryPitch * parryPitchSpacing;
                 parryNoise.Play();
             }
             else

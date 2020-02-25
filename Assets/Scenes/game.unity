@@ -887,6 +887,9 @@ MonoBehaviour:
   initDashTime: 0.05
   initDashMult: 7
   health: 3
+  parryPitchMaxTime: 1.75
+  maxParryPitch: 10
+  parryPitchSpacing: 0.1
   hurt: {fileID: 2100000, guid: 777f9a44c20686e41a65882311194804, type: 2}
   tapParry: {fileID: 2100000, guid: a8bed727e10947744bb31337b4cd5a2c, type: 2}
   cam: {fileID: 1687258584}
