@@ -127,7 +127,7 @@ public class Player : MonoBehaviour
     {
         if (timeSinceLastHurt > hurtCooldown)
         {
-            hurtNoise.pitch = (float)PitManager.random.NextDouble() * -0.4f + 1.2f;
+            hurtNoise.pitch = (float)PitManager.random.NextDouble() * -0.5f + 1.25f;
             hurtNoise.Play();
             timeSinceLastHurt = 0;
             health -= 1;
