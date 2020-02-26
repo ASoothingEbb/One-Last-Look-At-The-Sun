@@ -16,7 +16,7 @@ public class PitManager : MonoBehaviour
     public int startBuffer = 5;
     public int maxSections = 3;
     public static System.Random random;
-    public static int max_depth = -1000;
+    public static int max_depth = -7500;
     public float startSections;
     public Material tunnelMat;
     public static float timeSinceStart = 0;
