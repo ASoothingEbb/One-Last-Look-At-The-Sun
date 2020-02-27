@@ -26,14 +26,20 @@ public class MoveTowardPlayer : MonoBehaviour
     {
         if (Mathf.Pow(this.transform.position.x - player.transform.position.x, 2) + Mathf.Pow(this.transform.position.z - player.transform.position.z, 2) > 0.2f)
         {
-            Vector3 target = player.transform.position;
+            Vector3 target;
+
+            if (player.transform.position.y - this.transform.position.y < noticeDist)
+            {
+                target = this.transform.position + new Vector3(0, speed, 0);
+            }
+            else
+            {
+                target = new Vector3(player.transform.position.x, this.transform.position.y, player.transform.position.z);
+            }
 
             Quaternion targetRot = Quaternion.LookRotation(target - this.transform.position);
             this.transform.rotation = Quaternion.Lerp(this.transform.rotation, targetRot, speed * Time.deltaTime);
-            if (player.transform.position.y - this.transform.position.y < noticeDist)
-            {
-                this.transform.position = Vector3.Lerp(this.transform.position, target, Time.deltaTime * speed * 1 / (Mathf.Pow(Mathf.Abs(player.transform.position.y - this.transform.position.y), 0.7f)));
-            }
+            this.transform.position = Vector3.Lerp(this.transform.position, target + offset, Time.deltaTime * speed * 1 / (Mathf.Pow(Mathf.Abs(player.transform.position.y - this.transform.position.y), 0.5f)));
         }
     }
 }
