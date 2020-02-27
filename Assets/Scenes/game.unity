@@ -964,7 +964,7 @@ MonoBehaviour:
   acceleratedMult: 1.33
   initDashTime: 0.05
   initDashMult: 7
-  health: 1000
+  health: 3
   parryPitchMaxTime: 1.75
   maxParryPitch: 10
   parryPitchSpacing: 0.1
