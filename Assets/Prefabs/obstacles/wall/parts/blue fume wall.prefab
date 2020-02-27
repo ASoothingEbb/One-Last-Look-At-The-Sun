@@ -98,15 +98,70 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3792646503779104395, guid: 0e93bdb7dab1b054e802054bab786207,
-        type: 3}
-      propertyPath: m_PropertySheet.m_Gradient.m_Array.Array.data[0].m_Value.ctime3
-      value: 48041
-      objectReference: {fileID: 0}
     - target: {fileID: 3792646503779104394, guid: 0e93bdb7dab1b054e802054bab786207,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792646503779104395, guid: 0e93bdb7dab1b054e802054bab786207,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Gradient.m_Array.Array.data[0].m_Value.ctime3
+      value: 40505
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792646503779104395, guid: 0e93bdb7dab1b054e802054bab786207,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Gradient.m_Array.Array.data[0].m_Value.key3.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792646503779104395, guid: 0e93bdb7dab1b054e802054bab786207,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Gradient.m_Array.Array.data[0].m_Value.key3.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792646503779104395, guid: 0e93bdb7dab1b054e802054bab786207,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Gradient.m_Array.Array.data[0].m_Value.key4.g
+      value: 0.8124155
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792646503779104395, guid: 0e93bdb7dab1b054e802054bab786207,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Gradient.m_Array.Array.data[0].m_Value.key4.b
+      value: 1.7633111
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792646503779104395, guid: 0e93bdb7dab1b054e802054bab786207,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Gradient.m_Array.Array.data[0].m_Value.key5.g
+      value: 489.91373
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792646503779104395, guid: 0e93bdb7dab1b054e802054bab786207,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Gradient.m_Array.Array.data[0].m_Value.key5.b
+      value: 766.9961
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792646503779104395, guid: 0e93bdb7dab1b054e802054bab786207,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Gradient.m_Array.Array.data[0].m_Value.ctime2
+      value: 32902
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792646503779104395, guid: 0e93bdb7dab1b054e802054bab786207,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Gradient.m_Array.Array.data[0].m_Value.ctime4
+      value: 47637
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792646503779104395, guid: 0e93bdb7dab1b054e802054bab786207,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Gradient.m_Array.Array.data[0].m_Value.ctime5
+      value: 62103
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792646503779104395, guid: 0e93bdb7dab1b054e802054bab786207,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Gradient.m_Array.Array.data[0].m_Value.key3.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792646503779104395, guid: 0e93bdb7dab1b054e802054bab786207,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Gradient.m_Array.Array.data[0].m_Value.m_NumColorKeys
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e93bdb7dab1b054e802054bab786207, type: 3}
