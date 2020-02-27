@@ -112,6 +112,7 @@ MonoBehaviour:
   randomOffset: 1
   offset: {x: 0, y: 0, z: 0}
   randomOffsetMaxDist: 2
+  noticeDist: 30
 --- !u!114 &8296172668660599439
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -90,7 +90,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnable: {fileID: 4717983066241056457, guid: 31dee3e972fd9a2468fe9182f22684a1,
     type: 3}
-  rate: 5
+  rate: 9
 --- !u!1001 &173946678577252276
 PrefabInstance:
   m_ObjectHideFlags: 0
