@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8296172668660599438}
   - component: {fileID: 8296172668660599437}
   - component: {fileID: 8296172668660599439}
-  - component: {fileID: 8361735977803076453}
   m_Layer: 0
   m_Name: eel fixscale
   m_TagString: hazard
@@ -31,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3837205132787149124}
   m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -92,7 +91,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.15
+  m_Radius: 0.5
   m_Height: 4.2
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: -1.8457037}
@@ -111,8 +110,8 @@ MonoBehaviour:
   speed: 9
   randomOffset: 1
   offset: {x: 0, y: 0, z: 0}
-  randomOffsetMaxDist: 2
-  noticeDist: 30
+  randomOffsetMaxDist: 1
+  noticeDist: 10
 --- !u!114 &8296172668660599439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,16 +124,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d99f5bbc1f10bb489b669eeef2f65e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &8361735977803076453
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3837205132787149124}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.35
-  m_Center: {x: 0, y: 0, z: -1.8457041}

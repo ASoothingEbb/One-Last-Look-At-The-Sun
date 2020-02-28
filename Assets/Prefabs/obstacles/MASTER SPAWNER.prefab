@@ -233,27 +233,36 @@ MonoBehaviour:
       m_RotationOrder: 0
   - prefab: {fileID: 5069854587461753412, guid: 676b1b62f272cc94cac822bb2937b9bb,
       type: 3}
-    chance: 0
+    chance: 0.25
     depthChance:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 34
+        time: 0.00057770126
+        value: 0.00095768063
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 0
         weightedMode: 0
-        inWeight: 0
+        inWeight: 0.33333334
         outWeight: 0
+      - serializedVersion: 3
+        time: 0.6987265
+        value: 0.9975361
+        inSlope: -0.0008707501
+        outSlope: -0.0008707501
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.57034194
+        outWeight: 0.3010403
       - serializedVersion: 3
         time: 1
         value: 1
-        inSlope: 0
-        outSlope: 0
+        inSlope: 0.008178207
+        outSlope: 0.008178207
         tangentMode: 34
         weightedMode: 0
-        inWeight: 0
+        inWeight: 0.33333334
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
