@@ -17,7 +17,6 @@ public class PitManager : MonoBehaviour
     public int maxSections = 3;
     public static System.Random random;
     public static int max_depth = -5000;
-    public float startSections;
     public Material tunnelMat;
     public static float timeSinceStart = 0;
     public float sectionsBetweenMurals = 10;
@@ -68,6 +67,7 @@ public class PitManager : MonoBehaviour
         if (lastPosSpawned > -sectionLength * startBuffer || lastPosSpawned <= max_depth)
         {
             newSection = pitBlank;
+            sectionNum--;
         }
         else if (sectionNum % sectionsBetweenMurals == 0){
             newSection = pitMural;
