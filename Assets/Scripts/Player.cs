@@ -31,7 +31,8 @@ public class Player : MonoBehaviour
     public float initDashTime = 0.05f;
     public float initDashMult = 7;
 
-    public int health = 3;
+    public int maxHealth = 3;
+    int health;
 
     public float parryPitchMaxTime = 1f;
     public int maxParryPitch =  5;
@@ -59,6 +60,7 @@ public class Player : MonoBehaviour
     {
         moveDir = new Vector2();
         tapParry.SetFloat("Vector1_5E361D35", 0);
+        health = maxHealth;
     }
 
     public void Update()
@@ -218,7 +220,7 @@ public class Player : MonoBehaviour
             slowed = true;
         } else if (other.CompareTag("heal"))
         {
-            health = 3;
+            health = maxHealth;
             accelerated = false;
             healNoise.Play();
         }
