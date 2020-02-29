@@ -959,12 +959,12 @@ MonoBehaviour:
   maxHorizDist: 3.5
   fallSpeed: 17.5
   parryEffectIntensity: 0.1
-  slowSpeedMult: 0.3
+  slowSpeedMult: 0.5
   accelerated: 0
   acceleratedMult: 1.33
   initDashTime: 0.05
   initDashMult: 7
-  health: 3
+  maxHealth: 3
   parryPitchMaxTime: 1.75
   maxParryPitch: 10
   parryPitchSpacing: 0.1
