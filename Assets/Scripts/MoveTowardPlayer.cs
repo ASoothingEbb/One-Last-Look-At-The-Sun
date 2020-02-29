@@ -24,20 +24,16 @@ public class MoveTowardPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 target;
 
-        if (player.transform.position.y - this.transform.position.y < noticeDist)
+        if (player.position.y - this.transform.position.y < noticeDist)
         {
-            target = this.transform.position + new Vector3(0, speed, 0);
-        }
-        else
-        {
-            target = new Vector3(player.transform.position.x, this.transform.position.y, player.transform.position.z);
-        }
+            Vector3 target = player.position + offset;
 
-        Quaternion targetRot = Quaternion.LookRotation(target - this.transform.position);
-        this.transform.rotation = Quaternion.Lerp(this.transform.rotation, targetRot, speed * Time.deltaTime);
-        this.transform.position = Vector3.Lerp(this.transform.position, target + offset, Time.deltaTime * speed * 1 / (Mathf.Pow(Mathf.Abs(player.transform.position.y - this.transform.position.y), 0.5f)));
+            Quaternion targetRot = Quaternion.LookRotation(target);
+            this.transform.rotation = Quaternion.Lerp(this.transform.rotation, targetRot, speed * Time.deltaTime);
+            this.transform.position += (target - this.transform.position).normalized * Time.deltaTime * speed;
+            
+        }
         
     }
 }

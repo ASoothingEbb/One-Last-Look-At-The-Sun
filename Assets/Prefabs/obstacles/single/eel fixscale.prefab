@@ -107,11 +107,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8d0f2a2269cac4ab859ab56bd21c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 9
-  randomOffset: 1
+  speed: 10
+  randomOffset: 0
   offset: {x: 0, y: 0, z: 0}
   randomOffsetMaxDist: 1
-  noticeDist: 10
+  noticeDist: 30
 --- !u!114 &8296172668660599439
 MonoBehaviour:
   m_ObjectHideFlags: 0
