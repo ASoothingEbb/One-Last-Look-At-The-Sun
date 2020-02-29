@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0
-  period: 0.75
+  period: 1.25
   time: 0
   start: {x: 0, y: 0, z: -3.5}
   end: {x: 0, y: 0, z: 3.5}
