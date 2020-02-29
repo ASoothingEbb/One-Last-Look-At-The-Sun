@@ -84,6 +84,7 @@ MonoBehaviour:
   maxRandom: 20
   randomOffset: 0
   offset: 45
+  randomDir: 0
 --- !u!1 &7175847394018891815
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +414,7 @@ MonoBehaviour:
   maxRandom: 20
   randomOffset: 0
   offset: 0
+  randomDir: 0
 --- !u!1 &7175847394138352605
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,6 +836,7 @@ MonoBehaviour:
   maxRandom: 20
   randomOffset: 0
   offset: 30
+  randomDir: 0
 --- !u!1 &7175847394212290015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1902,6 +1905,7 @@ MonoBehaviour:
   maxRandom: 20
   randomOffset: 0
   offset: 90
+  randomDir: 0
 --- !u!1 &7175847394957003259
 GameObject:
   m_ObjectHideFlags: 0
@@ -2509,6 +2513,7 @@ MonoBehaviour:
   maxRandom: 20
   randomOffset: 0
   offset: 60
+  randomDir: 0
 --- !u!1 &7175847395241400821
 GameObject:
   m_ObjectHideFlags: 0
@@ -3239,6 +3244,7 @@ MonoBehaviour:
   maxRandom: 20
   randomOffset: 0
   offset: 75
+  randomDir: 0
 --- !u!1 &7175847395805169494
 GameObject:
   m_ObjectHideFlags: 0
@@ -3476,6 +3482,7 @@ MonoBehaviour:
   maxRandom: 20
   randomOffset: 0
   offset: 15
+  randomDir: 0
 --- !u!1 &7175847395859571119
 GameObject:
   m_ObjectHideFlags: 0
