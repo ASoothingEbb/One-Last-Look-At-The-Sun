@@ -23,14 +23,17 @@ public class EndSun : MonoBehaviour
         fall.Stop();
         for (float i = 0; i <= time; i += Time.deltaTime)
         {
+            boom.volume = i / time;
             this.transform.localScale = Vector3.Lerp(new Vector3(1, 1, 1), new Vector3(endSize, endSize, endSize), i / time);
             yield return null;
         }
 
         for (float i = 0; i <= time; i += Time.deltaTime)
         {
+            boom.volume = 1 - (i/time);
             yield return null;
         }
+        boom.volume = 0;
 
         SceneManager.LoadScene("game");
 
