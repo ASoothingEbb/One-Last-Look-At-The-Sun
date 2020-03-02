@@ -896,8 +896,8 @@ MonoBehaviour:
   vertVelDamp: 15
   sideSpeedMult: 1.5
   fallSpeedMult: 1.75
-  parryCamShakeMag: 0.4
-  parryCamShakeTime: 0.075
+  hurtCamShakeMag: 0.8
+  hurtCamShakeTime: 0.6
   maxHorizDist: 3.5
   fallSpeed: 17.5
   parryEffectIntensity: 0.1

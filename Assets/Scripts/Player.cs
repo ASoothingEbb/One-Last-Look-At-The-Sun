@@ -18,8 +18,8 @@ public class Player : MonoBehaviour
     public float vertVelDamp = 2;
     public float sideSpeedMult = 2f;
     public float fallSpeedMult = 2f;
-    public float parryCamShakeMag = 0.2f;
-    public float parryCamShakeTime = 0.075f;
+    public float hurtCamShakeMag = 0.2f;
+    public float hurtCamShakeTime = 0.075f;
     public float maxHorizDist = 5;
     public float fallSpeed = 10f;
     public float parryEffectIntensity = 1f;
@@ -133,11 +133,11 @@ public class Player : MonoBehaviour
             hurtNoise.Play();
             timeSinceLastHurt = 0;
             health -= 1;
-            StartCoroutine(shakeCamera(.4f, .4f));
+            StartCoroutine(shakeCamera(hurtCamShakeMag, hurtCamShakeTime));
             if (health < 1)
             {
-                StartCoroutine(shakeCamera(0.4f, 1f));
-                StartCoroutine(FadeOut(0,0,0, "death", 0.2f));
+                StartCoroutine(shakeCamera(0.5f, 10f));
+                StartCoroutine(FadeOut(0,0,0, "death", 0.4f));
             }
         }
 
