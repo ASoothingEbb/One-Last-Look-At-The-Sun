@@ -33,6 +33,8 @@ public class Player : MonoBehaviour
 
     public int maxHealth = 3;
     int health;
+    public float healFlashOpacity = 0.3f;
+    public float healFlashTime = 0.2f;
 
     public float parryPitchMaxTime = 1f;
     public int maxParryPitch =  5;
@@ -164,6 +166,20 @@ public class Player : MonoBehaviour
         }
     }
 
+    public IEnumerator HealFlash()
+    {
+        for (float i = 0; i <= healFlashTime/2; i += Time.deltaTime)
+        {
+            dieScreen.color = new Color(1, 1, 1, (i / (healFlashTime/2)) * healFlashOpacity);
+            yield return null;
+        }
+        for (float i = 0; i <= healFlashTime / 2; i += Time.deltaTime)
+        {
+            dieScreen.color = new Color(1, 1, 1, healFlashOpacity - ((i / (healFlashTime / 2)) * healFlashOpacity));
+            yield return null;
+        }
+    }
+
     public IEnumerator FadeOut(float r, float g, float b, string sceneToLoad, float time)
     {
         for (float i = 0; i <= time; i += Time.deltaTime)
@@ -186,7 +202,7 @@ public class Player : MonoBehaviour
             {
                 if(timeSinceLastParryHit < parryPitchMaxTime)
                 {
-                    currentParryPitch = Mathf.Min(currentParryPitch+1, maxParryPitch);
+                    currentParryPitch++;
                 }
                 else
                 {
@@ -195,6 +211,12 @@ public class Player : MonoBehaviour
                 timeSinceLastParryHit = 0;
                 parryNoise.pitch = 1 + currentParryPitch * parryPitchSpacing;
                 parryNoise.Play();
+                if(currentParryPitch == maxParryPitch)
+                {
+                    currentParryPitch = 0;
+                    healNoise.Play();
+                    health = Mathf.Min(health + 1, maxHealth);
+                }
             }
             else
             {
@@ -223,6 +245,7 @@ public class Player : MonoBehaviour
             health = maxHealth;
             accelerated = false;
             healNoise.Play();
+            StartCoroutine(HealFlash());
         }
     }
 
