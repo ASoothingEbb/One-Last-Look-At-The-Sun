@@ -25,7 +25,8 @@ public class Spawner : MonoBehaviour
             }
 
         }
-        Instantiate(spawnables[i % spawnables.Length].prefab, gameObject.transform);
+        GameObject toSpawn = spawnables[i % spawnables.Length].prefab;
+        Instantiate(toSpawn, gameObject.transform).name = toSpawn.name;
     }
 }
 
