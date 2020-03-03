@@ -208,7 +208,7 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("vid"))
         {
-            vid.url = Application.dataPath + "/Videos/" + other.name + ".mp4";
+            vid.clip = Resources.Load<VideoClip>(other.name) as VideoClip;
             vid.Play();
         }
         else if (other.CompareTag("bounce"))
