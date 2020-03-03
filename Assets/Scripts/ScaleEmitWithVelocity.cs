@@ -20,6 +20,5 @@ public class ScaleEmitWithVelocity : MonoBehaviour
     void Update()
     {
         vfx.SetFloat("rate", rateScale * (-body.velocity.y) * (player.accelerated ? accelScale : 1));
-        vfx.SetVector3("velocity", new Vector3(0, 2 * -body.velocity.y, 0));
     }
 }
