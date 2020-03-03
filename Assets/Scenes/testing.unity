@@ -510,6 +510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rateScale: 3
+  accelScale: 2
 --- !u!1001 &235858590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -607,7 +608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &237119752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1427,7 +1428,7 @@ MonoBehaviour:
   hurtNoise: {fileID: 836339441}
   parryNoise: {fileID: 836339433}
   windNoise: {fileID: 0}
-  healNoise: {fileID: 0}
+  healNoise: {fileID: 836339433}
   accelNoise: {fileID: 0}
 --- !u!114 &836339438
 MonoBehaviour:

@@ -341,7 +341,7 @@ Transform:
   m_GameObject: {fileID: 199533822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -359,6 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rateScale: 0.3
+  accelScale: 4
 --- !u!1 &237119751
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,7 +912,7 @@ MonoBehaviour:
   healFlashOpacity: 0.5
   healFlashTime: 0.5
   parryPitchMaxTime: 2
-  maxParryPitch: 5
+  maxParryPitch: 4
   parryPitchSpacing: 0.15
   hurt: {fileID: 2100000, guid: 777f9a44c20686e41a65882311194804, type: 2}
   tapParry: {fileID: 2100000, guid: a8bed727e10947744bb31337b4cd5a2c, type: 2}

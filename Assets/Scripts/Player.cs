@@ -215,6 +215,7 @@ public class Player : MonoBehaviour
                 {
                     currentParryPitch = 0;
                     healNoise.Play();
+                    StartCoroutine(HealFlash());
                     health = Mathf.Min(health + 1, maxHealth);
                 }
             }
