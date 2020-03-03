@@ -178,6 +178,7 @@ public class Player : MonoBehaviour
             dieScreen.color = new Color(1, 1, 1, healFlashOpacity - ((i / (healFlashTime / 2)) * healFlashOpacity));
             yield return null;
         }
+        dieScreen.color = new Color(1, 1, 1, 0));
     }
 
     public IEnumerator FadeOut(float r, float g, float b, string sceneToLoad, float time)
