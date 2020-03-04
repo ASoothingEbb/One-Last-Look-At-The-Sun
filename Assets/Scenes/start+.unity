@@ -1355,7 +1355,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: O N E   L A S T   L O O K   A T   T H E   S U N
+  m_Text: O N E   L A S T   L O O K   A T   T H E   S U N ?
 --- !u!222 &811356089
 CanvasRenderer:
   m_ObjectHideFlags: 0

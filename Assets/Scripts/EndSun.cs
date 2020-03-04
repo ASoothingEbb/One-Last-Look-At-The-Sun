@@ -35,7 +35,7 @@ public class EndSun : MonoBehaviour
         }
         boom.volume = 0;
 
-        SceneManager.LoadScene("game");
+        SceneManager.LoadScene("start+");
 
     }
 }
