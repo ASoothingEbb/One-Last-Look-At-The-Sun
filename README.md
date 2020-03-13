@@ -1,7 +1,7 @@
 # One Last Look At The Sun
 
-One Last Look At The Sun is a 3D first person action game where the player must descend down a procedurally generated pit that gets progressively harder as you descend. On reaching a certain depth you complete the game.
-This project was  created as the disseration of my Computer Science Bsc.
+One Last Look At The Sun is a 3D first person action game where the player must descend down a procedurally generated pit that becomes progressively harder as you descend. On reaching a certain depth you complete the game.
+This project was created for the disseration of my Computer Science Bsc.
 
 Click on the image to watch gameplay:
 
